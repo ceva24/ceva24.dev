@@ -1,7 +1,7 @@
 import Typography from "typography"
-import moraga from "typography-theme-moraga"
+import usWebDesignStandards from "typography-theme-us-web-design-standards"
 
-const typography = new Typography(moraga)
+const typography = new Typography(usWebDesignStandards)
 
 export const { scale, rhythm, options } = typography
 export default typography

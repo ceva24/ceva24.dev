@@ -4,16 +4,17 @@
   "version": "1.0.0",
   "license": "Apache-2.0",
   "dependencies": {
+    "@emotion/core": "^10.0.17",
     "gatsby": "^2.15.14",
+    "gatsby-plugin-emotion": "^4.1.6",
     "gatsby-plugin-react-helmet": "^3.1.7",
     "gatsby-plugin-typography": "^2.3.7",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
     "react-typography": "^0.16.19",
-    "typeface-source-sans-pro": "0.0.75",
     "typography": "^0.16.19",
-    "typography-theme-moraga": "^0.16.19"
+    "typography-theme-us-web-design-standards": "^0.16.19"
   },
   "repository": {
     "type": "git",

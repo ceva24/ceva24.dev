@@ -1,13 +1,25 @@
 import React from "react"
+import { css } from "@emotion/core"
 import Helmet from "./helmet"
-import Header from "./header"
-import Menu from "./menu"
+import Title from "./title"
+import About from "./about"
 
 export default ({ children }) => (
-    <div style={{ margin: '0 auto', minHeight: 1100, maxWidth: 800, padding: '3rem' }}>
-        <Helmet />
-        <Header />
-        <Menu />
-        {children}
+    <div>
+        <div css={css`
+            margin: 0 auto;
+            min-height: 1100px;
+            min-width: 300px;
+            max-width: 800px;
+        `}>
+            <Helmet />
+            <div css={css`
+                padding: 2rem 0 2rem 0
+            `}>
+                <Title />
+                <About />
+                {children}
+            </div>
+        </div>
     </div>
 )

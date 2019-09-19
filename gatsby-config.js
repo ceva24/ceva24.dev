@@ -1,5 +1,6 @@
 module.exports = {
-    // TODO subtitle as siteMetadata
+    // TODO subtitle etc. as siteMetadata
+    // TODO package fontawesome
     plugins: [
         {
             resolve: "gatsby-plugin-typography",

@@ -16,11 +16,11 @@ export default () => (
                 margin-right: ${rhythm(1 / 2)};
                 margin-bottom: 0;
                 border-radius: 100%;
-                height: 80px;
-                width: 80px;
+                height: ${rhythm(3)};
+                width: ${rhythm(3)};
         `} />
         <div css={css`
-            padding-left: 1rem;
+            padding-left: ${rhythm(3 / 4)};
             border-left: 1px solid;
         `}
         >

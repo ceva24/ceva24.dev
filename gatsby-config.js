@@ -9,7 +9,7 @@ module.exports = {
                 omitGoogleFont: false  // TODO package font
             },
         },
-        "gatsby-plugin-emotion", // TODO use rhythm units
-        "gatsby-plugin-react-helmet",
+        "gatsby-plugin-emotion",
+        "gatsby-plugin-react-helmet"
     ],
 }

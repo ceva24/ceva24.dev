@@ -8,7 +8,7 @@ export default () => (
         margin-bottom: ${rhythm(2)};
     `}>
         <h1 css={css`
-        margin-bottom: 0;
+            margin-bottom: 0;
         `}>
             <Link to="/" css={css`
                 color: inherit;

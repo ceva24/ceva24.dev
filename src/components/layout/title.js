@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { rhythm } from "../../utils/typography"
 import { css } from "@emotion/core"
 
-export default () => (
+export default props => (
     <header css={css`
         margin-bottom: ${rhythm(2)};
     `}>
@@ -13,8 +13,8 @@ export default () => (
             <Link to="/" css={css`
                 color: inherit;
                 text-decoration: none;
-            `}>ceva24.dev</Link>
+            `}>{props.title}</Link>
         </h1>
-        <p><em>Thoughts, code and everything in-between</em></p>
+        <p><em>{props.subtitle}</em></p>
     </header>
 )

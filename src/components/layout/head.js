@@ -1,8 +1,8 @@
 import React from "react"
 import Helmet from "react-helmet"
 
-export default () => (
+export default props => (
     <Helmet>
-        <title>ceva24.dev | Thoughts, code and everything in-between</title>
+        <title>{props.title} | {props.subtitle}</title>
     </Helmet>
 )

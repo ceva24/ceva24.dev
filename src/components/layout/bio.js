@@ -14,6 +14,7 @@ export default () => (
     `}>
         <img
             src={Avatar}
+            alt="Chris Evans"
             css={css`
                 margin-right: ${rhythm(1 / 2)};
                 margin-bottom: 0;

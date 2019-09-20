@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { rhythm } from "../../utils/typography"
 import { css } from "@emotion/core"
 
-export default props => (
+export default (props) => (
     <header css={css`
         margin-bottom: ${rhythm(2)};
     `}>

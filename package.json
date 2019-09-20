@@ -14,6 +14,8 @@
     "react-fontawesome": "^1.6.1",
     "react-helmet": "^5.2.1",
     "react-typography": "^0.16.19",
+    "typeface-merriweather": "0.0.72",
+    "typeface-source-sans-pro": "0.0.75",
     "typography": "^0.16.19",
     "typography-theme-us-web-design-standards": "^0.16.19"
   },

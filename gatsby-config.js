@@ -6,7 +6,7 @@ module.exports = {
             resolve: "gatsby-plugin-typography",
             options: {
                 pathToConfigModule: "src/utils/typography",
-                omitGoogleFont: false  // TODO package font
+                omitGoogleFont: true
             },
         },
         "gatsby-plugin-emotion",

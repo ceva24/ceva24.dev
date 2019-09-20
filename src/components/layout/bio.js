@@ -1,5 +1,4 @@
 import React from "react"
-import FontAwesome from "react-fontawesome"
 import { css } from "@emotion/core"
 import { rhythm } from "../../utils/typography"
 import Avatar from "../../../static/avatar.png"
@@ -20,7 +19,11 @@ export default () => (
                 height: 80px;
                 width: 80px;
         `} />
-        <div>
+        <div css={css`
+            padding-left: 1rem;
+            border-left: 1px solid;
+        `}
+        >
             <strong>Chris Evans</strong>
             <div>A Web Development Team Leader at the University of York</div>
             <div>

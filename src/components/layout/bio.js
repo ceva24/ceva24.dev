@@ -1,5 +1,7 @@
 import React from "react"
 import { css } from "@emotion/core"
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
+import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons"
 import { rhythm } from "../../utils/typography"
 import Avatar from "../../../static/avatar.png"
 import SocialIcon from "../socialIcon"
@@ -27,10 +29,10 @@ export default () => (
             <strong>Chris Evans</strong>
             <div>A Web Development Team Leader at the University of York</div>
             <div>
-                <SocialIcon name="envelope" url="mailto:chris@ceva24.dev" />
-                <SocialIcon name="github" url="https://www.github.com/ceva24" />
-                <SocialIcon name="linkedin" url="https://uk.linkedin.com/in/ceva24" />
-                <SocialIcon name="twitter" url="https://twitter.com/ceva24" />
+                <SocialIcon icon={faEnvelope} url="mailto:chris@ceva24.dev" />
+                <SocialIcon icon={faGithub} url="https://www.github.com/ceva24" />
+                <SocialIcon icon={faLinkedin} url="https://uk.linkedin.com/in/ceva24" />
+                <SocialIcon icon={faTwitter} url="https://twitter.com/ceva24" />
             </div>
         </div>
     </div>

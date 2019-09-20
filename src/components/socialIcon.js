@@ -1,6 +1,6 @@
 import React from "react"
-import FontAwesome from "react-fontawesome"
 import { css } from "@emotion/core"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { rhythm } from "../utils/typography"
 
 export default (props) => (
@@ -11,6 +11,6 @@ export default (props) => (
             color: #0071bc;
         }
     `}>
-        <FontAwesome name={props.name} />
+        <FontAwesomeIcon icon={props.icon} />
     </a>
 )

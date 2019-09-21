@@ -15,6 +15,7 @@ export default ({ children }) => {
               siteMetadata {
                 title
                 subtitle
+                name
               }
             }
           }
@@ -23,6 +24,7 @@ export default ({ children }) => {
 
     const title = data.site.siteMetadata.title
     const subtitle = data.site.siteMetadata.subtitle
+    const name = data.site.siteMetadata.name
 
     return (
         <div css={css`
@@ -34,7 +36,7 @@ export default ({ children }) => {
         `}>
             <Head title={title} subtitle={subtitle} />
             <Title title={title} subtitle={subtitle} />
-            <Bio />
+            <Bio name={name} />
             {children}
         </div>
     )

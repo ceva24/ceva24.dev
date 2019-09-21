@@ -4,7 +4,8 @@ module.exports = {
     // TODO go-live preparation
     siteMetadata: {
         title: "ceva24.dev",
-        subtitle: "Thoughts, code and everything in-between"
+        subtitle: "Thoughts, code and everything in-between",
+        name: "Chris Evans"
     },
     plugins: [
         {

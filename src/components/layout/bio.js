@@ -6,7 +6,7 @@ import { rhythm } from "src/utils/typography"
 import SocialIcon from "src/components/socialIcon"
 import Avatar from "static/avatar.png"
 
-export default () => (
+export default (props) => (
 
     <div css={css`
             display: flex;
@@ -15,7 +15,7 @@ export default () => (
     `}>
         <img
             src={Avatar}
-            alt="Chris Evans"
+            alt={props.name}
             css={css`
                 margin-right: ${rhythm(1 / 2)};
                 margin-bottom: 0;
@@ -28,7 +28,11 @@ export default () => (
             border-left: 1px solid;
         `}
         >
-            <strong>Chris Evans</strong>
+            <div css={css`
+                font-size: ${rhythm(4 / 5)};
+            `}>
+                <strong>{props.name}</strong>
+            </div>
             <div>A Web Development Team Leader at the University of York</div>
             <div css={css`
                 font-size: ${rhythm(4 / 5)};

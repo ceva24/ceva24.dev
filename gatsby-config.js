@@ -1,7 +1,7 @@
-const path = require('path')
-
 module.exports = {
     // TODO go-live preparation
+    // TODO string consistency
+    // TODO responsive
     siteMetadata: {
         title: "ceva24.dev",
         subtitle: "Thoughts, code and everything in-between",
@@ -18,10 +18,18 @@ module.exports = {
         {
             resolve: "gatsby-plugin-root-import",
             options: {
-                src: path.join(__dirname, 'src'),
-                static: path.join(__dirname, 'static')
+                src: `${__dirname}/src`,
+                static: `${__dirname}/static`
             }
         },
+        {
+            resolve: "gatsby-source-filesystem",
+            options: {
+                name: "posts",
+                path: `${__dirname}/posts`
+            }
+        },
+        "gatsby-transformer-remark",
         "gatsby-plugin-emotion",
         "gatsby-plugin-react-helmet"
     ],

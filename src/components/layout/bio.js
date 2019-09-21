@@ -3,7 +3,7 @@ import { css } from "@emotion/core"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons"
 import { rhythm } from "src/utils/typography"
-import SocialIcon from "src/components/socialIcon"
+import SocialIcon from "src/components/layout/socialIcon"
 import Avatar from "static/avatar.png"
 
 export default (props) => (
@@ -26,8 +26,7 @@ export default (props) => (
         <div css={css`
             padding-left: ${rhythm(3 / 4)};
             border-left: 1px solid;
-        `}
-        >
+        `}>
             <div css={css`
                 font-size: ${rhythm(4 / 5)};
             `}>

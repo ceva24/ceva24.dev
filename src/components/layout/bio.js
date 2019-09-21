@@ -10,6 +10,7 @@ export default () => (
 
     <div css={css`
             display: flex;
+            align-items: center;
             margin-bottom: ${rhythm(2)};
     `}>
         <img

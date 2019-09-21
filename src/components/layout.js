@@ -30,7 +30,7 @@ export default ({ children }) => {
             min-height: 1100px;
             min-width: 300px;
             max-width: 800px;
-            padding: ${rhythm(3 / 2)} 0;
+            padding: ${rhythm(3 / 2)} ${rhythm(1)};
         `}>
             <Head title={title} subtitle={subtitle} />
             <Title title={title} subtitle={subtitle} />

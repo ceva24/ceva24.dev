@@ -1,7 +1,6 @@
 const path = require('path')
 
 module.exports = {
-    // TODO use image plugin
     // TODO go-live preparation
     siteMetadata: {
         title: "ceva24.dev",

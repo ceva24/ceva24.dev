@@ -29,7 +29,6 @@ export default ({ children }) => {
     return (
         <div css={css`
             margin: 0 auto;
-            min-height: 1100px;
             min-width: 300px;
             max-width: 800px;
             padding: ${rhythm(3 / 2)} ${rhythm(1)};

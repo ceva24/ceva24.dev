@@ -1,16 +1,20 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { css } from "@emotion/core"
 import Layout from "src/components/layout"
-import Post from "src/components/index/post"
+import PostListItem from "src/components/index/post-list-item"
 
 export default ({ data }) => (
     <Layout>
         <h2>Posts</h2>
-        <div>
+        <ul css={css`
+            list-style: none;
+            margin-left: 0;
+        `}>
             {data.allMarkdownRemark.edges.map(({ node }) => (
-                <Post node={node} />
+                <PostListItem node={node} />
             ))}
-        </div>
+        </ul>
     </Layout>
 )
 
@@ -23,7 +27,7 @@ export const query = graphql`
           id
           frontmatter {
             title
-            date(formatString: "DD MMMM, YYYY")
+            date(formatString: "YYYY-MM-DD")
           }
           fields {
             slug

@@ -3,7 +3,7 @@ import { css } from "@emotion/core"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons"
 import { rhythm } from "src/utils/typography"
-import SocialIcon from "src/components/layout/socialIcon"
+import SocialIcon from "src/components/layout/social-icon"
 import Avatar from "static/avatar.png"
 
 export default (props) => (

@@ -1,3 +1,7 @@
+html {
+    overflow-y: auto;
+}
+
 a {
     color: #c0392b;
 }

@@ -30,7 +30,9 @@ export default () => (
         >
             <strong>Chris Evans</strong>
             <div>A Web Development Team Leader at the University of York</div>
-            <div>
+            <div css={css`
+                font-size: ${rhythm(4 / 5)};
+            `}>
                 <SocialIcon icon={faEnvelope} url="mailto:chris@ceva24.dev" />
                 <SocialIcon icon={faGithub} url="https://www.github.com/ceva24" />
                 <SocialIcon icon={faLinkedin} url="https://uk.linkedin.com/in/ceva24" />

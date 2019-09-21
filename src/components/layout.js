@@ -1,10 +1,10 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { css } from "@emotion/core"
-import Head from "./layout/head"
-import Title from "./layout/title"
-import Bio from "./layout/bio"
-import { rhythm } from "../utils/typography"
+import { rhythm } from "src/utils/typography"
+import Head from "src/components/layout/head"
+import Title from "src/components/layout/title"
+import Bio from "src/components/layout/bio"
 
 export default ({ children }) => {
 

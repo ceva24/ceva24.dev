@@ -1,7 +1,7 @@
 import React from "react"
 import { css } from "@emotion/core"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { rhythm } from "../utils/typography"
+import { rhythm } from "src/utils/typography"
 
 export default (props) => (
     <a href={props.url} title={props.url} css={css`

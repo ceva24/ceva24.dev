@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
-import { rhythm } from "../../utils/typography"
 import { css } from "@emotion/core"
+import { rhythm } from "src/utils/typography"
 
 export default (props) => (
     <header css={css`

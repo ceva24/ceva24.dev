@@ -2,9 +2,9 @@ import React from "react"
 import { css } from "@emotion/core"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons"
-import { rhythm } from "../../utils/typography"
-import Avatar from "../../../static/avatar.png"
-import SocialIcon from "../socialIcon"
+import { rhythm } from "src/utils/typography"
+import SocialIcon from "src/components/socialIcon"
+import Avatar from "static/avatar.png"
 
 export default () => (
 

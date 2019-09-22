@@ -2,6 +2,8 @@ module.exports = {
     // TODO go-live preparation
     // TODO string consistency
     // TODO responsive
+    // TODO header
+    // TODO prism
     siteMetadata: {
         title: "ceva24.dev",
         subtitle: "Thoughts, code and everything in-between",

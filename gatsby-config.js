@@ -29,12 +29,7 @@ module.exports = {
                 path: `${__dirname}/posts`
             }
         },
-        {
-            resolve: "gatsby-transformer-remark",
-            options: {
-                plugins: ["gatsby-remark-copy-linked-files"]
-            }
-        },
+        "gatsby-transformer-remark",
         "gatsby-plugin-emotion",
         "gatsby-plugin-react-helmet"
     ],

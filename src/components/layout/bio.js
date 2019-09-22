@@ -22,6 +22,7 @@ export default (props) => (
                 border-radius: 100%;
                 height: ${rhythm(3)};
                 width: ${rhythm(3)};
+                box-shadow: none;
         `} />
         <div css={css`
             padding-left: ${rhythm(3 / 4)};

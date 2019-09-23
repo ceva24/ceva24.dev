@@ -20,9 +20,6 @@ export default ({ children }) => {
         `
     )
 
-    const name = data.site.siteMetadata.name
-    const subtitle = data.site.siteMetadata.subtitle
-
     return (
         <div css={css`
             margin: 0 auto;
@@ -44,10 +41,11 @@ export default ({ children }) => {
 
             <Helmet>
                 <html lang="en" />
-                <title>{name} | {subtitle}</title>
+                <meta charSet="utf-8" />
+                <title>{data.site.siteMetadata.name} | {data.site.siteMetadata.subtitle}</title>
             </Helmet>
 
-            <Bio name={name} />
+            <Bio name={data.site.siteMetadata.name} />
 
             {children}
         </div>

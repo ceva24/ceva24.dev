@@ -1,5 +1,4 @@
 module.exports = {
-    // TODO go-live preparation
     // TODO prism
     siteMetadata: {
         name: "Chris Evans",
@@ -29,6 +28,7 @@ module.exports = {
         },
         "gatsby-transformer-remark",
         "gatsby-plugin-emotion",
-        "gatsby-plugin-react-helmet"
+        "gatsby-plugin-react-helmet",
+        "gatsby-plugin-offline"
     ],
 }

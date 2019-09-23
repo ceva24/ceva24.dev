@@ -4,7 +4,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons"
 import { rhythm } from "src/utils/typography"
 import SocialIcon from "src/components/layout/social-icon"
-import Avatar from "static/avatar.png"
+import ProfilePicture from "static/profile-picture.png"
 
 export default (props) => (
     <div css={css`
@@ -13,8 +13,8 @@ export default (props) => (
         margin-bottom: ${rhythm(2)};
     `}>
         <img
-            src={Avatar}
-            alt={props.name}
+            src={ProfilePicture}
+            alt="Chris Evans' profile picture"
             css={css`
                 margin-right: ${rhythm(1 / 2)};
                 margin-bottom: 0;
@@ -36,10 +36,10 @@ export default (props) => (
             <div css={css`
                 font-size: ${rhythm(4 / 5)};
             `}>
-                <SocialIcon icon={faEnvelope} url="mailto:chris@ceva24.dev" />
-                <SocialIcon icon={faGithub} url="https://www.github.com/ceva24" />
-                <SocialIcon icon={faLinkedin} url="https://uk.linkedin.com/in/ceva24" />
-                <SocialIcon icon={faTwitter} url="https://twitter.com/ceva24" />
+                <SocialIcon icon={faEnvelope} label="Email" url="mailto:chris@ceva24.dev" />
+                <SocialIcon icon={faGithub} label="Github" url="https://www.github.com/ceva24" />
+                <SocialIcon icon={faLinkedin} label="LinkedIn" url="https://uk.linkedin.com/in/ceva24" />
+                <SocialIcon icon={faTwitter} label="Twitter" url="https://twitter.com/ceva24" />
             </div>
         </div>
     </div>

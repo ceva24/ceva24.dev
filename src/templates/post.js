@@ -3,19 +3,19 @@ import { graphql, Link } from "gatsby"
 import { css } from "@emotion/core"
 import { rhythm } from "src/utils/typography"
 import Layout from "src/components/layout"
+import PostDate from "src/components/post-date"
 
 export default ({ data }) => (
     <Layout>
-        <h2 css={css`
+        <h1 css={css`
             margin-bottom: 0;
         `}>
             {data.markdownRemark.frontmatter.title}
-        </h2>
+        </h1>
         <div css={css`
-            color: #7f8c8d;
             margin-bottom: ${rhythm(3 / 4)};
         `}>
-            <strong>{data.markdownRemark.frontmatter.date}</strong>
+            <PostDate>{data.markdownRemark.frontmatter.date}</PostDate>
         </div>
         <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
         <Link to="/">Home</Link>

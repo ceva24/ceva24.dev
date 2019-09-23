@@ -6,7 +6,7 @@ import { rhythm } from "src/utils/typography"
 export default (props) => (
     <a href={props.url} title={props.url} css={css`
         color: inherit;
-        margin-right: ${rhythm(3 / 4)};
+        margin-right: ${rhythm(1 / 2)};
     `}>
         <FontAwesomeIcon icon={props.icon} />
     </a>

@@ -3,6 +3,6 @@ import Helmet from "react-helmet"
 
 export default (props) => (
     <Helmet>
-        <title>{props.title} | {props.subtitle}</title>
+        <title>{props.name}</title>
     </Helmet>
 )

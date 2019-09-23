@@ -7,11 +7,10 @@ import SocialIcon from "src/components/layout/social-icon"
 import Avatar from "static/avatar.png"
 
 export default (props) => (
-
     <div css={css`
-            display: flex;
-            align-items: center;
-            margin-bottom: ${rhythm(2)};
+        display: flex;
+        align-items: center;
+        margin-bottom: ${rhythm(2)};
     `}>
         <img
             src={Avatar}

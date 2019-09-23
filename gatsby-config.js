@@ -1,11 +1,8 @@
 module.exports = {
     // TODO go-live preparation
-    // TODO responsive
     // TODO header
     // TODO prism
     siteMetadata: {
-        title: "ceva24.dev",
-        subtitle: "Thoughts, code and everything in-between",
         name: "Chris Evans"
     },
     plugins: [

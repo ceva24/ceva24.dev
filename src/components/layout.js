@@ -3,7 +3,6 @@ import { graphql, useStaticQuery } from "gatsby"
 import { css } from "@emotion/core"
 import { rhythm } from "src/utils/typography"
 import Head from "src/components/layout/head"
-import Title from "src/components/layout/title"
 import Bio from "src/components/layout/bio"
 
 export default ({ children }) => {
@@ -13,8 +12,6 @@ export default ({ children }) => {
           query {
             site {
               siteMetadata {
-                title
-                subtitle
                 name
               }
             }
@@ -22,8 +19,6 @@ export default ({ children }) => {
         `
     )
 
-    const title = data.site.siteMetadata.title
-    const subtitle = data.site.siteMetadata.subtitle
     const name = data.site.siteMetadata.name
 
     return (
@@ -33,8 +28,7 @@ export default ({ children }) => {
             max-width: 800px;
             padding: ${rhythm(3 / 2)} ${rhythm(1)};
         `}>
-            <Head title={title} subtitle={subtitle} />
-            <Title title={title} subtitle={subtitle} />
+            <Head name={name} />
             <Bio name={name} />
             {children}
         </div>

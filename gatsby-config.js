@@ -3,7 +3,8 @@ module.exports = {
     // TODO header
     // TODO prism
     siteMetadata: {
-        name: "Chris Evans"
+        name: "Chris Evans",
+        subtitle: "Thoughts, code and everything in-between"
     },
     plugins: [
         {

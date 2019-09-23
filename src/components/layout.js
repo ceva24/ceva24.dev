@@ -13,6 +13,7 @@ export default ({ children }) => {
             site {
               siteMetadata {
                 name
+                subtitle
               }
             }
           }
@@ -20,6 +21,7 @@ export default ({ children }) => {
     )
 
     const name = data.site.siteMetadata.name
+    const subtitle = data.site.siteMetadata.subtitle
 
     return (
         <div css={css`
@@ -28,7 +30,7 @@ export default ({ children }) => {
             max-width: 800px;
             padding: ${rhythm(3 / 2)} ${rhythm(1)};
         `}>
-            <Head name={name} />
+            <Head name={name} subtitle={subtitle} />
             <Bio name={name} />
             {children}
         </div>

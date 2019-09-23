@@ -1,6 +1,5 @@
 module.exports = {
     // TODO go-live preparation
-    // TODO header
     // TODO prism
     siteMetadata: {
         name: "Chris Evans",

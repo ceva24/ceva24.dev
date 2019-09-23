@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { rhythm } from "src/utils/typography"
 
 export default (props) => (
-    <a href={props.url} title={props.url} css={css`
+    <a href={props.url} title={props.url} aria-label={props.label} css={css`
         color: inherit;
         margin-right: ${rhythm(1 / 2)};
     `}>

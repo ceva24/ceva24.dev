@@ -23,6 +23,7 @@ export default ({node}) => (
                 flex-grow: 2;
                 text-align: right;
                 color: #7f8c8d;
+                padding-left: ${rhythm(3 / 4)};
             `}>
                 <strong>{node.frontmatter.date}</strong>
             </div>

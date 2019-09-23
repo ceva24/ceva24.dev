@@ -1,6 +1,5 @@
 module.exports = {
     // TODO go-live preparation
-    // TODO string consistency
     // TODO responsive
     // TODO header
     // TODO prism

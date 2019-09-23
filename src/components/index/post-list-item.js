@@ -11,7 +11,7 @@ export default ({node}) => (
         <div css={css`
             display: flex;
         `}>
-            <h2 css={css`
+            <h3 css={css`
                 margin-bottom: ${rhythm(1 / 3)};
             `}>
                 <Link to={node.fields.path} css={css`
@@ -19,7 +19,7 @@ export default ({node}) => (
                 `}>
                     {node.frontmatter.title}
                 </Link>
-            </h2>
+            </h3>
             <div css={css`
                 flex-grow: 2;
                 text-align: right;

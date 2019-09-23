@@ -7,11 +7,11 @@ import PostDate from "src/components/post-date"
 
 export default ({ data }) => (
     <Layout>
-        <h1 css={css`
+        <h2 css={css`
             margin-bottom: 0;
         `}>
             {data.markdownRemark.frontmatter.title}
-        </h1>
+        </h2>
         <div css={css`
             margin-bottom: ${rhythm(3 / 4)};
         `}>

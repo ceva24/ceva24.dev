@@ -1,3 +1,4 @@
+import "src/styles/highlights.css"
 import "typeface-source-sans-pro"
 import "typeface-merriweather"
 import "@fortawesome/fontawesome-svg-core/styles.css"

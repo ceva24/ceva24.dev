@@ -1,5 +1,4 @@
 module.exports = {
-    // TODO prism
     siteMetadata: {
         name: "Chris Evans",
         subtitle: "Thoughts, code and everything in-between"
@@ -26,7 +25,19 @@ module.exports = {
                 path: `${__dirname}/posts`
             }
         },
-        "gatsby-transformer-remark",
+        {
+            resolve: "gatsby-transformer-remark",
+            options: {
+                plugins: [
+                    {
+                        resolve: "gatsby-remark-highlights",
+                        options: {
+                            scopePrefix: 'syntax--'
+                        }
+                    },
+                ],
+            },
+        },
         "gatsby-plugin-emotion",
         "gatsby-plugin-react-helmet",
         "gatsby-plugin-offline"

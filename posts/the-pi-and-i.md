@@ -42,56 +42,58 @@ First of all, I’m going to be using an external drive to store files on. XBMC 
 
 The first script is invoked when the machine starts up, and all it does is call an implementation script that does the actual work.
 
-```java
-    System.out.println("Hello world");
 ```
+#! /bin/sh
+# /etc/init.d/mountdrive
+### BEGIN INIT INFO
+# Provides: mountdrive
+# Required-Start:
+# Required-Stop:
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Mount USB1.
+# Description:       Mount USB1 at boot time.
+### END INIT INFO
 
-```javascript
-    #! /bin/sh
-    # /etc/init.d/mountdrive
-    ### BEGIN INIT INFO
-    # Provides: mountdrive
-    # Required-Start:
-    # Required-Stop:
-    # Default-Start:     2 3 4 5
-    # Default-Stop:      0 1 6
-    # Short-Description: Mount USB1.
-    # Description:       Mount USB1 at boot time.
-    ### END INIT INFO
-
-    sudo nohup /etc/init.d/mountdriveimpl &
-    exit 0
+sudo nohup /etc/init.d/mountdriveimpl &
+exit 0
 ```
 
 The header contains information about the file and the runlevels. All it does is invoke the next script located at `/etc/init.d/mountdriveimpl` in admin mode (`sudo`) and uses `nohup` to ensure that it doesn’t block until the other script has returned.
 
 Two further things need to be done to this script to get it to run at boot-time – first of all running the command
 
-`sudo chmod +x /etc/init.d/mountdrive`
+```shellscript
+sudo chmod +x /etc/init.d/mountdrive
+```
 
 In order to make the file executable, and
 
-`sudo update-rc.d /etc/init.d/mountdrive defaults`
+```shellscript
+sudo update-rc.d /etc/init.d/mountdrive defaults
+```
 
 Which is a Debian-specific command to add it to the boot sequence.
 
 The mountdriveimpl file is as follows:
 
-    #! /bin/sh
-    # /etc/init.d/mountdriveimpl
-    ### BEGIN INIT INFO
-    # Provides: mountdriveimpl
-    # Required-Start:
-    # Required-Stop:
-    # Default-Start:
-    # Default-Stop:
-    # Short-Description: Mount USB1.
-    # Description:       Mount USB1 at boot time.
-    ### END INIT INFO
- 
-    sleep 120
-    sudo mount -o uid=pi,gid=pi /dev/sda1 /media/usb
-    exit 0
+```shellscript
+#! /bin/sh
+# /etc/init.d/mountdriveimpl
+### BEGIN INIT INFO
+# Provides: mountdriveimpl
+# Required-Start:
+# Required-Stop:
+# Default-Start:
+# Default-Stop:
+# Short-Description: Mount USB1.
+# Description:       Mount USB1 at boot time.
+### END INIT INFO
+
+sleep 120
+sudo mount -o uid=pi,gid=pi /dev/sda1 /media/usb
+exit 0
+```
 
 And now it should become clear why I was using `nohup` earlier. This script sleeps for two minutes before continuing – sometimes the system encountered issues trying to mount the USB storage immediately at boot (one time bricking the entire SD and requiring a complete reflashing…), so I figured this is the safest way to ensure everything runs smoothly.
 
@@ -104,34 +106,42 @@ The second thing I wanted to do was access the USB storage connected in a more u
 
 The release of Raspbmc that I installed didn’t come with Samba by default, so I had to download it. The handy `apt-get` command allows download and installation of packages, however before that I had to run the following command to update the index with the latest changes to these applications:
 
-`sudo apt-get update`
+```shellscript
+sudo apt-get update
+```
 
 After this I was able to download Samba via the command
 
-`sudo apt-get install samba`
+```shellscript
+sudo apt-get install samba
+```
 
 which takes a while to download.
 
 After downloading Samba I had to make two changes in the configuration file `/etc/samba/smb.conf`; first, uncommenting the line
 
-`interfaces = 127.0.0.0/8 eth0`
+```shellscript
+interfaces = 127.0.0.0/8 eth0
+```
 
 which essentially allows it to enable the folders at boot. Secondly, adding the details of the `/media/usb` folder as a network location. This is done with the following setting.
 
-    [Xillia]
-    comment = USB Key Drive
-    path = /media/usb
-    writeable = yes
-    browseable = yes
-    valid users = pi nobody
-    guest ok = yes
-    guest account = nobody
-    guest only = no
-    force user = pi
-    read list = pi nobody
-    write list = pi nobody
-    create mask = 0775
-    directory mask = 0775
+```shellscript
+[Xillia]
+comment = USB Key Drive
+path = /media/usb
+writeable = yes
+browseable = yes
+valid users = pi nobody
+guest ok = yes
+guest account = nobody
+guest only = no
+force user = pi
+read list = pi nobody
+write list = pi nobody
+create mask = 0775
+directory mask = 0775
+```
 
 This allows full access rights to the drive over the network.
 
@@ -144,20 +154,22 @@ This setup has worked very smoothly for me so far and I’m pretty happy with it
 I did run into an issue with 1080p MKVs, which was that the screen would occasionally go black for a second before continuing; lowering the default framerate in XBMC’s settings solved the problem.
 The other point to note is that it’s technically unhealthy to turn off the Pi without a clean OS shutdown, which I perform manually with the following script:
 
-    #! /bin/sh
-    ### BEGIN INIT INFO
-    # Provides: shutdownpi
-    # Required-Start:
-    # Required-Stop:
-    # Default-Start:
-    # Default-Stop:
-    # Short-Description: Shut down cleanly.
-    # Description:       Shut down cleanly.
-    ### END INIT INFO
-     
-    sudo /etc/init.d/samba stop
-    sudo initctl stop xbmc
-    sudo poweroff
+```shellscript
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides: shutdownpi
+# Required-Start:
+# Required-Stop:
+# Default-Start:
+# Default-Stop:
+# Short-Description: Shut down cleanly.
+# Description:       Shut down cleanly.
+### END INIT INFO
+ 
+sudo /etc/init.d/samba stop
+sudo initctl stop xbmc
+sudo poweroff
+```
 
 This shuts down Samba, XBMC, and finally the OS itself (though not the machine). I’ve had no problems just flicking off the switch other than a few inconsequential error messages logged at the next boot, but there may be a chance the SD card becomes corrupt. I intend to just take an image of my current setup so that if this happens I can write it back to the SD card and return it to a stable state with no fuss.
 

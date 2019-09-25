@@ -1,6 +1,7 @@
 .editor {
     background-color: #212121;
     color: #DDDDDD;
+    overflow-x: auto;
 }
 .editor .wrap-guide {
     background-color: #272727;

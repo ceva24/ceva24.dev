@@ -207,8 +207,7 @@ Which gives us these respective results:
     }
   ],
   "paging": {
-    "next": "https://graph.facebook.com/40796308305/likes?
-             access_token=[redacted]&limit=5000&offset=5000&__after_id=8605796091",
+    "next": "https://graph.facebook.com/40796308305/likes?access_token=[redacted]&limit=5000&offset=5000&__after_id=8605796091",
   }
 }
 ```

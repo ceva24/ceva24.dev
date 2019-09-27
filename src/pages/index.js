@@ -11,7 +11,7 @@ export default ({ data }) => (
             list-style: none;
             margin-left: 0;
         `}>
-            {data.allMarkdownRemark.edges.map(({ node }) => (
+            {data.allMarkdownRemark.edges.map(({node}) => (
                 <PostListItem node={node} />
             ))}
         </ul>

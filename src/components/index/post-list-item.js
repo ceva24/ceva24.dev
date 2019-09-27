@@ -14,7 +14,7 @@ export default ({node}) => (
             <h3 css={css`
                 margin-bottom: ${rhythm(1 / 3)};
             `}>
-                <Link to={node.fields.path} css={css`
+                <Link to={`/${node.fields.path}`} css={css`
                     text-decoration: none;
                 `}>
                     {node.frontmatter.title}

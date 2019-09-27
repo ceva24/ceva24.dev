@@ -32,7 +32,7 @@ module.exports = {
                     {
                         resolve: "gatsby-remark-highlights",
                         options: {
-                            scopePrefix: 'syntax--'
+                            scopePrefix: "syntax--"
                         }
                     },
                 ],

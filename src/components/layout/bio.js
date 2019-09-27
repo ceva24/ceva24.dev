@@ -13,20 +13,17 @@ export default (props) => (
         align-items: center;
         margin-bottom: ${rhythm(2)};
     `}>
-        <Link to="/">
-            <img
-                src={ProfilePicture}
-                alt="Chris Evans' profile picture"
-                align="middle"
-                css={css`
-                    margin-right: ${rhythm(1 / 2)};
-                    margin-bottom: 0;
-                    border-radius: 100%;
-                    height: ${rhythm(3)};
-                    width: ${rhythm(3)};
-                    box-shadow: none;
-            `} />
-        </Link>
+        <img
+            src={ProfilePicture}
+            alt="Chris Evans' profile picture"
+            css={css`
+                margin-right: ${rhythm(1 / 2)};
+                margin-bottom: 0;
+                border-radius: 100%;
+                height: ${rhythm(3)};
+                width: ${rhythm(3)};
+                box-shadow: none;
+        `} />
         <div css={css`
             padding-left: ${rhythm(3 / 4)};
             border-left: 1px solid;

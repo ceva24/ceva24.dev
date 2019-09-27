@@ -1,9 +1,10 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import { css, Global } from "@emotion/core"
+import { css } from "@emotion/core"
 import { rhythm } from "src/utils/typography"
+import Helmet from "react-helmet"
+import GlobalStyles from "src/styles/global"
 import Bio from "src/components/layout/bio"
-import Helmet from "react-helmet";
 
 export default ({ children }) => {
 
@@ -28,20 +29,12 @@ export default ({ children }) => {
             padding: ${rhythm(3 / 2)} ${rhythm(1)};
         `}>
 
-            <Global styles={css`
-                h1 {
-                    font-size: ${rhythm(4 / 5)}; 
-                    font-family: 'Source Sans Pro',sans-serif;
-                    margin-bottom: 0;
-                }
-                a { color: #c0392b; text-decoration: none; }
-                a:hover { color: #e74c3c; }
-                img { box-shadow: 0 1px 4px #7f8c8d; }
-            `} />
+            <GlobalStyles />
 
             <Helmet>
                 <html lang="en" />
                 <meta charSet="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
                 <title>{data.site.siteMetadata.name} | {data.site.siteMetadata.subtitle}</title>
             </Helmet>
 

@@ -6,7 +6,7 @@ import PostDate from "src/components/post-date"
 
 export default ({node}) => (
     <li key={node.id} css={css`
-        margin-bottom: ${rhythm(1)}
+        margin-bottom: ${rhythm(1)};
     `}>
         <div css={css`
             display: flex;

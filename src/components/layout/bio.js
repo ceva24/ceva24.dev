@@ -43,7 +43,7 @@ export default (props) => (
                     {props.name}
                 </Link>
             </h1>
-            <div>A Web Development Team Leader at the University of York</div>
+            <div>A Web Development / Systems Integration Team Leader at the University of York</div>
             <div css={css`
                 @media(max-width: 768px) {
                     font-size: ${rhythm(1)};

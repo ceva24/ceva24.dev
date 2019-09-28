@@ -12,6 +12,9 @@ export default (props) => (
         display: flex;
         align-items: center;
         margin-bottom: ${rhythm(2)};
+        @media(max-width: 768px) {
+            justify-content: center;
+        }
     `}>
         <img
             src={ProfilePicture}

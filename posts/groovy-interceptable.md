@@ -1,5 +1,5 @@
 ---
-title: "Spock Interaction Testing with GroovyInterceptable"
+title: "Spock: Interaction Testing with GroovyInterceptable"
 date: "2014-06-09"
 ---
 

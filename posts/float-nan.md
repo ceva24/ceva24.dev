@@ -3,8 +3,6 @@ title: "When is a Float not a Float?"
 date: "2014-02-01"
 ---
 
-
-
 I came across a small issue the other day that I thought was interesting enough to make a post about. One of the methods I was interfacing with that returned a float would occasionally return a value of `NaN` (depending on the input), whereas I always wanted to use a numeric value.
 
 To get around this I used the following snippet:

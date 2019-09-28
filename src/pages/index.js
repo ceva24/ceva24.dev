@@ -6,7 +6,7 @@ import PostListItem from "src/components/index/post-list-item"
 
 export default ({ data }) => (
     <Layout>
-        <h2>Posts</h2>
+        <h2>Posts <span class="secondary-description">({data.allMarkdownRemark.totalCount})</span></h2>
         <ul css={css`
             list-style: none;
             margin-left: 0;

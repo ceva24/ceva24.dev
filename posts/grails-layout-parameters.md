@@ -1,5 +1,5 @@
 ---
-title: "Grails: Passing Variables from a View into a Layout"
+title: "Grails: Passing Variables from a View to a Layout"
 date: "2015-08-29"
 ---
 

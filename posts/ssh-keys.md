@@ -9,7 +9,7 @@ This post will be an overview of the general configuration of such a setup, in c
 
 ![A set of keys](/posts/ssh-keys/keys.jpg)
 
-### Step 1 – Generate a public and private SSH key
+### Step 1 – Generate a Public and Private SSH Key
 
 On the server that will connect to the remote machine, run the command:
 
@@ -31,7 +31,7 @@ Your identification has been saved in mykey.
 Your public key has been saved in mykey.pub.
 ```
 
-### Step 2 – Add the public key to the remote user’s authorized_keys
+### Step 2 – Add the Public Key to the Remote User’s authorized_keys
 
 In order to be able to log in to a remote machine as a specific user on that box, this user’s `~/.ssh/authorized_keys` file must contain an entry with the public key generated in step 1. In this entry, the key can be locked down to only run a specific command, which in this case is a script that decides whether or not to execute the desired command that’s passed as an argument.
 
@@ -43,7 +43,7 @@ command=”/etc/init.d/restrict-ssh.pl”,no-port-forwarding,no-X11-forwarding,n
 
 The first part of `mykey.pub` is the text `ssh-dss`, which should be included in the above. The last part is a comment, which can be modified if desired.
 
-### Step 3 – Create a script that restricts the runnable commands
+### Step 3 – Create a Script that Restricts the Runnable Commands
 
 This step is optional depending on whether the user is to be allowed unrestricted access, in which case drop the `command=` from `authorized_keys`. Otherwise, the command specified is run, i.e. the script. When invoking the SSH key, the actual desired command is passed as an argument via an environment variable which this script parses and decides whether to invoke or not.
 

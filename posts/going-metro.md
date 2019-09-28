@@ -16,7 +16,7 @@ I wanted to re-partition my drive as well, the process of which erases my Vista 
 Both installations took around twenty minutes each which was far less than I thought they would, though the last time I remember manually installing an OS was Windows 98 (!). Handily, Vista remembered my OEM licence so I didn’t even need to write it down and enter it again (I had written it down anyway). As soon as Windows 8 started, I could activate it and all was good.
 Although installation isn’t part of the day-to-day, I felt it worth pointing out that it was a pretty painless process for me, which was a good start.
 
-### Load times
+### Load Times
 
 Coming from a boot-to-desktop time of about one minute thirty seconds in Vista, the boot times are greatly improved for my mid-level machine. It’s now less than thirty seconds boot-to-start screen. If I had hardware adequate enough to support an SSD, this would be magnitudes quicker again (I hear reports of around 8 seconds).
 Most of the software loads much more quickly as well. Starting Adobe Photoshop used to take a minute or more (plus non-responsiveness during that time); now it’s about fifteen seconds.

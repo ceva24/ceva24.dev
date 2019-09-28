@@ -3,7 +3,7 @@ title: "Grails: Transient properties on Command Objects"
 date: "2014-10-28"
 ---
 
-On Grails domain classes it’s possible to declare variables as transient with the `transients` property:
+On Grails domain classes it’s possible to declare variables as transient (i.e. should not be persisted to the database) by using the `transients` property:
 
 ```java
 static transients = ['firstName']

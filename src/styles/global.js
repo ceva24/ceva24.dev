@@ -37,5 +37,8 @@ export default () => (
         img {
             box-shadow: 0 1px 4px #7f8c8d;
         }
+        .secondary-description {
+            color: #636e72;
+        }
     `} />
 )

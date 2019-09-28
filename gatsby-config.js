@@ -38,6 +38,14 @@ module.exports = {
                 ],
             },
         },
+        {
+            resolve: "gatsby-plugin-google-analytics",
+            options: {
+                trackingId: "UA-66779785-4",
+                anonymize: true,
+                respectDNT: true
+            }
+        },
         "gatsby-plugin-emotion",
         "gatsby-plugin-react-helmet",
         "gatsby-plugin-offline"

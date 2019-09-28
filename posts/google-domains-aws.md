@@ -17,6 +17,8 @@ Purchase a domain on Google Domains. Under DNS, don't change the nameservers, ke
 
 [Create an S3 bucket for static website hosting](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html) and upload your website content, or an `index.html` for a now.
  The bucket name should be the name of your domain including the `www` subdomain, in my case `www.ceva24.dev`.
+ 
+If you're hosting a website that uses client-side routing e.g. React Router then you should also configure the Error document to be the same as the Index document.
 
 **At this point you should be able to access your website via the S3 static website hosting URL**!
 
@@ -59,10 +61,8 @@ Under Synthetic Records add a subdomain forward from `@` (the root) to your secu
 
 **At this point you should be able to access your website via your domain name!**
 
-### Optional Extras
+### Wrapping up
 
-And that's it! There are more steps you could take e.g.
-[configuring your bucket so that it can only be accessed via the Cloudfront distribution](https://docs.aws.amazon.com/en_pv/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html),
-but that's up to you. As it stands we now have a website hosted in S3 and routed via Google Domains nameservers.
+And that's it! We now have a website hosted in S3 and routed via Google Domains nameservers.
 
 Thanks for reading!

@@ -3,7 +3,7 @@ title: "Grails: Passing Variables from a View into a Layout"
 date: "2015-08-29"
 ---
 
-In order to pass variables to normal Grails views or templates the model parameter is used, as in:
+In order to pass variables to normal Grails views or templates the `model` parameter is used, which is a `Map` that contains all values you want to make available to the view:
 
 ```java
 <g:render template="cart/checkout" model="${[contents: contents]}"></g:render>

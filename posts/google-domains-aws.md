@@ -49,7 +49,7 @@ You can leave all other options as default and create the Distribution.
 
 **At this point you should be able to access your website via the Cloudfront Distribution URL!**
 
-### Configure Google Domains to point to your Cloudfront Distribution
+### Configure Google Domains to Point to your Cloudfront Distribution
 
 Now we can point the Google Domains nameservers to your Cloudfront Distribution. We do this via a CNAME record (which explains why we're not hosting the website at the apex domain, as CNAME records can't be for the root).
 
@@ -61,7 +61,7 @@ Under Synthetic Records add a subdomain forward from `@` (the root) to your secu
 
 **At this point you should be able to access your website via your domain name!**
 
-### Wrapping up
+### Wrapping Up
 
 And that's it! We now have a website hosted in S3 and routed via Google Domains nameservers.
 

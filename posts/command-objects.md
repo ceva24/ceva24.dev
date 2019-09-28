@@ -1,5 +1,5 @@
 ---
-title: "Grails: Transient properties on Command Objects"
+title: "Grails: Transient Properties on Command Objects"
 date: "2014-10-28"
 ---
 

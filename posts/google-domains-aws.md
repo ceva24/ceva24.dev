@@ -1,5 +1,5 @@
 ---
-title: "Configuring A Google Domain to point to an S3 Bucket"
+title: "Configuring a Google Domain to Point to an S3 Bucket"
 date: "2019-09-28"
 ---
 

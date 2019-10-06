@@ -6,7 +6,7 @@ import Layout from "src/components/layout"
 import PostDate from "src/components/post-date"
 
 export default ({ data }) => (
-    <Layout>
+    <Layout title={data.markdownRemark.frontmatter.title}>
         <h2 css={css`
             margin-bottom: 0;
         `}>

@@ -5,7 +5,7 @@ import Layout from "src/components/layout"
 import PostListItem from "src/components/index/post-list-item"
 
 export default ({ data }) => (
-    <Layout>
+    <Layout title={`${data.site.siteMetadata.name} | ${data.site.siteMetadata.subtitle}`}>
         <h2>Posts <span class="secondary-description">({data.allMarkdownRemark.totalCount})</span></h2>
         <ul css={css`
             list-style: none;
@@ -20,6 +20,12 @@ export default ({ data }) => (
 
 export const query = graphql`
   query {
+    site {
+      siteMetadata {
+        name
+        subtitle
+      }
+    }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       totalCount
       edges {

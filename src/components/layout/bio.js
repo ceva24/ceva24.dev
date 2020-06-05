@@ -37,10 +37,10 @@ export default () => {
                 margin-right: ${rhythm(1 / 2)};
                 margin-bottom: 0;
                 border-radius: 100%;
-                min-height: ${rhythm(3)};
-                min-width: ${rhythm(3)};
-                height: ${rhythm(3)};
-                width: ${rhythm(3)};
+                min-height: 78px;
+                min-width: 78px;
+                height: 78px;
+                width: 78px;
                 box-shadow: none;
         `}/>
         <div css={css`

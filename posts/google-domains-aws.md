@@ -41,6 +41,8 @@ As part of setting up your certificate you'll have to verify to Amazon that you 
 Create a web distribution using Cloudfront. After hitting numerous Access Denied errors I discovered that *the origin domain name should be the static website URL from S3, not the S3 bucket name that appears in the autocomplete list*.
 There's an [AWS guide that goes into further detail](https://aws.amazon.com/premiumsupport/knowledge-center/s3-website-cloudfront-error-403/) about this, and also provides other possible solutions.
 
+Under 'Default Cache Behavior Settings' change the 'Viewer Protocol Policy' to be 'Redirect HTTP to HTTPS' (credit to Charles Eldridge for reminding me about this!).
+
 Under 'Alternate Domain Names (CNAMEs)' enter both your apex domain and `www` subdomain. Immediately after under 'SSL Certificate' select 'Custom SSL Certificate' and choose your ACM certificate in the drop-down.
 
 ![Cloudfront configuration](/posts/google-domains-aws/cloudfront.png)

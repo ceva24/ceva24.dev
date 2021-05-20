@@ -1,10 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import Layout from "src/components/layout"
 import PostListItem from "src/components/index/post-list-item"
 
-export default ({ data }) => (
+const Index = ({ data }) => (
     <Layout title={`${data.site.siteMetadata.name} | ${data.site.siteMetadata.subtitle}`}>
         <h2>Posts <span class="secondary-description">({data.allMarkdownRemark.totalCount})</span></h2>
         <ul css={css`
@@ -17,6 +17,8 @@ export default ({ data }) => (
         </ul>
     </Layout>
 )
+
+export default Index
 
 export const query = graphql`
   query {

@@ -1,7 +1,9 @@
 import React from "react"
 
-export default ({children}) => (
+const PostDate = ({children}) => (
     <strong class="secondary-description">
         {children}
     </strong>
 )
+
+export default PostDate

@@ -1,13 +1,13 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons"
 import { rhythm } from "src/utils/typography"
 import SocialIcon from "src/components/layout/social-icon"
 import ProfilePicture from "static/profile-picture.png"
 
-export default () => {
+const Bio = () => {
 
     const data = useStaticQuery(
         graphql`
@@ -74,3 +74,5 @@ export default () => {
         </div>
     </div>
 }
+
+export default Bio

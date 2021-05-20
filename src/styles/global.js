@@ -1,8 +1,8 @@
 import React from "react"
-import { css, Global } from "@emotion/core"
+import { css, Global } from "@emotion/react"
 import { rhythm } from "src/utils/typography"
 
-export default () => (
+const GlobalStyles = () => (
     <Global styles={css`
         @media(max-width: 768px) {
             body {
@@ -42,3 +42,5 @@ export default () => (
         }
     `} />
 )
+
+export default GlobalStyles

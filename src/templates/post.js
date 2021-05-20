@@ -1,11 +1,11 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { rhythm } from "src/utils/typography"
 import Layout from "src/components/layout"
 import PostDate from "src/components/post-date"
 
-export default ({ data }) => (
+const Post = ({ data }) => (
     <Layout title={data.markdownRemark.frontmatter.title}>
         <h2 css={css`
             margin-bottom: 0;
@@ -21,6 +21,8 @@ export default ({ data }) => (
         <Link to="/">Home</Link>
     </Layout>
 )
+
+export default Post
 
 export const query = graphql`
   query($slug: String!) {

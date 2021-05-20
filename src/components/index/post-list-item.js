@@ -1,10 +1,10 @@
 import React from "react"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { rhythm } from "src/utils/typography"
 import { Link } from "gatsby"
 import PostDate from "src/components/post-date"
 
-export default ({node}) => (
+const PostListItem = ({node}) => (
     <li key={node.id} css={css`
         margin-bottom: ${rhythm(1)};
     `}>
@@ -31,3 +31,5 @@ export default ({node}) => (
         <p>{node.excerpt}</p>
     </li>
 )
+
+export default PostListItem

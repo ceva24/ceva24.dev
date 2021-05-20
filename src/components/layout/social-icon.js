@@ -1,9 +1,9 @@
 import React from "react"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { rhythm } from "src/utils/typography"
 
-export default (props) => (
+const SocialIcon = (props) => (
     <a href={props.url} title={props.url} aria-label={props.label} css={css`
         color: inherit;
         margin-right: ${rhythm(1 / 2)};
@@ -11,3 +11,5 @@ export default (props) => (
         <FontAwesomeIcon icon={props.icon} />
     </a>
 )
+
+export default SocialIcon

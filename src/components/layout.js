@@ -1,11 +1,11 @@
 import React from "react"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { rhythm } from "src/utils/typography"
 import Helmet from "react-helmet"
 import GlobalStyles from "src/styles/global"
 import Bio from "src/components/layout/bio"
 
-export default ({ title, children }) => (
+const Layout = ({ title, children }) => (
     <div css={css`
         margin: 0 auto;
         min-width: 300px;
@@ -27,3 +27,5 @@ export default ({ title, children }) => (
         {children}
     </div>
 )
+
+export default Layout

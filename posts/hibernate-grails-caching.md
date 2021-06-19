@@ -12,14 +12,14 @@ Consider a Grails 3 application with the following domain:
 ```java
 @ToString(includePackage = false, includes = 'username')
 class Person {
- 
+
     String username
- 
+
     static mapping = {
         version false
         id generator: 'assigned'
     }
- 
+
     static constraints = {
         id bindable: true
     }
@@ -30,13 +30,13 @@ and the following config:
 
 ```yml
 hibernate.cache:
-  queries: false
-  use_second_level_cache: false
-  use_query_cache: false
-  region.factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
+    queries: false
+    use_second_level_cache: false
+    use_query_cache: false
+    region.factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
 ```
 
-*Note: the hibernate ehcache dependency must also be included in the application’s build.gradle, e.g. compile ‘org.hibernate:hibernate-ehcache:5.1.5.Final’*
+_Note: the hibernate ehcache dependency must also be included in the application’s build.gradle, e.g. compile ‘org.hibernate:hibernate-ehcache:5.1.5.Final’_
 
 and the following bootstrapped data:
 
@@ -47,17 +47,17 @@ new Person(id: 2, username: 'user2').save()
 
 ### First Level Cache
 
-By default hibernate has the first level cache enabled. Retrieving an object from the database places it into the first level cache, and if the same ID is requested *in the current session*, it will be retrieved from the first level cache instead of the database. For example, consider the following code:
+By default hibernate has the first level cache enabled. Retrieving an object from the database places it into the first level cache, and if the same ID is requested _in the current session_, it will be retrieved from the first level cache instead of the database. For example, consider the following code:
 
 ```java
 Person getPerson(Long id) {
- 
+
     log.info "Getting person with id ${id}"
- 
+
     def person = Person.get(id)
- 
+
     log.info "Retrieved person: ${person}"
- 
+
     return person
 }
 ```
@@ -74,14 +74,14 @@ If we add a second call:
 
 ```java
 Person getPerson(Long id) {
- 
+
     log.info "Getting person with id ${id}"
- 
+
     def person = Person.get(id)
     def samePerson = Person.get(id)
- 
+
     log.info "Retrieved person: ${person}"
- 
+
     return person
 }
 ```
@@ -98,16 +98,16 @@ There’s still only one database call – this is the first level cache in acti
 
 ### Second Level Cache
 
-The second level cache in Hibernate is the same as the first level cache, except it *persists across sessions*. However, Hibernate doesn’t know how long we want data to persist for, when the cache should be cleared etc, so we use a dedicated caching engine called Ehcache to configure this.
+The second level cache in Hibernate is the same as the first level cache, except it _persists across sessions_. However, Hibernate doesn’t know how long we want data to persist for, when the cache should be cleared etc, so we use a dedicated caching engine called Ehcache to configure this.
 
 In order to use the second level cache, we need to change the config:
 
 ```yml
 hibernate.cache:
-  queries: false
-  use_second_level_cache: true
-  use_query_cache: false
-  region.factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
+    queries: false
+    use_second_level_cache: true
+    use_query_cache: false
+    region.factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
 ```
 
 but then also enable a cache for each domain we’d like to cache:
@@ -115,15 +115,15 @@ but then also enable a cache for each domain we’d like to cache:
 ```java
 @ToString(includePackage = false, includes = 'username')
 class Person {
- 
+
     String username
- 
+
     static mapping = {
         version false
         cache true
         id generator: 'assigned'
     }
- 
+
     static constraints = {
         id bindable: true
     }
@@ -182,13 +182,13 @@ First of all, let’s run a query:
 
 ```java
 List getPeople(String term) {
- 
+
     log.info "Getting people with username matching '${term}'"
- 
+
     def people = Person.findAllByUsernameIlike("%${term}%")
- 
+
     log.info "Retrieved people: ${people}"
- 
+
     return people
 }
 ```
@@ -205,10 +205,10 @@ This is because query caching isn’t enabled. To enable it we change the config
 
 ```yml
 hibernate.cache:
-  queries: false
-  use_second_level_cache: true
-  use_query_cache: true
-  region.factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
+    queries: false
+    use_second_level_cache: true
+    use_query_cache: true
+    region.factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
 ```
 
 And add two new cache regions:
@@ -253,10 +253,10 @@ If the final config property, hibernate.cache.queries is enabled:
 
 ```yml
 hibernate.cache:
-  queries: true
-  use_second_level_cache: true
-  use_query_cache: true
-  region.factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
+    queries: true
+    use_second_level_cache: true
+    use_query_cache: true
+    region.factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
 ```
 
 Then both dynamic finders and criteria queries are automatically cached.

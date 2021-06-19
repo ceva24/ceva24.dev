@@ -11,7 +11,7 @@ Dynamic finders take advantage of Groovy’s meta-programming paradigm, and are 
 Course.findByCourseCode('G400')
 
 Person.findByForenameAndSurname('Chris', 'Evans')
- 
+
 Person.findAllWhereAgeGreaterThan(24)
 ```
 
@@ -19,12 +19,12 @@ Alternatively these could be done with where closures:
 
 ```java
 Course.where { courseCode == 'G400' }.get()
- 
+
 Person.where { forename == 'Chris'
-               surname == 'Evans' }.get() 
+               surname == 'Evans' }.get()
 // Or alternatively:
 Person.where { forename == 'Chris' && surname == 'Evans' }.get()
- 
+
 Person.where { age > 24 }.list()
 ```
 

@@ -1,29 +1,29 @@
 module.exports = {
     siteMetadata: {
         name: "Chris Evans",
-        subtitle: "Thoughts, code and everything in-between"
+        subtitle: "Thoughts, code and everything in-between",
     },
     plugins: [
         {
             resolve: "gatsby-plugin-typography",
             options: {
                 pathToConfigModule: "src/utils/typography",
-                omitGoogleFont: true
+                omitGoogleFont: true,
             },
         },
         {
             resolve: "gatsby-plugin-root-import",
             options: {
                 src: `${__dirname}/src`,
-                static: `${__dirname}/static`
-            }
+                static: `${__dirname}/static`,
+            },
         },
         {
             resolve: "gatsby-source-filesystem",
             options: {
                 name: "posts",
-                path: `${__dirname}/posts`
-            }
+                path: `${__dirname}/posts`,
+            },
         },
         {
             resolve: "gatsby-transformer-remark",
@@ -32,8 +32,8 @@ module.exports = {
                     {
                         resolve: "gatsby-remark-highlights",
                         options: {
-                            scopePrefix: "syntax--"
-                        }
+                            scopePrefix: "syntax--",
+                        },
                     },
                 ],
             },
@@ -43,11 +43,11 @@ module.exports = {
             options: {
                 trackingId: "UA-66779785-4",
                 anonymize: true,
-                respectDNT: true
-            }
+                respectDNT: true,
+            },
         },
         "gatsby-plugin-emotion",
         "gatsby-plugin-react-helmet",
-        "gatsby-plugin-offline"
+        "gatsby-plugin-offline",
     ],
-}
+};

@@ -10,7 +10,7 @@ const Index = ({ data }) => (
     >
         <h2>
             Posts{" "}
-            <span class="secondary-description">
+            <span className="secondary-description">
                 ({data.allMarkdownRemark.totalCount})
             </span>
         </h2>
@@ -21,7 +21,7 @@ const Index = ({ data }) => (
             `}
         >
             {data.allMarkdownRemark.edges.map(({ node }) => (
-                <PostListItem node={node} />
+                <PostListItem key={node.id} node={node} />
             ))}
         </ul>
     </Layout>

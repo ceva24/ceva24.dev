@@ -15,7 +15,6 @@
         "clean": "gatsby clean",
         "format": "prettier --write .",
         "lint": "xo",
-        "test": "NODE_ENV=test jest --coverage",
         "check": "npm run format && npm run lint && npm run test"
     },
     "dependencies": {
@@ -45,6 +44,7 @@
         "typography-theme-us-web-design-standards": "^0.16.19"
     },
     "devDependencies": {
+        "eslint-config-xo-react": "^0.25.0",
         "gatsby-plugin-root-import": "^2.0.6",
         "xo": "^0.40.2"
     }

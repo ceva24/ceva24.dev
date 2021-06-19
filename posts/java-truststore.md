@@ -4,7 +4,7 @@ date: "2020-06-10"
 ---
 
 In order to make an HTTPS request in Java, the SSL Certificate issued to the site you're trying to connect to needs to be in a TrustStore.
- 
+
 OpenJDK 10 onwards comes bundled with a set of root CA certificates so it's less of an issue, but in older versions of Java this isn't the case.
 
 The following example running under `JDK 1.8.0_31` attempts to connect to https://www.cam.ac.uk/:
@@ -53,7 +53,7 @@ This will prompt for a password; the default value is `changeit`.
 
 ```console
 -Djavax.net.ssl.trustStore="C:\mytruststore.jks" -Djavax.net.ssl.trustStorePassword=changeit
-``` 
+```
 
 ### Result
 

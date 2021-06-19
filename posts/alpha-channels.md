@@ -21,9 +21,9 @@ The black against the white background should mean that the Magic Wand Tool has 
 ### 1. Select the Background
 
 First choose the Magic Wand tool and select the background.
- 
+
 ![The Photoshop Magic Wand tool](/posts/alpha-channels/magic-wand.png)
- 
+
 By selecting the background, we can almost always ensure that all relevant parts will be selected (with a caveat, as we can see below).
 
 The initial result is as follows (click for a larger image).
@@ -61,12 +61,12 @@ Conclusion
 
 So, in summary:
 
- - Set up a background in stark contrast to the desired image (e.g. white).
- - Use the Magic Wand Tool to select the background.
- - Use CTRL-SHIFT-I to inverse the selection.
- - Right-click anywhere on the image and select ‘Save Selection…’.
- - Save the file as a 32bits/pixel .tga.
- - Take a satisfactory sip of your favourite beverage, safe in the knowledge of a job well done.
+-   Set up a background in stark contrast to the desired image (e.g. white).
+-   Use the Magic Wand Tool to select the background.
+-   Use CTRL-SHIFT-I to inverse the selection.
+-   Right-click anywhere on the image and select ‘Save Selection…’.
+-   Save the file as a 32bits/pixel .tga.
+-   Take a satisfactory sip of your favourite beverage, safe in the knowledge of a job well done.
 
 And there we have it. One alpha-channeled image, and a description of how to create it.
 

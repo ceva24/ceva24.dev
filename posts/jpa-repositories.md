@@ -10,12 +10,12 @@ Another way to do this is to save domain objects using a [JPA repository](https:
 ```java
 @Autowired
 PersonRepository personRepository
- 
+
 def 'my test'() {
- 
+
     setup:
     personRepository.save new Person(id: 1, forename: 'Chris')
- 
+
     expect:
     ...
 }
@@ -36,7 +36,7 @@ then in the same package or a sub-package create a repository against the domain
 
 ```java
 interface TestProductRepository extends Repository<Product, Long> {
- 
+
     Product save(Product product)
 }
 ```
@@ -51,19 +51,19 @@ This will be picked up by the Spring auto-configuration. It can then be autowire
 )
 @Transactional
 class ProductSpec {
- 
+
     @Autowired
     TestProductRepository testProductRepository
- 
+
     def 'my test'() {
- 
+
         setup:
         testProductRepository.save(new Product(
                 id: 1,
                 name: 'Bottle of Coke',
                 price: new BigDecimal(1.10)
         ))
- 
+
         expect:
         ...
     }

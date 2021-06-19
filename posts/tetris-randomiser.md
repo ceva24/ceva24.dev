@@ -18,7 +18,7 @@ def maxTilePosition = 4
 def nextPiece = {
 
     def block
-	
+
     for (i in 1..6) {
         block = blocks[rng.nextInt(maxTilePosition)]
         if (!(block in history)) break

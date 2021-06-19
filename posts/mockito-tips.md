@@ -45,7 +45,7 @@ This requires PowerMock to work (which means using the correct `@RunWith` and `@
 
 ```java
 mockStatic(System.class);
- 
+
 when(System.getenv()).doReturn(mock(Map.class));
 ```
 

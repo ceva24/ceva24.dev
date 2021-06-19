@@ -1,3 +1,9 @@
 {
-    "extends": ["prettier"]
+    "extends": ["prettier", "xo-react"],
+    "rules": {
+        "react/jsx-indent": "off",
+        "react/jsx-indent-props": "off",
+        "react/jsx-tag-spacing": "off",
+        "react/prop-types": "off"
+    }
 }

@@ -15,12 +15,12 @@ I found this was possible in the following way:
 
 ```java
 class SubmitDetailsCommand {
- 
+
 String name
 String address
- 
+
 String previousAddress
- 
+
 static constraints = {
     previousAddress nullable: true, bindable: false
 }
@@ -32,12 +32,12 @@ Alternatively if the transient property is to be used as part of custom validati
 
 ```java
 class SubmitDetailsCommand {
- 
+
 String name
 String address
- 
+
 String previousAddress
- 
+
 static constraints = {
     address validator: { address, command -> address != previousAddress }
     previousAddress nullable: true, bindable: false
@@ -48,16 +48,16 @@ The following technique can be used:
 
 ```java
 def controllerMethod() {
- 
+
     def command = new SubmitDetailsCommand()
     bindData(command, params << [previousAddress: session.usersPreviousAddress], [include: ['name', 'address', 'previousAddress']])
- 
+
     command.validate()
- 
+
     if (command.hasErrors()) {
         ...
     }
- 
+
     ...
 }
 ```

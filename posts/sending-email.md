@@ -9,8 +9,8 @@ This is an example that shows how to send emails using pure Java.
 
 the [JavaMail API](https://javaee.github.io/javamail/) is the standard library for handling email. As of this post the latest version is 1.5.0. For this example the following JARs are required:
 
- - mailapi-1.5.0.jar
- - smtp-1.5.0.jar
+-   mailapi-1.5.0.jar
+-   smtp-1.5.0.jar
 
 ### Email Sender
 
@@ -18,7 +18,7 @@ This is a simple template that provides methods for sending an email with an att
 
 ```java
 package org.chrise;
- 
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -39,17 +39,17 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 import javax.mail.util.ByteArrayDataSource;
- 
+
 public class EmailSender
 {
     private final String fromAddress;
     private final Session session;
- 
+
     public EmailSender(String fromAddress, Properties props, final String user,
             final String pass)
     {
         this.fromAddress = fromAddress;
- 
+
         // Create a new session with the user and pass.
         session = Session.getInstance(props, new Authenticator()
         {
@@ -60,37 +60,37 @@ public class EmailSender
             }
         });
     }
- 
+
     public void sendEmailWithAttachment(String toAddress, String subject, String body,
-            String attachmentName, String attachmentFilePath, String attachmentMediaType) 
+            String attachmentName, String attachmentFilePath, String attachmentMediaType)
             throws AddressException, MessagingException, IOException
     {
         // Construct the email as a mime multipart - body text and attachment.
         final Message message = new MimeMessage(session);
         final Multipart content = new MimeMultipart();
- 
+
         // Set the email properties.
         message.setRecipient(Message.RecipientType.TO, new InternetAddress(toAddress));
         message.setFrom(new InternetAddress(fromAddress));
         message.setSubject(subject);
- 
+
         // Create the body text part.
         final BodyPart bodyPart = new MimeBodyPart();
         bodyPart.setText(body);
         content.addBodyPart(bodyPart);
- 
+
         // Create the attachment part.
         final BodyPart attachment = new MimeBodyPart();
         final DataSource source = new ByteArrayDataSource(
-                Files.readAllBytes(Paths.get(attachmentFilePath)), 
+                Files.readAllBytes(Paths.get(attachmentFilePath)),
                 attachmentMediaType);
- 
+
         attachment.setDataHandler(new DataHandler(source));
         attachment.setFileName(attachmentName);
         content.addBodyPart(attachment);
- 
+
         message.setContent(content);
- 
+
         // Send the email.
         Transport.send(message);
     }
@@ -105,14 +105,14 @@ Below is a small driver that shows how to configure the SMTP properties and send
 
 ```java
 package org.chrise;
- 
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 import javax.mail.MessagingException;
 import org.chrise.EmailSender.Attachment;
- 
+
 public class EmailDriver
 {
     public static void main(String[] args)
@@ -123,10 +123,10 @@ public class EmailDriver
         props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.port", "465");
- 
-        final EmailSender sender = new EmailSender("christian@ceva24.co.uk", props, 
+
+        final EmailSender sender = new EmailSender("christian@ceva24.co.uk", props,
                 "redacted", "redacted");
- 
+
         try
         {
             sender.sendEmailWithAttachment("christian@ceva24.co.uk",

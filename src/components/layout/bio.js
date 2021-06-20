@@ -8,7 +8,7 @@ import {
     faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { rhythm } from "src/utils/typography";
-import SocialIcon from "src/components/layout/social-icon";
+import { SocialIcon } from "src/components/layout/social-icon";
 import ProfilePicture from "static/profile-picture.png";
 
 const Bio = () => {

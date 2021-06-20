@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
     siteMetadata: {
         name: "Chris Evans",
@@ -14,15 +16,15 @@ module.exports = {
         {
             resolve: "gatsby-plugin-root-import",
             options: {
-                src: `${__dirname}/src`,
-                static: `${__dirname}/static`,
+                src: path.join(__dirname, "/src"),
+                static: path.join(__dirname, "/static"),
             },
         },
         {
             resolve: "gatsby-source-filesystem",
             options: {
                 name: "posts",
-                path: `${__dirname}/posts`,
+                path: path.join(__dirname, "/posts"),
             },
         },
         {

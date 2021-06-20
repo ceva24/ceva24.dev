@@ -1,7 +1,7 @@
 const path = require("path");
 const { createFilePath } = require("gatsby-source-filesystem");
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
+const onCreateNode = ({ node, getNode, actions }) => {
     const { createNodeField } = actions;
     if (node.internal.type === "MarkdownRemark") {
         const slug = createFilePath({ node, getNode, trailingSlash: false });
@@ -15,7 +15,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     }
 };
 
-exports.createPages = async ({ graphql, actions }) => {
+const createPages = async ({ graphql, actions }) => {
     const { createPage } = actions;
     const result = await graphql(`
         query {
@@ -32,7 +32,8 @@ exports.createPages = async ({ graphql, actions }) => {
         }
     `);
 
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    for (const edge of result.data.allMarkdownRemark.edges) {
+        const node = edge.node;
         createPage({
             path: node.fields.path,
             component: path.resolve("src/templates/post.js"),
@@ -40,5 +41,7 @@ exports.createPages = async ({ graphql, actions }) => {
                 slug: node.fields.slug,
             },
         });
-    });
+    }
 };
+
+module.exports = {  onCreateNode, createPages };

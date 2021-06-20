@@ -15,28 +15,28 @@ In order to be able to pass the data around in a more object-oriented manner, I 
 
 ```java
 package org.chrise.facebook.model;
- 
+
 public class FacebookObject
 {
     private final String name;
     private final String id;
- 
+
     public FacebookObject(String name, String id)
     {
         this.name = name;
         this.id = id;
     }
- 
+
     public String getName()
     {
         return name;
     }
- 
+
     public String getId()
     {
         return id;
     }
- 
+
     @Override
     public String toString()
     {
@@ -54,10 +54,10 @@ public class Facebook
     private static final String MEMBER_NAME = "name";
     private static final String MEMBER_ID = "id";
     private static final String MEMBER_DATA = "data";
- 
+
     private FacebookClient client;
     private JsonParser parser;
- 
+
     public Facebook() throws KeyManagementException, NoSuchAlgorithmException
     {
         try
@@ -69,7 +69,7 @@ public class Facebook
         {
             client = null;
             parser = null;
- 
+
             throw e;
         }
     }
@@ -79,7 +79,7 @@ public class Facebook
 The two global references are to the REST client object and one to a `JsonParser`, which as its name suggests, facilitates creating Gson objects from the raw Strings returned from the client’s methods.
 
 Below are a few methods that show what can be done with the library.
- 
+
 ### Method: getNameForId()
 
 ```java
@@ -88,11 +88,12 @@ public String getNameForId(String id)
     // Perform the API request and parse the data.
     String data = client.getObjectProperties(id);
     JsonObject json = (JsonObject)parser.parse(data);
- 
+
     // Confirm that the member exists.
     return ((json.has(MEMBER_NAME)) ? json.get(MEMBER_NAME).getAsString() : "");
 }
 ```
+
 This is a method that takes in an id of a Facebook Object and returns the name if the object exists, else an empty String. As a reminder, the format of the data returned from Facebook is as follows:
 
 ```
@@ -106,6 +107,7 @@ This is a method that takes in an id of a Facebook Object and returns the name i
   "locale": "en_GB"
 }
 ```
+
 This is a standard JSON object with seven key-value pairs. Thus we see that the data parsed with the `JsonParser` is cast as a `JsonObject` with the following line:
 
 ```java
@@ -126,28 +128,28 @@ Get returns a [JsonElement](https://static.javadoc.io/com.google.code.gson/gson/
 public List<facebookobject> getLikes(String id)
 {
     final List<facebookobject> result = new ArrayList<>();
- 
+
     // client.getObjectLikes requires authentication.
     if (!client.isAuthenticated())
         client.authenticate();
- 
+
     // Perform the API request and parse the data.
     String data = client.getObjectLikes(id);
     JsonObject json = (JsonObject)parser.parse(data);
     JsonArray dataArray = json.getAsJsonArray(MEMBER_DATA);
- 
+
     // Loop through each Facebook object and add its name to the list.
     for (JsonElement e : dataArray)
     {
         JsonObject o = e.getAsJsonObject();
- 
+
         // Confirm that the members exist.
         String objectId = ((o.has(MEMBER_ID)) ? o.get(MEMBER_ID).getAsString() : "");
         String objectName = ((o.has(MEMBER_NAME)) ? o.get(MEMBER_NAME).getAsString() : "");
- 
+
         result.add(new FacebookObject(objectId, objectName));
     }
- 
+
     return result;
 }
 ```
@@ -157,61 +159,61 @@ Data is returned in the following format:
 
 ```json
 {
-  "data": [
-    {
-      "name": "Atlanta Food & Wine Festival",
-      "category": "Community",
-      "id": "123355014367126"
-    },
-    {
-      "name": "Six Flags Great Adventure",
-      "category": "Attractions/things to do",
-      "id": "69421318512"
-    },
-    {
-      "name": "Kings Dominion",
-      "category": "Attractions/things to do",
-      "id": "32237381874"
-    },
-    {
-      "name": "ESSENCE Music Festival",
-      "category": "Concert tour",
-      "id": "42125257610"
-    },
-    {
-      "name": "Spotify",
-      "category": "App page",
-      "id": "6243987495"
-    },
-    {
-      "name": "Coca-Cola light",
-      "category": "Food/beverages",
-      "id": "287552055150"
-    },
-    {
-      "name": "Coca-Cola Zero",
-      "category": "Food/beverages",
-      "id": "61124008229"
-    },
-    {
-      "name": "Fanta",
-      "category": "Food/beverages",
-      "id": "23550666633"
-    },
-    {
-      "name": "Sprite",
-      "category": "Food/beverages",
-      "id": "66681829158"
-    },
-    {
-      "name": "Diet Coke",
-      "category": "Food/beverages",
-      "id": "8605796091"
+    "data": [
+        {
+            "name": "Atlanta Food & Wine Festival",
+            "category": "Community",
+            "id": "123355014367126"
+        },
+        {
+            "name": "Six Flags Great Adventure",
+            "category": "Attractions/things to do",
+            "id": "69421318512"
+        },
+        {
+            "name": "Kings Dominion",
+            "category": "Attractions/things to do",
+            "id": "32237381874"
+        },
+        {
+            "name": "ESSENCE Music Festival",
+            "category": "Concert tour",
+            "id": "42125257610"
+        },
+        {
+            "name": "Spotify",
+            "category": "App page",
+            "id": "6243987495"
+        },
+        {
+            "name": "Coca-Cola light",
+            "category": "Food/beverages",
+            "id": "287552055150"
+        },
+        {
+            "name": "Coca-Cola Zero",
+            "category": "Food/beverages",
+            "id": "61124008229"
+        },
+        {
+            "name": "Fanta",
+            "category": "Food/beverages",
+            "id": "23550666633"
+        },
+        {
+            "name": "Sprite",
+            "category": "Food/beverages",
+            "id": "66681829158"
+        },
+        {
+            "name": "Diet Coke",
+            "category": "Food/beverages",
+            "id": "8605796091"
+        }
+    ],
+    "paging": {
+        "next": "https://graph.facebook.com/40796308305/likes?access_token=[redacted]&limit=5000&offset=5000&__after_id=8605796091"
     }
-  ],
-  "paging": {
-    "next": "https://graph.facebook.com/40796308305/likes?access_token=[redacted]&limit=5000&offset=5000&__after_id=8605796091",
-  }
 }
 ```
 
@@ -234,25 +236,25 @@ public FacebookObject[] getSixDegrees(String id)
 {
     final FacebookObject[] result = new FacebookObject[6];
     final Random randomGenerator = new Random();
- 
+
     // Loop through up to 6 FacebookObjects, tracking their id for the next iteration.
     for (int i = 0; i < 6; i++)
     {
         List<facebookobject> likes = this.getLikes(id);
- 
+
         // Quit out if a dead end is reached.
-        if (likes.isEmpty()) 
+        if (likes.isEmpty())
             break;
- 
+
         // Get a random like. Passing 0 to nextInt() is not allowed.
-        FacebookObject degree = likes.size() == 1 ? 
-                                likes.get(0) : 
+        FacebookObject degree = likes.size() == 1 ?
+                                likes.get(0) :
                                 likes.get(randomGenerator.nextInt(likes.size() - 1));
- 
+
         id = degree.getId(); // Prepare for the next loop.
         result[i] = degree;
     }
- 
+
     return result;
 }
 ```
@@ -265,13 +267,13 @@ Putting it all together, here’s a Main class that runs all of the above method
 public class Main
 {
     private static Facebook facebook;
- 
+
     public static void main(String[] args)
     {
         try
         {
             facebook = new Facebook();
- 
+
             Main.runNameQuery();
             Main.runLikesQuery();
             Main.runDegreesQuery();
@@ -281,26 +283,26 @@ public class Main
             System.err.println("Failed to create Facebook client. Cause: " + e.getMessage());
         }
     }
- 
+
     private static void runNameQuery()
     {
         System.out.println(facebook.getNameForId("ceva24"));
     }
- 
+
     private static void runLikesQuery()
     {
         for (FacebookObject like : facebook.getLikes("cocacola"))
             System.out.println(like);
     }
- 
+
     private static void runDegreesQuery()
     {
         FacebookObject[] degrees = facebook.getSixDegrees("cocacola");
- 
+
         for (int i = 0; i < 6; i++)
         {
-            FacebookObject o = degrees[i]; 
- 
+            FacebookObject o = degrees[i];
+
             if (o == null)
             {
                 String suffix;
@@ -311,7 +313,7 @@ public class Main
                     case 3  : suffix = "rd"; break;
                     default : suffix = "th";
                 }
- 
+
                 System.out.println("You only reached the "
                         + (i) + suffix + " degree! Better luck next time!");
                 break;
@@ -329,7 +331,7 @@ And the results:
 
 ```
 Christian Evans
- 
+
 123355014367126, Atlanta Food & Wine Festival
 69421318512, Six Flags Great Adventure
 32237381874, Kings Dominion
@@ -341,11 +343,11 @@ Christian Evans
 66681829158, Sprite
 8605796091, Diet Coke
 5120148605, will.i.am
- 
+
 6243987495, Spotify
 77589292295, Chevrolet
 8280904159, Eli Manning
- 
+
 You only reached the 3rd degree! Better luck next time!
 ```
 

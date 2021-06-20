@@ -1,46 +1,51 @@
 {
-  "name": "ceva24.dev",
-  "private": true,
-  "version": "1.0.0",
-  "license": "Apache-2.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ceva24/ceva24.dev"
-  },
-  "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.4.0",
-    "@emotion/styled": "^11.3.0",
-    "@fortawesome/fontawesome-svg-core": "^1.2.35",
-    "@fortawesome/free-brands-svg-icons": "^5.15.3",
-    "@fortawesome/free-solid-svg-icons": "^5.15.3",
-    "@fortawesome/react-fontawesome": "^0.1.14",
-    "gatsby": "^3.7.2",
-    "gatsby-plugin-emotion": "^6.7.1",
-    "gatsby-plugin-google-analytics": "^3.7.1",
-    "gatsby-plugin-manifest": "^3.7.1",
-    "gatsby-plugin-offline": "^4.7.1",
-    "gatsby-plugin-react-helmet": "^4.7.1",
-    "gatsby-plugin-typography": "^3.7.1",
-    "gatsby-remark-highlights": "^1.3.4",
-    "gatsby-source-filesystem": "^3.7.1",
-    "gatsby-transformer-remark": "^4.4.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-helmet": "^6.1.0",
-    "react-typography": "^0.16.20",
-    "typeface-merriweather": "^1.1.13",
-    "typeface-source-sans-pro": "^1.1.13",
-    "typography": "^0.16.21",
-    "typography-theme-us-web-design-standards": "^0.16.19"
-  },
-  "devDependencies": {
-    "gatsby-plugin-root-import": "^2.0.6"
-  }
+    "name": "ceva24.dev",
+    "private": true,
+    "version": "1.0.0",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ceva24/ceva24.dev"
+    },
+    "scripts": {
+        "develop": "gatsby develop",
+        "start": "gatsby develop",
+        "build": "gatsby build",
+        "serve": "gatsby serve",
+        "clean": "gatsby clean",
+        "format": "prettier --write .",
+        "lint": "xo",
+        "check": "npm run format && npm run lint && npm run test"
+    },
+    "dependencies": {
+        "@emotion/react": "^11.4.0",
+        "@emotion/styled": "^11.3.0",
+        "@fortawesome/fontawesome-svg-core": "^1.2.35",
+        "@fortawesome/free-brands-svg-icons": "^5.15.3",
+        "@fortawesome/free-solid-svg-icons": "^5.15.3",
+        "@fortawesome/react-fontawesome": "^0.1.14",
+        "gatsby": "^3.7.2",
+        "gatsby-plugin-emotion": "^6.7.1",
+        "gatsby-plugin-google-analytics": "^3.7.1",
+        "gatsby-plugin-manifest": "^3.7.1",
+        "gatsby-plugin-offline": "^4.7.1",
+        "gatsby-plugin-react-helmet": "^4.7.1",
+        "gatsby-plugin-typography": "^3.7.1",
+        "gatsby-remark-highlights": "^1.3.4",
+        "gatsby-source-filesystem": "^3.7.1",
+        "gatsby-transformer-remark": "^4.4.1",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-helmet": "^6.1.0",
+        "react-typography": "^0.16.20",
+        "typeface-merriweather": "^1.1.13",
+        "typeface-source-sans-pro": "^1.1.13",
+        "typography": "^0.16.21",
+        "typography-theme-us-web-design-standards": "^0.16.19"
+    },
+    "devDependencies": {
+        "eslint-config-xo-react": "^0.25.0",
+        "gatsby-plugin-root-import": "^2.0.6",
+        "xo": "^0.40.2"
+    }
 }

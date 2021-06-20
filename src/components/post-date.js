@@ -1,9 +1,7 @@
-import React from "react"
+import React from "react";
 
-const PostDate = ({children}) => (
-    <strong class="secondary-description">
-        {children}
-    </strong>
-)
+const PostDate = ({ children }) => (
+    <strong className="secondary-description">{children}</strong>
+);
 
-export default PostDate
+export default PostDate;

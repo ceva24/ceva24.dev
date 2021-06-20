@@ -4,7 +4,7 @@ date: "2012-09-30"
 ---
 
 A few weeks ago I was convinced to buy a [Raspberry Pi](https://www.raspberrypi.org/).
- 
+
 It’s a very flexible piece of kit, and has a friendly community supporting it to boot. It also gives me a chance to delve into a Linux environment at home, something I haven’t done before.
 My RPi is currently employed as a media center and sits comfortably next to the television in my living room.
 
@@ -14,11 +14,11 @@ In this post I’m going to go over the equipment required to set it up and step
 
 ### Kit
 
- - Raspberry Pi
- - Micro-USB Adapter (most phone chargers work perfectly)
- - CAT5 Ethernet Cable
- - HDMI-to-HDMI Cable
- - SD Card (2GB or more)
+-   Raspberry Pi
+-   Micro-USB Adapter (most phone chargers work perfectly)
+-   CAT5 Ethernet Cable
+-   HDMI-to-HDMI Cable
+-   SD Card (2GB or more)
 
 ### Installation and Configuration
 
@@ -165,7 +165,7 @@ The other point to note is that it’s technically unhealthy to turn off the Pi 
 # Short-Description: Shut down cleanly.
 # Description:       Shut down cleanly.
 ### END INIT INFO
- 
+
 sudo /etc/init.d/samba stop
 sudo initctl stop xbmc
 sudo poweroff

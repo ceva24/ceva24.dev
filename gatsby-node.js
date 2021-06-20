@@ -44,4 +44,4 @@ const createPages = async ({ graphql, actions }) => {
     }
 };
 
-module.exports = {  onCreateNode, createPages };
+module.exports = { onCreateNode, createPages };

@@ -3,7 +3,7 @@ import { css } from "@emotion/react";
 import { rhythm } from "src/utils/typography";
 import Helmet from "react-helmet";
 import GlobalStyles from "src/styles/global";
-import Bio from "src/components/layout/bio";
+import { Bio } from "src/components/layout/bio";
 
 const Layout = ({ title, children }) => (
     <div

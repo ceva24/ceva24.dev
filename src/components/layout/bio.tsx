@@ -1,4 +1,3 @@
-import React from "react";
 import { graphql, useStaticQuery, Link } from "gatsby";
 import { css } from "@emotion/react";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -7,12 +6,22 @@ import {
     faLinkedin,
     faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import { rhythm } from "src/utils/typography";
-import { SocialIcon } from "src/components/layout/social-icon";
-import ProfilePicture from "static/profile-picture.png";
+import { rhythm } from "../../utils/typography";
+import ProfilePicture from "../../../static/profile-picture.png";
+import { SocialIcon } from "./social-icon";
+
+interface SiteMetaData {
+    site: {
+        siteMetadata: {
+            name: string;
+            subtitle: string;
+        };
+    };
+}
 
 const Bio = () => {
-    const data = useStaticQuery(
+    const data: SiteMetaData = useStaticQuery(
+        // eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
         graphql`
             query {
                 site {
@@ -37,7 +46,7 @@ const Bio = () => {
             `}
         >
             <img
-                src={ProfilePicture}
+                src={ProfilePicture as string}
                 alt="Chris Evans head shot"
                 css={css`
                     margin-right: ${rhythm(1 / 2)};
@@ -109,4 +118,4 @@ const Bio = () => {
     );
 };
 
-export default Bio;
+export { Bio };

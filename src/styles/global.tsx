@@ -1,6 +1,5 @@
-import React from "react";
 import { css, Global } from "@emotion/react";
-import { rhythm } from "src/utils/typography";
+import { rhythm } from "../utils/typography";
 
 const GlobalStyles = () => (
     <Global
@@ -45,4 +44,4 @@ const GlobalStyles = () => (
     />
 );
 
-export default GlobalStyles;
+export { GlobalStyles };

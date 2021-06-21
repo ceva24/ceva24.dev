@@ -4,19 +4,7 @@ import { rhythm } from "../utils/typography";
 import { Layout } from "../components/layout";
 import { PostDate } from "../components/post-date";
 
-interface PostMarkdownRemark {
-    data: {
-        markdownRemark: {
-            frontmatter: {
-                title: string;
-                date: string;
-            };
-            html: string;
-        };
-    };
-}
-
-const Post: React.FC<PostMarkdownRemark> = ({ data }: PostMarkdownRemark) => (
+const Post: React.FC<PostTemplateData> = ({ data }: PostTemplateData) => (
     <Layout title={data.markdownRemark.frontmatter.title}>
         <h2
             css={css`
@@ -38,10 +26,8 @@ const Post: React.FC<PostMarkdownRemark> = ({ data }: PostMarkdownRemark) => (
     </Layout>
 );
 
-export default Post;
-
 // eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
-export const query = graphql`
+const query = graphql`
     query ($slug: String!) {
         markdownRemark(fields: { slug: { eq: $slug } }) {
             html
@@ -52,3 +38,6 @@ export const query = graphql`
         }
     }
 `;
+
+export default Post;
+export { query };

@@ -10,17 +10,8 @@ import { rhythm } from "../../utils/typography";
 import ProfilePicture from "../../../static/profile-picture.png";
 import { SocialIcon } from "./social-icon";
 
-interface SiteMetaData {
-    site: {
-        siteMetadata: {
-            name: string;
-            subtitle: string;
-        };
-    };
-}
-
 const Bio = () => {
-    const data: SiteMetaData = useStaticQuery(
+    const data: BioComponentData = useStaticQuery(
         // eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
         graphql`
             query {

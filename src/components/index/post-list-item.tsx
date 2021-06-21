@@ -3,21 +3,7 @@ import { Link } from "gatsby";
 import { rhythm } from "../../utils/typography";
 import { PostDate } from "../post-date";
 
-interface Node {
-    node: {
-        id: string;
-        fields: {
-            path: string;
-        };
-        frontmatter: {
-            title: string;
-            date: string;
-        };
-        excerpt: string;
-    };
-}
-
-const PostListItem: React.FC<Node> = ({ node }: Node) => (
+const PostListItem: React.FC<IndexPageEdge> = ({ node }: IndexPageEdge) => (
     <li
         key={node.id}
         css={css`
@@ -57,4 +43,4 @@ const PostListItem: React.FC<Node> = ({ node }: Node) => (
     </li>
 );
 
-export default PostListItem;
+export { PostListItem };

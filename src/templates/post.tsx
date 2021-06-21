@@ -1,12 +1,10 @@
-/* eslint-disable react/no-danger */
-import React from "react";
 import { graphql, Link } from "gatsby";
 import { css } from "@emotion/react";
-import { rhythm } from "src/utils/typography";
-import Layout from "src/components/layout";
-import PostDate from "src/components/post-date";
+import { rhythm } from "../utils/typography";
+import { Layout } from "../components/layout";
+import { PostDate } from "../components/post-date";
 
-const Post = ({ data }) => (
+const Post: React.FC<PostTemplateData> = ({ data }: PostTemplateData) => (
     <Layout title={data.markdownRemark.frontmatter.title}>
         <h2
             css={css`
@@ -22,14 +20,14 @@ const Post = ({ data }) => (
         >
             <PostDate>{data.markdownRemark.frontmatter.date}</PostDate>
         </div>
+        {/* eslint-disable-next-line react/no-danger */}
         <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
         <Link to="/">Home</Link>
     </Layout>
 );
 
-export default Post;
-
-export const query = graphql`
+// eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
+const query = graphql`
     query ($slug: String!) {
         markdownRemark(fields: { slug: { eq: $slug } }) {
             html
@@ -40,3 +38,6 @@ export const query = graphql`
         }
     }
 `;
+
+export default Post;
+export { query };

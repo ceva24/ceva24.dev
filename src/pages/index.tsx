@@ -1,10 +1,9 @@
-import React from "react";
 import { graphql } from "gatsby";
 import { css } from "@emotion/react";
-import Layout from "src/components/layout";
-import PostListItem from "src/components/index/post-list-item";
+import { Layout } from "../components/layout";
+import { PostListItem } from "../components/index/post-list-item";
 
-const Index = ({ data }) => (
+const Index: React.FC<IndexPageData> = ({ data }: IndexPageData) => (
     <Layout
         title={`${data.site.siteMetadata.name} | ${data.site.siteMetadata.subtitle}`}
     >
@@ -27,9 +26,8 @@ const Index = ({ data }) => (
     </Layout>
 );
 
-export default Index;
-
-export const query = graphql`
+// eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
+const query = graphql`
     query {
         site {
             siteMetadata {
@@ -56,3 +54,6 @@ export const query = graphql`
         }
     }
 `;
+
+export default Index;
+export { query };

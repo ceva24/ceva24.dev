@@ -2,7 +2,7 @@
     "name": "ceva24.dev",
     "private": true,
     "version": "1.0.0",
-    "license": "Apache-2.0",
+    "license": "MIT",
     "repository": {
         "type": "git",
         "url": "https://github.com/ceva24/ceva24.dev"
@@ -15,7 +15,8 @@
         "clean": "gatsby clean",
         "format": "prettier --write .",
         "lint": "xo",
-        "check": "npm run format && npm run lint && npm run test"
+        "check-types": "tsc",
+        "check": "npm run format && npm run lint && npm run check-types"
     },
     "dependencies": {
         "@emotion/react": "^11.4.0",
@@ -44,6 +45,8 @@
         "typography-theme-us-web-design-standards": "^0.16.19"
     },
     "devDependencies": {
+        "@types/react-helmet": "^6.1.1",
+        "@types/typography": "^0.16.3",
         "eslint-config-xo-react": "^0.25.0",
         "gatsby-plugin-root-import": "^2.0.6",
         "xo": "^0.40.2"

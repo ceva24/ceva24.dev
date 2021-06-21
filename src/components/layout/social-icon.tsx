@@ -3,11 +3,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { rhythm } from "../../utils/typography";
 
-type SocialIconProps = {
+interface SocialIconProps {
     url: string;
     label: string;
     icon: IconProp;
-};
+}
 
 const SocialIcon: React.FC<SocialIconProps> = ({
     url,

@@ -1,10 +1,23 @@
-import React from "react";
 import { css } from "@emotion/react";
-import { rhythm } from "src/utils/typography";
 import { Link } from "gatsby";
-import { PostDate } from "src/components/post-date";
+import { rhythm } from "../../utils/typography";
+import { PostDate } from "../post-date";
 
-const PostListItem = ({ node }) => (
+interface Node { 
+    node: {
+        id: string,
+        fields: {
+            path: string
+        },
+        frontmatter: {
+            title: string,
+            date: string
+        },
+        excerpt: string
+    }
+}
+
+const PostListItem: React.FC<Node> = ({ node }: Node) => (
     <li
         key={node.id}
         css={css`

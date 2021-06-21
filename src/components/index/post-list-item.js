@@ -2,7 +2,7 @@ import React from "react";
 import { css } from "@emotion/react";
 import { rhythm } from "src/utils/typography";
 import { Link } from "gatsby";
-import PostDate from "src/components/post-date";
+import { PostDate } from "src/components/post-date";
 
 const PostListItem = ({ node }) => (
     <li

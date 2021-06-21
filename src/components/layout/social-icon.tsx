@@ -9,7 +9,11 @@ type SocialIconProps = {
     icon: IconProp;
 };
 
-const SocialIcon = ({ url, label, icon }: SocialIconProps) => (
+const SocialIcon: React.FC<SocialIconProps> = ({
+    url,
+    label,
+    icon,
+}: SocialIconProps) => (
     <a
         href={url}
         title={url}

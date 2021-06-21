@@ -3,18 +3,18 @@ import { Link } from "gatsby";
 import { rhythm } from "../../utils/typography";
 import { PostDate } from "../post-date";
 
-interface Node { 
+interface Node {
     node: {
-        id: string,
+        id: string;
         fields: {
-            path: string
-        },
+            path: string;
+        };
         frontmatter: {
-            title: string,
-            date: string
-        },
-        excerpt: string
-    }
+            title: string;
+            date: string;
+        };
+        excerpt: string;
+    };
 }
 
 const PostListItem: React.FC<Node> = ({ node }: Node) => (

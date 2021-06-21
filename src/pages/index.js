@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { css } from "@emotion/react";
-import Layout from "src/components/layout";
+import { Layout } from "src/components/layout";
 import PostListItem from "src/components/index/post-list-item";
 
 const Index = ({ data }) => (

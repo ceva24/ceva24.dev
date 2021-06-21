@@ -3,7 +3,7 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import { css } from "@emotion/react";
 import { rhythm } from "src/utils/typography";
-import Layout from "src/components/layout";
+import { Layout } from "src/components/layout";
 import { PostDate } from "src/components/post-date";
 
 const Post = ({ data }) => (

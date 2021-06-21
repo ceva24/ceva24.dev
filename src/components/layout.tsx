@@ -1,11 +1,15 @@
-import React from "react";
 import { css } from "@emotion/react";
-import { rhythm } from "src/utils/typography";
 import Helmet from "react-helmet";
-import GlobalStyles from "src/styles/global";
-import Bio from "src/components/layout/bio";
+import { rhythm } from "../utils/typography";
+import { GlobalStyles } from "../styles/global";
+import { Bio } from "./layout/bio";
 
-const Layout = ({ title, children }) => (
+interface LayoutProps {
+    title: string;
+    children: React.ReactNode;
+}
+
+const Layout: React.FC<LayoutProps> = ({ title, children }: LayoutProps) => (
     <div
         css={css`
             margin: 0 auto;
@@ -32,4 +36,4 @@ const Layout = ({ title, children }) => (
     </div>
 );
 
-export default Layout;
+export { Layout };

@@ -36,7 +36,7 @@ const createPages = async ({ graphql, actions }) => {
         const node = edge.node;
         createPage({
             path: node.fields.path,
-            component: path.resolve("src/templates/post.js"),
+            component: path.resolve("src/templates/post.tsx"),
             context: {
                 slug: node.fields.slug,
             },

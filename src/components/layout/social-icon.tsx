@@ -23,4 +23,4 @@ const SocialIcon = ({ url, label, icon }: SocialIconProps) => (
     </a>
 );
 
-export {SocialIcon };
+export { SocialIcon };

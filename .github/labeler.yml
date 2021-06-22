@@ -1,0 +1,24 @@
+documentation:
+  - README.md
+  - LICENCE
+
+test:
+  - src/**/*.test.ts
+  - src/**/*.snap
+
+source:
+  - src/**/*
+
+content:
+  - posts/**/*
+  - static/**/*
+  - src/pages/**/*
+
+workflow:
+  - .github/**/*
+
+styling:
+  - src/styles/**/*
+
+dependencies:
+  - package-lock.json

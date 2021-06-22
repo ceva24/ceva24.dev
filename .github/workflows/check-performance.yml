@@ -1,4 +1,4 @@
-name: check performance
+name: performance checks
 
 on:
   workflow_dispatch:

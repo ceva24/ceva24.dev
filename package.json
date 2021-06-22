@@ -49,6 +49,6 @@
         "@types/typography": "^0.16.3",
         "eslint-config-xo-react": "^0.25.0",
         "gatsby-plugin-root-import": "^2.0.6",
-        "xo": "^0.40.2"
+        "xo": "^0.40.3"
     }
 }

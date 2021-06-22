@@ -2,11 +2,16 @@
     "name": "ceva24.dev",
     "private": true,
     "version": "1.0.0",
+    "description": "A personal website written in Gatsby",
     "license": "MIT",
     "repository": {
         "type": "git",
         "url": "https://github.com/ceva24/ceva24.dev"
     },
+    "keywords": [
+        "gatsby",
+        "website"
+    ],
     "scripts": {
         "develop": "gatsby develop",
         "start": "gatsby develop",

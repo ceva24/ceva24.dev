@@ -1,0 +1,21 @@
+name: check performance
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  lhci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+        run: npm i -g @lhci/cli@0.8.x
+        run: npm i
+        run: npm run build
+        run: lhci autorun

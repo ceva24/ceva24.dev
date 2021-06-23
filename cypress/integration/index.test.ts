@@ -1,5 +1,5 @@
 describe("Index page", () => {
-    it("Contains the header", () => {
+    it("Contains the bio", () => {
         cy.visit("/");
 
         cy.contains("Chris Evans");

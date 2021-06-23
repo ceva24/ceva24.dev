@@ -2,6 +2,7 @@
     "baseUrl": "http://localhost:9000",
     "pluginsFile": false,
     "supportFile": false,
+    "fixturesFolder": false,
     "video": false,
     "screenshotOnRunFailure": false,
     "chromeWebSecurity": false

@@ -14,5 +14,6 @@
         "removeComments": false,
         "preserveConstEnums": true,
         "jsxImportSource": "@emotion/react"
-    }
+    },
+    "exclude": ["cypress/**/*"]
 }

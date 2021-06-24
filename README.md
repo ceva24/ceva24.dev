@@ -1,6 +1,7 @@
 # ceva24.dev
 
 [![build](https://github.com/ceva24/ceva24.dev/actions/workflows/build.yml/badge.svg)](https://github.com/ceva24/ceva24.dev/actions/workflows/build.yml)
+[![end-to-end tests](https://github.com/ceva24/ceva24.dev/actions/workflows/test-e2e.yml/badge.svg)](https://github.com/ceva24/ceva24.dev/actions/workflows/test-e2e.yml)
 [![code formatting](https://github.com/ceva24/ceva24.dev/actions/workflows/check-format.yml/badge.svg)](https://github.com/ceva24/ceva24.dev/actions/workflows/check-format.yml)
 [![linting](https://github.com/ceva24/ceva24.dev/actions/workflows/lint.yml/badge.svg)](https://github.com/ceva24/ceva24.dev/actions/workflows/lint.yml)
 [![type checking](https://github.com/ceva24/ceva24.dev/actions/workflows/check-types.yml/badge.svg)](https://github.com/ceva24/ceva24.dev/actions/workflows/check-types.yml)

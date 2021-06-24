@@ -14,13 +14,6 @@ module.exports = {
             },
         },
         {
-            resolve: "gatsby-plugin-root-import",
-            options: {
-                src: path.join(__dirname, "/src"),
-                static: path.join(__dirname, "/static"),
-            },
-        },
-        {
             resolve: "gatsby-source-filesystem",
             options: {
                 name: "posts",
@@ -46,6 +39,22 @@ module.exports = {
                 trackingId: "UA-66779785-4",
                 anonymize: true,
                 respectDNT: true,
+            },
+        },
+        {
+            resolve: "gatsby-plugin-manifest",
+            options: {
+                name: "ceva24.dev",
+                lang: "en",
+                start_url: "/",
+                background_color: "#ffffff",
+                theme_color: "#c0392b",
+                display: "standalone",
+                icon: "static/favicon.png",
+                icon_options: {
+                    purpose: "any maskable",
+                },
+                cache_busting_mode: "none",
             },
         },
         "gatsby-plugin-emotion",

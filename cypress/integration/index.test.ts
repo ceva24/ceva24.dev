@@ -1,4 +1,12 @@
+import '@percy/cypress';
+
 describe("Index page", () => {
+    it("Renders", () => {
+        cy.visit("/");
+
+        cy.percySnapshot();
+    });
+
     it("Contains the bio", () => {
         cy.visit("/");
 

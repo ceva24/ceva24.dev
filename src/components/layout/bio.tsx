@@ -59,6 +59,7 @@ const Bio = () => {
                 <h1>
                     <Link
                         to="/"
+                        className="bio-link"
                         css={css`
                             color: inherit;
                             &:hover {

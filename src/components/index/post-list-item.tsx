@@ -6,6 +6,7 @@ import { PostDate } from "../post-date";
 const PostListItem: React.FC<IndexPageEdge> = ({ node }: IndexPageEdge) => (
     <li
         key={node.id}
+        className="post"
         css={css`
             margin-bottom: ${rhythm(1)};
         `}

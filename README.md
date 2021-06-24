@@ -15,20 +15,16 @@
 
 ## Introduction
 
-Static website built with TypeScript and [Gatsby](https://www.gatsbyjs.org/), hosted at [https://ceva24.dev](https://ceva24.dev)
+Static website built with TypeScript and [Gatsby](https://www.gatsbyjs.org/), hosted at [https://ceva24.dev](https://ceva24.dev).
 
 ## Development
 
-### Tooling
-
 Uses [Husky](https://typicode.github.io/husky/#/) for pre-commit hooks, just run `npm run prepare` first 🐶 _woof_!
 
-### Syntax Highlighting
-
-Uses the [gatsby-remark-highlights](https://github.com/amitpatra/gatsby-remark-highlights) plugin for syntax highlighting; Atom theme styles are in `src/styles/highlights.css`
+Uses the [gatsby-remark-highlights](https://github.com/amitpatra/gatsby-remark-highlights) plugin for rendering syntax highlighting; Atom theme styles are in `src/styles/highlights.css`.
 
 ## CI/CD
 
 Uses [LHCI](https://github.com/GoogleChrome/lighthouse-ci) for performance checks 🚦 [Percy](https://percy.io/788e43c2/ceva24.dev) for visual testing 🦔 Reports and snapshots included on each PR ✔️
 
-Continuously deployed using [AWS Amplify](https://aws.amazon.com/amplify/)
+Continuously deployed using [AWS Amplify](https://aws.amazon.com/amplify/) 🚀

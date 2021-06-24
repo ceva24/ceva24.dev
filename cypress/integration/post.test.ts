@@ -1,4 +1,5 @@
-import '@percy/cypress';
+// eslint-disable-next-line import/no-unassigned-import
+import "@percy/cypress";
 
 describe("Post page", () => {
     it("Renders", () => {

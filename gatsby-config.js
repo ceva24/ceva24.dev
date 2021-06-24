@@ -47,8 +47,13 @@ module.exports = {
                 name: "ceva24.dev",
                 lang: "en",
                 start_url: "/",
+                background_color: "#ffffff",
+                theme_color: "#c0392b",
                 display: "standalone",
                 icon: "static/favicon.png",
+                icon_options: {
+                    purpose: "any maskable",
+                },
                 cache_busting_mode: "none",
             },
         },

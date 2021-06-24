@@ -62,8 +62,7 @@
         "cypress": "^7.5.0",
         "eslint-config-xo-react": "^0.25.0",
         "eslint-plugin-cypress": "^2.11.3",
-        "gatsby-plugin-root-import": "^2.0.6",
-        "xo": "^0.40.3",
-        "husky": "^6.0.0"
+        "husky": "^6.0.0",
+        "xo": "^0.40.3"
     }
 }

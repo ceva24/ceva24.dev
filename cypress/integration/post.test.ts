@@ -1,4 +1,13 @@
+// eslint-disable-next-line import/no-unassigned-import
+import "@percy/cypress";
+
 describe("Post page", () => {
+    it("Renders", () => {
+        cy.visit("/posts/introduction");
+
+        cy.percySnapshot();
+    });
+
     it("Contains the header", () => {
         cy.visit("/posts/introduction");
 

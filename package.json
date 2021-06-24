@@ -2,7 +2,7 @@
     "name": "ceva24.dev",
     "private": true,
     "version": "1.0.0",
-    "description": "A personal website written in Gatsby",
+    "description": "Static website built with TypeScript and Gatsby",
     "license": "MIT",
     "repository": {
         "type": "git",

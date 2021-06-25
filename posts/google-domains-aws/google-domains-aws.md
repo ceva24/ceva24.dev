@@ -36,7 +36,7 @@ If you're hosting a website on S3 the easiest way to make your website secure is
 Follow [the guide to request a public certificate](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request-public.html#request-public-console). The cerficate should be for the root and all subdomains,
 the way I did this was to configure `ceva24.dev` as the domain name and `*.ceva24.dev` as an additional domain name.
 
-![The AWS Certificate Manager](/posts/google-domains-aws/acm.png)
+![The AWS Certificate Manager](./acm.png)
 
 As part of setting up your certificate you'll have to verify to Amazon that you own the address by [adding a CNAME record](https://support.google.com/domains/answer/9211383) in Google Domains with the name and data that AWS provides.
 
@@ -49,7 +49,7 @@ Under 'Default Cache Behavior Settings' change the 'Viewer Protocol Policy' to b
 
 Under 'Alternate Domain Names (CNAMEs)' enter both your apex domain and `www` subdomain. Immediately after under 'SSL Certificate' select 'Custom SSL Certificate' and choose your ACM certificate in the drop-down.
 
-![Cloudfront configuration](/posts/google-domains-aws/cloudfront.png)
+![Cloudfront configuration](./cloudfront.png)
 
 You can leave all other options as default and create the Distribution.
 

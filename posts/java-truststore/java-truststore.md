@@ -37,7 +37,7 @@ The steps to resolve this issue are as follows:
 
 This is straightforward in Google Chrome: navigate to the website, click the padlock in the address bar and select `Certificate`, then go to the `Details` tab and select `Copy to File...`.
 
-![Downloading an SSL certificate](/posts/java-truststore/ssl-certificate.png)
+![Downloading an SSL certificate](./ssl-certificate.png)
 
 ### Add the certificate to the TrustStore
 

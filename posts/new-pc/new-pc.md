@@ -26,8 +26,8 @@ I built a new PC over Christmas (after ~7 years the old one’s more than had it
 
 Pics:
 
-![Items laid out in preparation](/posts/new-pc/IMG_20151220_144823.jpg)
+![Items laid out in preparation](./IMG_20151220_144823.jpg)
 
-![Testing the build before installing it in the case](/posts/new-pc/IMG_20151220_164328.jpg)
+![Testing the build before installing it in the case](./IMG_20151220_164328.jpg)
 
-![The completed build](/posts/new-pc/IMG_20151221_000527.jpg)
+![The completed build](./IMG_20151221_000527.jpg)

@@ -5,7 +5,7 @@ date: "2012-11-26"
 
 More and more of my projects include an aspect of calling out to remote systems, be it to a web service via SOAP, or more recently to REST architectures. As part of this work, I’ve adopted a certain approach to creating web service consumers.
 
-![Carrie RESTing](/posts/rest-client-template/RESTing-300x229.jpg)
+![Carrie RESTing](./RESTing-300x229.jpg)
 
 I’ll illustrate this with a simple example, connecting to the [Facebook Graph API](https://developers.facebook.com/docs/reference/api/), the most recent iteration of its REST API (with a fancy name).
 

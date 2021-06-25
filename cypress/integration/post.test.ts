@@ -8,6 +8,14 @@ describe("Post page", () => {
         cy.percySnapshot();
     });
 
+    it("Renders syntax highlighting", () => {
+        cy.visit("/posts/hibernate-grails-caching");
+
+        cy.get(".syntax--java").should("exist");
+
+        cy.percySnapshot();
+    });
+
     it("Contains the header", () => {
         cy.visit("/posts/introduction");
 

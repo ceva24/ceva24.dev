@@ -27,6 +27,10 @@ const Layout: React.FC<LayoutProps> = ({ title, children }: LayoutProps) => (
                 name="viewport"
                 content="width=device-width, initial-scale=1, shrink-to-fit=no"
             />
+            <meta
+                name="description"
+                content="Chris Evans, a Web Development / Systems Integration Team Leader at the University of York"
+            />
             <title>{title}</title>
         </Helmet>
 

@@ -56,8 +56,9 @@ And the result:
 
 ![The final result](./2012-09-23_00004-1024x576.jpg)
 
-Success! If you’d like to see this for yourself, you can download the .tga file here.
-Conclusion
+Success!
+
+### Conclusion
 
 So, in summary:
 

@@ -5,7 +5,7 @@ date: "2012-11-16"
 
 I was one of the (likely) minority who jumped to upgrade to Windows 8 within a couple of days of its release. This is the first time that I’ve upgraded OS manually as opposed to waiting for whatever edition comes with my next new PC, but I had my reasons. In this post I’ll be discussing my opinions of some of the new features, highlighting both the good and bad that I’ve come across so far.
 
-![The Windows 8 logo](/posts/going-metro/windows-8-logo-300x140.jpg)
+![The Windows 8 logo](./windows-8-logo-300x140.jpg)
 
 So what were my reasons for upgrading? Firstly, the brave evolution of features in this latest Windows iteration piqued my interest, and secondly my old box was running Vista, which in most people’s estimation is probably reason enough itself (and then some). Additionally, I hadn’t had a proper cleanup since getting the PC circa 4 years ago, so it was high time for it.
 
@@ -28,13 +28,13 @@ It’s a rather slick display, at least once you get rid of a few of the less us
 
 For illustration purposes, this is what my Start Screen looks like.
 
-![The Windows 8 start screen](/posts/going-metro/startscreen-1024x576.png)
+![The Windows 8 start screen](./startscreen-1024x576.png)
 
 It’s neat and pretty customisable, though for some unfathomable reason you can’t change the background without a hack, only select patterns (yet you can change the background of your desktop as usual as well as that of the lock screen).
 
 I do have some issues with it however. I find it to be rather a pain that Metro apps can’t be shown side-by-side on the desktop, for example having a PDF up in Reader whilst having a couple of other standard desktop apps open and viewable at the same time. Even with my 27″ widescreen 1920×1080 display, only a small slice of the screen can be split between Desktop and Reader, meaning one way or the other it’s just too small to use (I’ve a feeling this description isn’t quite adequate, so see the image below). Bear in mind that I’m running a single monitor setup due to lack of space – I imagine switching to dual setup allows the Start Screen on one and the Desktop on another, which would be perfect.
 
-![Windows 8 split screen](/posts/going-metro/reader-1024x576.png)
+![Windows 8 split screen](./reader-1024x576.png)
 
 Also, whilst I don’t really use many of the Metro tiles, I do find it abhorrent that they decided to put ads in the Weather app, no matter how out of the way they may be.
 

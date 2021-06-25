@@ -1,4 +1,5 @@
 import { graphql, useStaticQuery, Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 import { css } from "@emotion/react";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -7,7 +8,6 @@ import {
     faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { rhythm } from "../../utils/typography";
-import ProfilePicture from "../../../static/profile-picture.png";
 import { SocialIcon } from "./social-icon";
 
 const Bio = () => {
@@ -36,18 +36,13 @@ const Bio = () => {
                 }
             `}
         >
-            <img
-                src={ProfilePicture as string}
+            <StaticImage
+                src="../../img/profile-picture.png"
                 alt="Chris Evans head shot"
+                quality={100}
                 css={css`
                     margin-right: ${rhythm(1 / 2)};
-                    margin-bottom: 0;
                     border-radius: 100%;
-                    min-height: 78px;
-                    min-width: 78px;
-                    height: 78px;
-                    width: 78px;
-                    box-shadow: none;
                 `}
             />
             <div

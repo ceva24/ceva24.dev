@@ -151,7 +151,7 @@ One other thing to note is that the attachments can be given a name different to
 
 And when this method is run:
 
-![Email inbox with the example message open](/posts/sending-email/email.png)
+![Email inbox with the example message open](./email.png)
 
 Message received!
 

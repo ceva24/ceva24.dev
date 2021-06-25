@@ -14,7 +14,7 @@ describe("Post page", () => {
         cy.get(".syntax--java").should("exist");
 
         cy.percySnapshot();
-    })
+    });
 
     it("Contains the header", () => {
         cy.visit("/posts/introduction");

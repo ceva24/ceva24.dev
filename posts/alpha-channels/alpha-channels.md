@@ -14,7 +14,7 @@ Alternatively the Magnetic Lasso Tool can be used to manually trace around the d
 
 That’s why I’ve chosen the following image as the example.
 
-![A picture of a black cat against a white background](/posts/alpha-channels/cat.png)
+![A picture of a black cat against a white background](./cat.png)
 
 The black against the white background should mean that the Magic Wand Tool has no problem at all selecting only the parts that we want.
 
@@ -22,13 +22,13 @@ The black against the white background should mean that the Magic Wand Tool has 
 
 First choose the Magic Wand tool and select the background.
 
-![The Photoshop Magic Wand tool](/posts/alpha-channels/magic-wand.png)
+![The Photoshop Magic Wand tool](./magic-wand.png)
 
 By selecting the background, we can almost always ensure that all relevant parts will be selected (with a caveat, as we can see below).
 
 The initial result is as follows (click for a larger image).
 
-![The black cat picture with only the background selected](/posts/alpha-channels/cat-first-selection.png)
+![The black cat picture with only the background selected](./cat-first-selection.png)
 
 As you may be able to make out, the small section of background next to the head hasn’t been selected, as it doesn’t connect directly to the rest. Shift-clicking it will add it to the current selection.
 
@@ -42,11 +42,11 @@ Note that alternatively we could have used the Magic Wand Tool to select all par
 
 With the cat selected, right-click anywhere on the image and choose ‘Save Selection…’ from the context menu.
 
-![The save selection menu](/posts/alpha-channels/save-selection.png)
+![The save selection menu](./save-selection.png)
 
 Click OK and the channel should be all set up. You can confirm this by clicking ‘channels’ in the Layers Window. The new channel should be shown.
 
-![The list of channels](/posts/alpha-channels/channels.png)
+![The list of channels](./channels.png)
 
 ### 4. Save and Test
 
@@ -54,7 +54,7 @@ Save and test! The image should be saved as a .tga with a 32 bits/pixel resoluti
 
 And the result:
 
-![The final result](/posts/alpha-channels/2012-09-23_00004-1024x576.jpg)
+![The final result](./2012-09-23_00004-1024x576.jpg)
 
 Success! If you’d like to see this for yourself, you can download the .tga file here.
 Conclusion

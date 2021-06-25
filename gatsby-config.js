@@ -6,6 +6,8 @@ module.exports = {
         subtitle: "Thoughts, code and everything in-between",
     },
     plugins: [
+        "gatsby-plugin-react-helmet",
+        "gatsby-plugin-emotion",
         {
             resolve: "gatsby-plugin-typography",
             options: {
@@ -20,10 +22,18 @@ module.exports = {
                 path: path.join(__dirname, "/posts"),
             },
         },
+        "gatsby-plugin-image",
+        "gatsby-plugin-sharp",
         {
             resolve: "gatsby-transformer-remark",
             options: {
                 plugins: [
+                    {
+                        resolve: "gatsby-remark-images",
+                        options: {
+                            maxWidth: 800,
+                        },
+                    },
                     {
                         resolve: "gatsby-remark-highlights",
                         options: {
@@ -50,15 +60,13 @@ module.exports = {
                 background_color: "#ffffff",
                 theme_color: "#c0392b",
                 display: "standalone",
-                icon: "static/favicon.png",
+                icon: "src/img/favicon.png",
                 icon_options: {
                     purpose: "any maskable",
                 },
                 cache_busting_mode: "none",
             },
         },
-        "gatsby-plugin-emotion",
-        "gatsby-plugin-react-helmet",
         "gatsby-plugin-offline",
     ],
 };

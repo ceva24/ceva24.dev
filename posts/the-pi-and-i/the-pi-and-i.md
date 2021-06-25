@@ -8,7 +8,7 @@ A few weeks ago I was convinced to buy a [Raspberry Pi](https://www.raspberrypi.
 It’s a very flexible piece of kit, and has a friendly community supporting it to boot. It also gives me a chance to delve into a Linux environment at home, something I haven’t done before.
 My RPi is currently employed as a media center and sits comfortably next to the television in my living room.
 
-![A picture of a Raspberry Pi](/posts/the-pi-and-i/thepi.jpg)
+![A picture of a Raspberry Pi](./thepi.jpg)
 
 In this post I’m going to go over the equipment required to set it up and steps taken to configure it. In the end it was a surprisingly cheap and fairly straightforward solution.
 
@@ -28,7 +28,7 @@ I grabbed the installer from the official website and downloaded the package. Th
 
 Booting the Pi for the first time causes it to download the latest Raspbmc package, which it then configures automatically over about 20 minutes. After completion, and from then on after boot, the main XBMC menu appears.
 
-![A picture of the XBMC main menu](/posts/the-pi-and-i/xbmcmenu.jpg)
+![A picture of the XBMC main menu](./xbmcmenu.jpg)
 
 Something I only realised after installation was that XBMC auto-detects CEC-enabled TV’s (I also learned what CEC was), which meant that my TV remote worked with it ‘out-of-the-box’ so to speak – an added bonus. However, I also decided to download the [XBMC Android App](https://play.google.com/store/apps/details?id=org.xbmc.android.remote&feature=nav_result#?t=W251bGwsMSwxLDMsIm9yZy54Ym1jLmFuZHJvaWQucmVtb3RlIl0), which is a lot easier and more responsive, and allows me to use my tablet as a remote controller. It works really well and is pretty cool.
 

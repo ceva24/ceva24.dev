@@ -7,7 +7,7 @@ I’ve experienced a few situations where its been necessary to configure an SSH
 
 This post will be an overview of the general configuration of such a setup, in case I ever have to do something similar in future. These instructions are readily available all over the internet in various formats, but I like to have it all written up in one place.
 
-![A set of keys](/posts/ssh-keys/keys.jpg)
+![A set of keys](./keys.jpg)
 
 ### Step 1 – Generate a Public and Private SSH Key
 

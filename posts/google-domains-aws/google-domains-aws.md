@@ -3,12 +3,16 @@ title: "Configuring a Google Domain to Point to an S3 Bucket"
 date: "2019-09-28"
 ---
 
+I've just switched to a `.dev` domain and wanted to host a website on [Amazon S3](https://aws.amazon.com/s3/), however all of the guides I could find assume you're going to use Amazon's own Route 53 rather than the Google Domains nameservers to achieve this.
+I wanted to keep using Google's nameservers as it's more cost-effective and I can use the super-simple email forwarding feature. I did figure out how to do all this in the end, and this post will explain how.
+
+---
+
 _Update 2021-06-19: This solution still works perfectly well and gives you lots of control over the individual services, but if you're looking for a straightforward way to host a static website I'd recommend using [AWS Amplify](https://aws.amazon.com/amplify/) - it guides you through the entire process and uses all of the same AWS services under the hood (S3, CloudFront etc.), it just removes all of the complexity. It also hooks up to your Git repo so you can enable continuous deployment without needing to write CDK or similar._
 
 ---
 
-I've just switched to a `.dev` domain and wanted to host a website on [Amazon S3](https://aws.amazon.com/s3/), however all of the guides I could find assume you're going to use Amazon's own Route 53 rather than the Google Domains nameservers to achieve this.
-I wanted to keep using Google's nameservers as it's more cost-effective and I can use the super-simple email forwarding feature. I did figure out how to do all this in the end, and this post will explain how.
+### Caveat
 
 One thing to mention is that this solution requires the website to be hosted at the `www` subdomain, which we then configure the apex domain to redirect to
 (e.g. [https://ceva24.dev](https://ceva24.dev) -> [https://www.ceva24.dev](https://www.ceva24.dev)).

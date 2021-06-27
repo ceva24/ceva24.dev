@@ -1,5 +1,5 @@
 import { css, Global } from "@emotion/react";
-import { rhythm } from "../utils/typography";
+import { rhythm } from "./typography";
 
 const GlobalStyles = () => (
     <Global

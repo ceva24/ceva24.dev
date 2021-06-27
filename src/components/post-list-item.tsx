@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 import { Link } from "gatsby";
-import { rhythm } from "../../utils/typography";
-import { PostDate } from "../post-date";
+import { rhythm } from "../styles/typography";
+import { PostDate } from "./post-date";
 
 const PostListItem: React.FC<IndexPageEdge> = ({ node }: IndexPageEdge) => (
     <li

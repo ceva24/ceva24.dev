@@ -1,7 +1,7 @@
 import { graphql } from "gatsby";
 import { css } from "@emotion/react";
-import { Layout } from "../components/layout";
-import { PostListItem } from "../components/index/post-list-item";
+import { Layout } from "../layout";
+import { PostListItem } from "../components/post-list-item";
 
 const Index: React.FC<IndexPageData> = ({ data }: IndexPageData) => (
     <Layout

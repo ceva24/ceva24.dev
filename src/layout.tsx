@@ -1,7 +1,5 @@
-import { css } from "@emotion/react";
+import React from "react";
 import Helmet from "react-helmet";
-import { rhythm } from "./styles/typography";
-import { GlobalStyles } from "./styles/global";
 import { Bio } from "./components/bio";
 
 interface LayoutProps {
@@ -10,16 +8,7 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = ({ title, children }: LayoutProps) => (
-    <div
-        css={css`
-            margin: 0 auto;
-            min-width: 300px;
-            max-width: 800px;
-            padding: ${rhythm(3 / 2)} ${rhythm(1)};
-        `}
-    >
-        <GlobalStyles />
-
+    <div>
         <Helmet>
             <html lang="en" />
             <meta charSet="utf-8" />

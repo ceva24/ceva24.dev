@@ -1,8 +1,8 @@
 import { css } from "@emotion/react";
 import Helmet from "react-helmet";
-import { rhythm } from "../utils/typography";
-import { GlobalStyles } from "../styles/global";
-import { Bio } from "./layout/bio";
+import { rhythm } from "./styles/typography";
+import { GlobalStyles } from "./styles/global";
+import { Bio } from "./components/bio";
 
 interface LayoutProps {
     title: string;

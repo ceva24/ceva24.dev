@@ -1,7 +1,7 @@
 import { graphql, Link } from "gatsby";
 import { css } from "@emotion/react";
-import { rhythm } from "../utils/typography";
-import { Layout } from "../components/layout";
+import { rhythm } from "../styles/typography";
+import { Layout } from "../layout";
 import { PostDate } from "../components/post-date";
 
 const Post: React.FC<PostTemplateData> = ({ data }: PostTemplateData) => (

@@ -7,7 +7,7 @@ import {
     faLinkedin,
     faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import { rhythm } from "../../utils/typography";
+import { rhythm } from "../styles/typography";
 import { SocialIcon } from "./social-icon";
 
 const Bio = () => {
@@ -37,7 +37,7 @@ const Bio = () => {
             `}
         >
             <StaticImage
-                src="../../img/profile-picture.png"
+                src="../img/profile-picture.png"
                 alt="Chris Evans head shot"
                 quality={100}
                 css={css`

@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import { rhythm } from "../../utils/typography";
+import { rhythm } from "../styles/typography";
 
 interface SocialIconProps {
     url: string;

@@ -1,31 +1,17 @@
+import React from "react";
 import { graphql, Link } from "gatsby";
-import { css } from "@emotion/react";
-import { rhythm } from "../styles/typography";
 import { Layout } from "../layout";
 import { PostDate } from "../components/post-date";
 
 const Post: React.FC<PostTemplateData> = ({ data }: PostTemplateData) => (
     <Layout title={data.markdownRemark.frontmatter.title}>
-        <h2
-            className="post-title"
-            css={css`
-                margin-bottom: 0;
-            `}
-        >
-            {data.markdownRemark.frontmatter.title}
-        </h2>
-        <div
-            css={css`
-                margin-bottom: ${rhythm(3 / 4)};
-            `}
-        >
+        <h2>{data.markdownRemark.frontmatter.title}</h2>
+        <div>
             <PostDate>{data.markdownRemark.frontmatter.date}</PostDate>
         </div>
         {/* eslint-disable-next-line react/no-danger */}
         <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-        <Link className="home-link" to="/">
-            Home
-        </Link>
+        <Link to="/">Home</Link>
     </Layout>
 );
 

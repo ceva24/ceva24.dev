@@ -1,5 +1,5 @@
+import React from "react";
 import { graphql } from "gatsby";
-import { css } from "@emotion/react";
 import { Layout } from "../layout";
 import { PostListItem } from "../components/post-list-item";
 
@@ -8,17 +8,9 @@ const Index: React.FC<IndexPageData> = ({ data }: IndexPageData) => (
         title={`${data.site.siteMetadata.name} | ${data.site.siteMetadata.subtitle}`}
     >
         <h2>
-            Posts{" "}
-            <span className="secondary-description">
-                ({data.allMarkdownRemark.totalCount})
-            </span>
+            Posts <span>({data.allMarkdownRemark.totalCount})</span>
         </h2>
-        <ul
-            css={css`
-                list-style: none;
-                margin-left: 0;
-            `}
-        >
+        <ul>
             {data.allMarkdownRemark.edges.map(({ node }) => (
                 <PostListItem key={node.id} node={node} />
             ))}

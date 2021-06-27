@@ -26,7 +26,7 @@ First choose the Magic Wand tool and select the background.
 
 By selecting the background, we can almost always ensure that all relevant parts will be selected (with a caveat, as we can see below).
 
-The initial result is as follows (click for a larger image).
+The initial result is as follows:
 
 ![The black cat picture with only the background selected](./cat-first-selection.png)
 

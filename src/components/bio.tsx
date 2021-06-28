@@ -9,21 +9,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { SocialIcon } from "./social-icon";
 
-const Bio = () => {
-    const data: BioComponentData = useStaticQuery(
-        // eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
-        graphql`
-            query {
-                site {
-                    siteMetadata {
-                        name
-                        subtitle
-                    }
-                }
-            }
-        `
-    );
-
+const PureBio: React.FC<BioComponentData> = (data: BioComponentData) => {
     return (
         <div>
             <StaticImage
@@ -35,10 +21,7 @@ const Bio = () => {
                 <h1>
                     <Link to="/">{data.site.siteMetadata.name}</Link>
                 </h1>
-                <div>
-                    A Web Development / Systems Integration Team Leader at the
-                    University of York
-                </div>
+                <div>{data.site.siteMetadata.description}</div>
                 <div>
                     <SocialIcon
                         icon={faEnvelope}
@@ -66,4 +49,22 @@ const Bio = () => {
     );
 };
 
-export { Bio };
+const Bio: React.FC = () => {
+    const data: BioComponentData = useStaticQuery(
+        // eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
+        graphql`
+            query {
+                site {
+                    siteMetadata {
+                        name
+                        description
+                    }
+                }
+            }
+        `
+    );
+
+    return <PureBio {...data} />;
+};
+
+export { Bio, PureBio };

@@ -1,5 +1,6 @@
-// eslint-disable-next-line import/no-unassigned-import
+/* eslint-disable import/no-unassigned-import */
 import "@percy/cypress";
+import "@testing-library/cypress/add-commands";
 
 describe("Post page", () => {
     it("Renders", () => {
@@ -19,7 +20,7 @@ describe("Post page", () => {
     it("Contains the header", () => {
         cy.visit("/posts/introduction");
 
-        cy.get(".post-title").contains("Introduction - Welp");
+        cy.contains("Introduction - Welp");
     });
 
     it("Contains the post content", () => {
@@ -33,7 +34,7 @@ describe("Post page", () => {
     it("Has a home link that returns to the index page", () => {
         cy.visit("/posts/introduction");
 
-        cy.get(".home-link").click();
+        cy.findByRole("link", { name: "Home" }).click();
 
         cy.url().should("eq", `${Cypress.config().baseUrl}/`);
     });
@@ -41,7 +42,7 @@ describe("Post page", () => {
     it("Returns to the index page when clicking on the bio title", () => {
         cy.visit("/posts/introduction");
 
-        cy.get(".bio-link").click();
+        cy.findByRole("link", { name: "Chris Evans" }).click();
 
         cy.url().should("eq", `${Cypress.config().baseUrl}/`);
     });

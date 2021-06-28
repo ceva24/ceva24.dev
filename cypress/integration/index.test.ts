@@ -1,5 +1,6 @@
-// eslint-disable-next-line import/no-unassigned-import
+/* eslint-disable import/no-unassigned-import */
 import "@percy/cypress";
+import "@testing-library/cypress/add-commands";
 
 describe("Index page", () => {
     it("Renders", () => {
@@ -17,14 +18,14 @@ describe("Index page", () => {
     it("Has a list of posts", () => {
         cy.visit("/");
 
-        cy.get(".post").should("have.length.above", 10);
+        cy.findAllByRole("link").should("have.length.above", 10);
     });
 
     it("Can click on a post to navigate to the post", () => {
         cy.visit("/");
 
-        cy.get(".post").first().find("a").click();
+        cy.findByRole("link", { name: "Introduction - Welp" }).click();
 
-        cy.url().should("include", "/posts/");
+        cy.url().should("eq", `${Cypress.config().baseUrl}/posts/introduction`);
     });
 });

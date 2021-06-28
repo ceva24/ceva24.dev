@@ -15,6 +15,14 @@ describe("Index page", () => {
         cy.contains("Chris Evans");
     });
 
+    it("Contains the bio head shot", () => {
+        cy.visit("/");
+
+        cy.findByRole("img")
+            .invoke("attr", "src")
+            .should("contain", "/profile-picture.png");
+    });
+
     it("Has a list of posts", () => {
         cy.visit("/");
 

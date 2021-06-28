@@ -4,6 +4,8 @@ module.exports = {
     siteMetadata: {
         name: "Chris Evans",
         subtitle: "Thoughts, code and everything in-between",
+        description:
+            "A Web Development / Systems Integration Team Leader at the University of York",
     },
     plugins: [
         "gatsby-plugin-react-helmet",

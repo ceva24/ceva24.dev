@@ -3,20 +3,22 @@ import { graphql } from "gatsby";
 import { Layout } from "../layout";
 import { PostListItem } from "../components/post-list-item";
 
-const Index: React.FC<IndexPageData> = ({ data }: IndexPageData) => (
-    <Layout
-        title={`${data.site.siteMetadata.name} | ${data.site.siteMetadata.subtitle}`}
-    >
-        <h2>
-            Posts <span>({data.allMarkdownRemark.totalCount})</span>
-        </h2>
-        <ul>
-            {data.allMarkdownRemark.edges.map((edge) => (
-                <PostListItem key={edge.node.id} node={edge.node} />
-            ))}
-        </ul>
-    </Layout>
-);
+const Index: React.FC<IndexPageData> = ({ data }: IndexPageData) => {
+    return (
+        <Layout
+            title={`${data.site.siteMetadata.name} | ${data.site.siteMetadata.subtitle}`}
+        >
+            <h2>
+                Posts <span>({data.allMarkdownRemark.totalCount})</span>
+            </h2>
+            <ul>
+                {data.allMarkdownRemark.edges.map((edge) => (
+                    <PostListItem key={edge.node.id} node={edge.node} />
+                ))}
+            </ul>
+        </Layout>
+    );
+};
 
 // eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
 const query = graphql`

@@ -44,7 +44,7 @@ interface BioComponentData {
     site: {
         siteMetadata: {
             name: string;
-            subtitle: string;
+            description: string;
         };
     };
 }

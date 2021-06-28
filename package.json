@@ -19,6 +19,7 @@
         "build": "gatsby build",
         "serve": "gatsby serve",
         "clean": "gatsby clean",
+        "test": "jest --coverage",
         "e2e": "cypress run",
         "e2e:visual": "percy exec -- cypress run",
         "format": "prettier --write .",
@@ -27,7 +28,7 @@
         "check-types:gatsby": "tsc",
         "check-types:cypress": "tsc --project cypress/tsconfig.json",
         "check-types": "npm run check-types:gatsby && npm run check-types:cypress",
-        "check": "npm run check-format && npm run lint && npm run check-types"
+        "check": "npm run check-format && npm run lint && npm run check-types && npm run test"
     },
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^1.2.35",
@@ -53,11 +54,14 @@
         "@percy/cli": "^1.0.0-beta.56",
         "@percy/cypress": "^3.1.0",
         "@testing-library/cypress": "^7.0.6",
+        "@testing-library/react": "^12.0.0",
+        "@types/jest": "^26.0.23",
         "@types/react-helmet": "^6.1.1",
         "cypress": "^7.6.0",
         "eslint-config-xo-react": "^0.25.0",
         "eslint-plugin-cypress": "^2.11.3",
         "husky": "^6.0.0",
+        "jest": "^27.0.5",
         "xo": "^0.40.3"
     }
 }

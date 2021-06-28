@@ -13,7 +13,7 @@ describe("bio", () => {
             },
         };
 
-        const { asFragment } = render(<PureBio site={data.site} />);
+        const { asFragment } = render(<PureBio {...data} />);
 
         expect(asFragment()).toMatchSnapshot();
     });

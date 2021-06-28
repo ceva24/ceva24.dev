@@ -11,8 +11,8 @@ const Index: React.FC<IndexPageData> = ({ data }: IndexPageData) => (
             Posts <span>({data.allMarkdownRemark.totalCount})</span>
         </h2>
         <ul>
-            {data.allMarkdownRemark.edges.map(({ node }) => (
-                <PostListItem key={node.id} node={node} />
+            {data.allMarkdownRemark.edges.map((edge) => (
+                <PostListItem key={edge.node.id} node={edge.node} />
             ))}
         </ul>
     </Layout>

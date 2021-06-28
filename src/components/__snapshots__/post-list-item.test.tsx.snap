@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`post list item renders 1`] = `
+<DocumentFragment>
+  <li>
+    <div>
+      <h3>
+        <a
+          href="/posts/post-title"
+        >
+          post title
+        </a>
+      </h3>
+      <div>
+        <strong>
+          01-01-2020
+        </strong>
+      </div>
+    </div>
+    <p>
+      This is a post
+    </p>
+  </li>
+</DocumentFragment>
+`;

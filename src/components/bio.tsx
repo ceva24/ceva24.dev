@@ -21,7 +21,7 @@ const PureBio: React.FC<BioComponentData> = (data: BioComponentData) => {
                 <h1>
                     <Link to="/">{data.site.siteMetadata.name}</Link>
                 </h1>
-                <div>{data.site.siteMetadata.description}</div>
+                <div>{data.site.siteMetadata.role}</div>
                 <div>
                     <SocialIcon
                         icon={faEnvelope}
@@ -57,7 +57,7 @@ const Bio: React.FC = () => {
                 site {
                     siteMetadata {
                         name
-                        description
+                        role
                     }
                 }
             }

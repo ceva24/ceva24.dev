@@ -2,14 +2,14 @@
 import "@percy/cypress";
 import "@testing-library/cypress/add-commands";
 
-describe("Post page", () => {
-    it("Renders", () => {
+describe("post page", () => {
+    it("renders", () => {
         cy.visit("/posts/introduction");
 
         cy.percySnapshot();
     });
 
-    it("Renders syntax highlighting", () => {
+    it("renders syntax highlighting", () => {
         cy.visit("/posts/hibernate-grails-caching");
 
         cy.get(".syntax--java").should("exist");
@@ -17,13 +17,13 @@ describe("Post page", () => {
         cy.percySnapshot();
     });
 
-    it("Contains the header", () => {
+    it("contains the header", () => {
         cy.visit("/posts/introduction");
 
         cy.contains("Introduction - Welp");
     });
 
-    it("Contains the post content", () => {
+    it("contains the post content", () => {
         cy.visit("/posts/introduction");
 
         cy.contains(
@@ -31,7 +31,7 @@ describe("Post page", () => {
         );
     });
 
-    it("Has a home link that returns to the index page", () => {
+    it("has a home link that returns to the index page", () => {
         cy.visit("/posts/introduction");
 
         cy.findByRole("link", { name: "Home" }).click();
@@ -39,7 +39,7 @@ describe("Post page", () => {
         cy.url().should("eq", `${Cypress.config().baseUrl}/`);
     });
 
-    it("Returns to the index page when clicking on the bio title", () => {
+    it("returns to the index page when clicking on the bio title", () => {
         cy.visit("/posts/introduction");
 
         cy.findByRole("link", { name: "Chris Evans" }).click();

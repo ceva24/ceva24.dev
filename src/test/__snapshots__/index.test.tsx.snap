@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`post renders 1`] = `
+<DocumentFragment>
+  <h2>
+    Posts 
+    <span>
+      (1)
+    </span>
+  </h2>
+  <ul>
+    <li>
+      <div>
+        <h3>
+          <a
+            href="/posts/post-title"
+          >
+            Post title
+          </a>
+        </h3>
+        <div>
+          <strong>
+            2000-01-01
+          </strong>
+        </div>
+      </div>
+      <p>
+        This is a post...
+      </p>
+    </li>
+  </ul>
+</DocumentFragment>
+`;

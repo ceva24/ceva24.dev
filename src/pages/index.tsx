@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { Layout } from "../layout";
+import { Layout } from "../components/layout";
 import { PostListItem } from "../components/post-list-item";
 
 const Index: React.FC<IndexPageData> = ({ data }: IndexPageData) => {

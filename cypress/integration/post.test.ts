@@ -9,6 +9,12 @@ describe("post page", () => {
         cy.percySnapshot();
     });
 
+    it("sets the page title", () => {
+        cy.visit("/posts/introduction");
+
+        cy.title().should("equal", "Introduction - Welp");
+    });
+
     it("renders syntax highlighting", () => {
         cy.visit("/posts/hibernate-grails-caching");
 

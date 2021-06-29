@@ -1,17 +1,26 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
-import { Layout } from "../layout";
+import { Layout } from "../components/layout";
 import { PostDate } from "../components/post-date";
 
-const Post: React.FC<PostTemplateData> = ({ data }: PostTemplateData) => (
-    <Layout title={data.markdownRemark.frontmatter.title}>
-        <h2>{data.markdownRemark.frontmatter.title}</h2>
+const PurePost: React.FC<PostTemplateData> = (data: PostTemplateData) => (
+    <>
+        <h2>{data.data.markdownRemark.frontmatter.title}</h2>
         <div>
-            <PostDate>{data.markdownRemark.frontmatter.date}</PostDate>
+            <PostDate>{data.data.markdownRemark.frontmatter.date}</PostDate>
         </div>
-        {/* eslint-disable-next-line react/no-danger */}
-        <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+
+        <div
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{ __html: data.data.markdownRemark.html }}
+        />
         <Link to="/">Home</Link>
+    </>
+);
+
+const Post: React.FC<PostTemplateData> = (data: PostTemplateData) => (
+    <Layout title={data.data.markdownRemark.frontmatter.title}>
+        <PurePost {...data} />
     </Layout>
 );
 
@@ -29,4 +38,4 @@ const query = graphql`
 `;
 
 export default Post;
-export { query };
+export { PurePost, query };

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`post renders 1`] = `
+<DocumentFragment>
+  <h2>
+    Post title
+  </h2>
+  <div>
+    <strong>
+      2000-01-01
+    </strong>
+  </div>
+  <div>
+    <p>
+      Hello world
+    </p>
+  </div>
+  <a
+    aria-current="page"
+    class=""
+    href="/"
+  >
+    Home
+  </a>
+</DocumentFragment>
+`;

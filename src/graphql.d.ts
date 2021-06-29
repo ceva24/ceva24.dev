@@ -40,11 +40,19 @@ interface PostTemplateData {
     };
 }
 
+interface LayoutData {
+    site: {
+        siteMetadata: {
+            pageDescription: string;
+        };
+    };
+}
+
 interface BioComponentData {
     site: {
         siteMetadata: {
             name: string;
-            description: string;
+            role: string;
         };
     };
 }

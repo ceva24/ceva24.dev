@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`layout renders 1`] = `
+<DocumentFragment>
+  <div>
+    <div>
+      Bio
+    </div>
+    <p>
+      Hello
+    </p>
+  </div>
+</DocumentFragment>
+`;

@@ -2,20 +2,34 @@
 import "@percy/cypress";
 import "@testing-library/cypress/add-commands";
 
-describe("Index page", () => {
-    it("Renders", () => {
+describe("index page", () => {
+    it("renders", () => {
         cy.visit("/");
 
         cy.percySnapshot();
     });
 
-    it("Contains the bio", () => {
+    it("sets the page metadata description", () => {
+        cy.visit("/");
+
+        cy.get('meta[name="description"]')
+            .invoke("attr", "content")
+            .should(
+                "equal",
+                "Chris Evans, a Web Development / Systems Integration Team Leader at the University of York"
+            );
+    });
+
+    it("contains the bio", () => {
         cy.visit("/");
 
         cy.contains("Chris Evans");
+        cy.contains(
+            "A Web Development / Systems Integration Team Leader at the University of York"
+        );
     });
 
-    it("Contains the bio head shot", () => {
+    it("contains the bio head shot", () => {
         cy.visit("/");
 
         cy.findByRole("img")
@@ -23,13 +37,13 @@ describe("Index page", () => {
             .should("contain", "/profile-picture.png");
     });
 
-    it("Has a list of posts", () => {
+    it("has a list of posts", () => {
         cy.visit("/");
 
         cy.findAllByRole("link").should("have.length.above", 10);
     });
 
-    it("Can click on a post to navigate to the post", () => {
+    it("can click on a post to navigate to the post", () => {
         cy.visit("/");
 
         cy.findByRole("link", { name: "Introduction - Welp" }).click();

@@ -8,7 +8,7 @@ describe("bio", () => {
             site: {
                 siteMetadata: {
                     name: "Captain",
-                    description: "Caveman",
+                    role: "Caveman",
                 },
             },
         };

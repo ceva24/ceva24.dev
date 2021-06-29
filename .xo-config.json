@@ -10,5 +10,5 @@
         "react/jsx-tag-spacing": "off",
         "react/react-in-jsx-scope": "off"
     },
-    "ignores": ["gatsby-*.js"]
+    "ignores": ["gatsby-*.js", "*.config.js"]
 }

@@ -9,6 +9,15 @@ describe("index page", () => {
         cy.percySnapshot();
     });
 
+    it("sets the page title", () => {
+        cy.visit("/");
+
+        cy.title().should(
+            "equal",
+            "Chris Evans | Thoughts, code and everything in-between"
+        );
+    });
+
     it("sets the page metadata description", () => {
         cy.visit("/");
 

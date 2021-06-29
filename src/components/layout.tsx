@@ -1,7 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { graphql, useStaticQuery } from "gatsby";
-import { Bio } from "./components/bio";
+import { Bio } from "./bio";
 
 interface LayoutProps {
     title: string;

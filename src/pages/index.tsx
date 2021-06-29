@@ -3,14 +3,14 @@ import { graphql } from "gatsby";
 import { Layout } from "../components/layout";
 import { PostListItem } from "../components/post-list-item";
 
-const PureIndex: React.FC<IndexPageData> = ({ data }: IndexPageData) => {
+const PureIndex: React.FC<IndexPageData> = (data: IndexPageData) => {
     return (
         <>
             <h2>
-                Posts <span>({data.allMarkdownRemark.totalCount})</span>
+                Posts <span>({data.data.allMarkdownRemark.totalCount})</span>
             </h2>
             <ul>
-                {data.allMarkdownRemark.edges.map((edge) => (
+                {data.data.allMarkdownRemark.edges.map((edge) => (
                     <PostListItem key={edge.node.id} node={edge.node} />
                 ))}
             </ul>
@@ -18,19 +18,12 @@ const PureIndex: React.FC<IndexPageData> = ({ data }: IndexPageData) => {
     );
 };
 
-const Index: React.FC<IndexPageData> = ({ data }: IndexPageData) => {
+const Index: React.FC<IndexPageData> = (data: IndexPageData) => {
     return (
         <Layout
-            title={`${data.site.siteMetadata.name} | ${data.site.siteMetadata.subtitle}`}
+            title={`${data.data.site.siteMetadata.name} | ${data.data.site.siteMetadata.subtitle}`}
         >
-            <h2>
-                Posts <span>({data.allMarkdownRemark.totalCount})</span>
-            </h2>
-            <ul>
-                {data.allMarkdownRemark.edges.map((edge) => (
-                    <PostListItem key={edge.node.id} node={edge.node} />
-                ))}
-            </ul>
+            <PureIndex {...data} />
         </Layout>
     );
 };

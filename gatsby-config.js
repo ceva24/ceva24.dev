@@ -9,6 +9,18 @@ module.exports = {
             "Chris Evans, a Web Development / Systems Integration Team Leader at the University of York",
     },
     plugins: [
+        "gatsby-plugin-postcss",
+        {
+            resolve: "gatsby-plugin-purgecss",
+            options: {
+                develop: true,
+                tailwind: true,
+                ignore: [
+                    "@fortawesome/fontawesome-svg-core/styles.css",
+                    "src/styles/highlights.css",
+                ],
+            },
+        },
         "gatsby-plugin-react-helmet",
         {
             resolve: "gatsby-source-filesystem",

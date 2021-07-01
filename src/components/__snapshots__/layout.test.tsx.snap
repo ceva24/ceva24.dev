@@ -3,9 +3,6 @@
 exports[`layout renders 1`] = `
 <DocumentFragment>
   <div>
-    <div>
-      Bio
-    </div>
     <p>
       Hello
     </p>

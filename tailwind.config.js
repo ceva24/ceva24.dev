@@ -2,7 +2,10 @@ module.exports = {
     purge: ["./src/**/*.{js,jsx,ts,tsx}"],
     darkMode: false,
     theme: {
-        extend: {},
+        fontFamily: {
+            sans: ["Montserrat"],
+            title: ["Nunito"],
+        },
     },
     variants: {
         extend: {},

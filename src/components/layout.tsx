@@ -1,7 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { graphql, useStaticQuery } from "gatsby";
-import { Bio } from "./bio";
 
 interface LayoutProps {
     title: string;
@@ -10,13 +9,11 @@ interface LayoutProps {
 
 interface PureLayoutProps extends LayoutProps {
     description: string;
-    bio: React.ReactElement;
 }
 
 const PureLayout: React.FC<PureLayoutProps> = ({
     title,
     description,
-    bio,
     children,
 }: PureLayoutProps) => (
     <div>
@@ -30,8 +27,6 @@ const PureLayout: React.FC<PureLayoutProps> = ({
             <meta name="description" content={description} />
             <title>{title}</title>
         </Helmet>
-
-        {bio}
 
         {children}
     </div>
@@ -51,13 +46,10 @@ const Layout: React.FC<LayoutProps> = ({ title, children }: LayoutProps) => {
         `
     );
 
-    const bio = <Bio />;
-
     return (
         <PureLayout
             title={title}
             description={data.site.siteMetadata.pageDescription}
-            bio={bio}
         >
             {children}
         </PureLayout>

@@ -2,24 +2,45 @@
 
 exports[`post list item renders 1`] = `
 <DocumentFragment>
-  <li>
-    <div>
-      <h3>
-        <a
-          href="/posts/post-title"
+  <li
+    aria-label="post title"
+  >
+    <div
+      class="max-w-4xl mx-auto"
+    >
+      <a
+        aria-label="post title"
+        href="/posts/post-title"
+      >
+        <div
+          class="p-6 pb-3 text-gray-700 hover:bg-gray-50 hover:shadow-lg"
         >
-          post title
-        </a>
-      </h3>
-      <div>
-        <strong>
-          01-01-2020
-        </strong>
-      </div>
+          <div
+            class="flex"
+          >
+            <h3
+              class="flex-grow font-title text-lg pr-6"
+            >
+              <strong
+                class="uppercase"
+              >
+                post title
+              </strong>
+            </h3>
+            <div
+              class="flex-none"
+            >
+              <div>
+                01-01-2020
+              </div>
+            </div>
+          </div>
+          <p>
+            This is a post
+          </p>
+        </div>
+      </a>
     </div>
-    <p>
-      This is a post
-    </p>
   </li>
 </DocumentFragment>
 `;

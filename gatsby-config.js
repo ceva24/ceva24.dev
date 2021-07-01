@@ -13,7 +13,6 @@ module.exports = {
         {
             resolve: "gatsby-plugin-purgecss",
             options: {
-                develop: true,
                 tailwind: true,
                 ignore: [
                     "@fortawesome/fontawesome-svg-core/styles.css",

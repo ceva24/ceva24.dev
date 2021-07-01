@@ -5,16 +5,11 @@ import { PostListItem } from "../components/post-list-item";
 
 const PureIndex: React.FC<IndexPageData> = (data: IndexPageData) => {
     return (
-        <>
-            <h2>
-                Posts <span>({data.data.allMarkdownRemark.totalCount})</span>
-            </h2>
-            <ul>
-                {data.data.allMarkdownRemark.edges.map((edge) => (
-                    <PostListItem key={edge.node.id} node={edge.node} />
-                ))}
-            </ul>
-        </>
+        <ul className="px-3">
+            {data.data.allMarkdownRemark.edges.map((edge) => (
+                <PostListItem key={edge.node.id} node={edge.node} />
+            ))}
+        </ul>
     );
 };
 
@@ -50,7 +45,7 @@ const query = graphql`
                         slug
                         path
                     }
-                    excerpt
+                    excerpt(pruneLength: 300)
                 }
             }
         }

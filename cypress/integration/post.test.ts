@@ -44,12 +44,4 @@ describe("post page", () => {
 
         cy.url().should("eq", `${Cypress.config().baseUrl}/`);
     });
-
-    it("returns to the index page when clicking on the bio title", () => {
-        cy.visit("/posts/introduction");
-
-        cy.findByRole("link", { name: "Chris Evans" }).click();
-
-        cy.url().should("eq", `${Cypress.config().baseUrl}/`);
-    });
 });

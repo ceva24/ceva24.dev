@@ -29,23 +29,6 @@ describe("index page", () => {
             );
     });
 
-    it("contains the bio", () => {
-        cy.visit("/");
-
-        cy.contains("Chris Evans");
-        cy.contains(
-            "A Web Development / Systems Integration Team Leader at the University of York"
-        );
-    });
-
-    it("contains the bio head shot", () => {
-        cy.visit("/");
-
-        cy.findByRole("img")
-            .invoke("attr", "src")
-            .should("contain", "/profile-picture.png");
-    });
-
     it("has a list of posts", () => {
         cy.visit("/");
 

@@ -40,7 +40,7 @@
         "gatsby-plugin-emotion": "^6.7.1",
         "gatsby-plugin-google-analytics": "^3.7.1",
         "gatsby-plugin-image": "^1.8.0",
-        "gatsby-plugin-manifest": "^3.7.1",
+        "gatsby-plugin-manifest": "^3.8.0",
         "gatsby-plugin-offline": "^4.7.1",
         "gatsby-plugin-react-helmet": "^4.7.1",
         "gatsby-plugin-sharp": "^3.8.0",

@@ -13,9 +13,9 @@ const PostListItem: React.FC<IndexPageEdge> = ({ node }: IndexPageEdge) => {
             >
                 <div className="p-6 pb-3 hover:bg-gray-50 hover:shadow-lg">
                     <div className="flex">
-                        <h3 className="flex-grow text-xl mr-6 uppercase font-normal">
+                        <h2 className="flex-grow text-xl mr-6 uppercase font-normal">
                             {title}
-                        </h3>
+                        </h2>
 
                         <div className="flex-none">{node.frontmatter.date}</div>
                     </div>

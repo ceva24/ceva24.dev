@@ -1,84 +1,28 @@
+import React from "react";
 import { graphql, useStaticQuery, Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-import { css } from "@emotion/react";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
     faGithub,
     faLinkedin,
     faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import { rhythm } from "../styles/typography";
 import { SocialIcon } from "./social-icon";
 
-const Bio = () => {
-    const data: BioComponentData = useStaticQuery(
-        // eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
-        graphql`
-            query {
-                site {
-                    siteMetadata {
-                        name
-                        subtitle
-                    }
-                }
-            }
-        `
-    );
-
+const PureBio: React.FC<BioComponentData> = (data: BioComponentData) => {
     return (
-        <div
-            css={css`
-                display: flex;
-                align-items: center;
-                margin-bottom: ${rhythm(2)};
-                @media (max-width: 768px) {
-                    justify-content: center;
-                }
-            `}
-        >
+        <div>
             <StaticImage
                 src="../img/profile-picture.png"
                 alt="Chris Evans head shot"
                 quality={100}
-                css={css`
-                    margin-right: ${rhythm(1 / 2)};
-                    border-radius: 100%;
-                `}
             />
-            <div
-                css={css`
-                    padding-left: ${rhythm(3 / 4)};
-                    border-left: 1px solid;
-                `}
-            >
+            <div>
                 <h1>
-                    <Link
-                        to="/"
-                        className="bio-link"
-                        css={css`
-                            color: inherit;
-                            &:hover {
-                                color: inherit;
-                            }
-                        `}
-                    >
-                        {data.site.siteMetadata.name}
-                    </Link>
+                    <Link to="/">{data.site.siteMetadata.name}</Link>
                 </h1>
+                <div>{data.site.siteMetadata.role}</div>
                 <div>
-                    A Web Development / Systems Integration Team Leader at the
-                    University of York
-                </div>
-                <div
-                    css={css`
-                        @media (max-width: 768px) {
-                            font-size: ${rhythm(1)};
-                        }
-                        @media (min-width: 768px) {
-                            font-size: ${rhythm(4 / 5)};
-                        }
-                    `}
-                >
                     <SocialIcon
                         icon={faEnvelope}
                         label="Email"
@@ -105,4 +49,22 @@ const Bio = () => {
     );
 };
 
-export { Bio };
+const Bio: React.FC = () => {
+    const data: BioComponentData = useStaticQuery(
+        // eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
+        graphql`
+            query {
+                site {
+                    siteMetadata {
+                        name
+                        role
+                    }
+                }
+            }
+        `
+    );
+
+    return <PureBio {...data} />;
+};
+
+export { Bio, PureBio };

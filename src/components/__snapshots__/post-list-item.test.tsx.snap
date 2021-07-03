@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`post list item renders 1`] = `
+<DocumentFragment>
+  <li
+    aria-label="post title"
+    class="mb-0"
+  >
+    <a
+      aria-label="post title"
+      class="text-black"
+      href="/posts/post-title"
+    >
+      <div
+        class="p-6 pb-3 hover:bg-gray-50 hover:shadow-lg"
+      >
+        <div
+          class="flex"
+        >
+          <h3
+            class="flex-grow text-xl mr-6 uppercase font-normal"
+          >
+            post title
+          </h3>
+          <div
+            class="flex-none"
+          >
+            01-01-2020
+          </div>
+        </div>
+        <p>
+          This is a post
+        </p>
+      </div>
+    </a>
+  </li>
+</DocumentFragment>
+`;

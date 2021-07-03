@@ -1,40 +1,29 @@
+import React from "react";
 import { graphql } from "gatsby";
-import { css } from "@emotion/react";
-import { Layout } from "../layout";
+import { Layout } from "../components/layout";
 import { PostListItem } from "../components/post-list-item";
 
-const Index: React.FC<IndexPageData> = ({ data }: IndexPageData) => (
-    <Layout
-        title={`${data.site.siteMetadata.name} | ${data.site.siteMetadata.subtitle}`}
-    >
-        <h2>
-            Posts{" "}
-            <span className="secondary-description">
-                ({data.allMarkdownRemark.totalCount})
-            </span>
-        </h2>
-        <ul
-            css={css`
-                list-style: none;
-                margin-left: 0;
-            `}
-        >
-            {data.allMarkdownRemark.edges.map(({ node }) => (
-                <PostListItem key={node.id} node={node} />
+const PureIndex: React.FC<IndexPageData> = (data: IndexPageData) => {
+    return (
+        <ul className="list-none">
+            {data.data.allMarkdownRemark.edges.map((edge) => (
+                <PostListItem key={edge.node.id} node={edge.node} />
             ))}
         </ul>
-    </Layout>
-);
+    );
+};
+
+const Index: React.FC<IndexPageData> = (data: IndexPageData) => {
+    return (
+        <Layout>
+            <PureIndex {...data} />
+        </Layout>
+    );
+};
 
 // eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
 const query = graphql`
     query {
-        site {
-            siteMetadata {
-                name
-                subtitle
-            }
-        }
         allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
             totalCount
             edges {
@@ -42,13 +31,13 @@ const query = graphql`
                     id
                     frontmatter {
                         title
-                        date(formatString: "YYYY-MM-DD")
+                        date
                     }
                     fields {
                         slug
                         path
                     }
-                    excerpt
+                    excerpt(pruneLength: 300)
                 }
             }
         }
@@ -56,4 +45,4 @@ const query = graphql`
 `;
 
 export default Index;
-export { query };
+export { PureIndex, query };

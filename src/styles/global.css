@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    p,
+    pre,
+    hr {
+        @apply mb-5;
+    }
+
+    h3 {
+        @apply mb-5 uppercase text-2xl font-normal;
+    }
+
+    a {
+        @apply text-blue-700;
+    }
+
+    ul {
+        @apply mb-5 list-inside list-disc;
+    }
+
+    ol {
+        @apply mb-5 list-inside list-decimal;
+    }
+
+    li {
+        @apply mb-2;
+    }
+
+    table {
+        @apply mb-5 w-full;
+    }
+
+    tr {
+        @apply border-t border-b p-2;
+    }
+
+    th,
+    td {
+        @apply p-2;
+    }
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 300;
+    src: url("../fonts/Montserrat-Light.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 400;
+    src: url("../fonts/Montserrat-Regular.ttf");
+    font-display: swap;
+}

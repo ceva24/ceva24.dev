@@ -1,11 +1,5 @@
 interface IndexPageData {
     data: {
-        site: {
-            siteMetadata: {
-                name: string;
-                subtitle: string;
-            };
-        };
         allMarkdownRemark: {
             totalCount: number;
             edges: IndexPageEdge[];
@@ -43,6 +37,9 @@ interface PostTemplateData {
 interface LayoutData {
     site: {
         siteMetadata: {
+            name: string;
+            website: string;
+            subtitle: string;
             pageDescription: string;
         };
     };

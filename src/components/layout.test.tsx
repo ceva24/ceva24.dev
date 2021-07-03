@@ -7,7 +7,13 @@ describe("layout", () => {
         const children = <p>Hello</p>;
 
         const { asFragment } = render(
-            <PureLayout title="Title" description="Description">
+            <PureLayout
+                title="Title"
+                pageDescription="Description"
+                name="Name"
+                website="Website"
+                subtitle="Subtitle"
+            >
                 {children}
             </PureLayout>
         );

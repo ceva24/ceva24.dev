@@ -15,12 +15,6 @@ describe("post", () => {
     it("renders", () => {
         const data: IndexPageData = {
             data: {
-                site: {
-                    siteMetadata: {
-                        name: "Site name",
-                        subtitle: "Site subtitle",
-                    },
-                },
                 allMarkdownRemark: {
                     totalCount: 1,
                     edges: [

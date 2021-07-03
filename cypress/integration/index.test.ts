@@ -12,10 +12,7 @@ describe("index page", () => {
     it("sets the page title", () => {
         cy.visit("/");
 
-        cy.title().should(
-            "equal",
-            "Chris Evans | Thoughts, code and everything in-between"
-        );
+        cy.title().should("equal", "Chris Evans");
     });
 
     it("sets the page metadata description", () => {
@@ -27,6 +24,12 @@ describe("index page", () => {
                 "equal",
                 "Chris Evans, a Web Development / Systems Integration Team Leader at the University of York"
             );
+    });
+
+    it("has the banner", () => {
+        cy.visit("/");
+
+        cy.findByRole("banner").contains("Chris Evans");
     });
 
     it("has a list of posts", () => {

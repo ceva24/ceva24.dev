@@ -28,60 +28,64 @@ const PureLayout: React.FC<PureLayoutProps> = ({
     subtitle,
     pageDescription,
     children,
-}: PureLayoutProps) => (
-    <div className="text-lg">
-        <Helmet>
-            <html lang="en" />
-            <meta charSet="utf-8" />
-            <meta
-                name="viewport"
-                content="width=device-width, initial-scale=1, shrink-to-fit=no"
-            />
-            <meta name="description" content={pageDescription} />
-            <title>{title}</title>
-        </Helmet>
+}: PureLayoutProps) => {
+    const pageTitle = title ?? name;
 
-        <header className="max-w-6xl mx-auto border-b">
-            <div className="py-8 text-center space-y-5">
-                <h1 className="text-7xl">
-                    <Link to="/">{name}</Link>
-                </h1>
+    return (
+        <div className="text-lg font-light">
+            <Helmet>
+                <html lang="en" />
+                <meta charSet="utf-8" />
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+                />
+                <meta name="description" content={pageDescription} />
+                <title>{pageTitle}</title>
+            </Helmet>
 
-                <div>
-                    <strong>{website}</strong> | {subtitle}
+            <header className="max-w-6xl mx-auto border-b">
+                <div className="my-8 text-center space-y-5">
+                    <h1 className="text-7xl">
+                        <Link to="/">{name}</Link>
+                    </h1>
+
+                    <div>
+                        <strong>{website}</strong> | {subtitle}
+                    </div>
+
+                    <div
+                        className="space-x-8 text-gray-700 text-2xl"
+                        aria-label="Contact"
+                    >
+                        <SocialIcon
+                            icon={faEnvelope}
+                            label="Email"
+                            url="mailto:chris@ceva24.dev"
+                        />
+                        <SocialIcon
+                            icon={faGithub}
+                            label="Github"
+                            url="https://www.github.com/ceva24"
+                        />
+                        <SocialIcon
+                            icon={faLinkedin}
+                            label="LinkedIn"
+                            url="https://www.linkedin.com/in/ceva24"
+                        />
+                        <SocialIcon
+                            icon={faTwitter}
+                            label="Twitter"
+                            url="https://twitter.com/ceva24"
+                        />
+                    </div>
                 </div>
+            </header>
 
-                <div
-                    className="space-x-8 text-gray-700 text-2xl"
-                    aria-label="Contact"
-                >
-                    <SocialIcon
-                        icon={faEnvelope}
-                        label="Email"
-                        url="mailto:chris@ceva24.dev"
-                    />
-                    <SocialIcon
-                        icon={faGithub}
-                        label="Github"
-                        url="https://www.github.com/ceva24"
-                    />
-                    <SocialIcon
-                        icon={faLinkedin}
-                        label="LinkedIn"
-                        url="https://www.linkedin.com/in/ceva24"
-                    />
-                    <SocialIcon
-                        icon={faTwitter}
-                        label="Twitter"
-                        url="https://twitter.com/ceva24"
-                    />
-                </div>
-            </div>
-        </header>
-
-        <main className="max-w-6xl mx-auto">{children}</main>
-    </div>
-);
+            <main className="max-w-6xl mx-auto px-3 my-6">{children}</main>
+        </div>
+    );
+};
 
 const Layout: React.FC<LayoutProps> = ({ title, children }: LayoutProps) => {
     const data: LayoutData = useStaticQuery(
@@ -100,11 +104,9 @@ const Layout: React.FC<LayoutProps> = ({ title, children }: LayoutProps) => {
         `
     );
 
-    const pageTitle = title ?? data.site.siteMetadata.name;
-
     return (
         <PureLayout
-            title={pageTitle}
+            title={title}
             name={data.site.siteMetadata.name}
             website={data.site.siteMetadata.website}
             subtitle={data.site.siteMetadata.subtitle}

@@ -1,13 +1,15 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import { Layout } from "../components/layout";
-import { PostDate } from "../components/post-date";
 
 const PurePost: React.FC<PostTemplateData> = (data: PostTemplateData) => (
     <>
-        <h2>{data.data.markdownRemark.frontmatter.title}</h2>
-        <div>
-            <PostDate>{data.data.markdownRemark.frontmatter.date}</PostDate>
+        <div className="mt-10 mb-5 space-y-3">
+            <h3 className="text-4xl uppercase font-normal">
+                {data.data.markdownRemark.frontmatter.title}
+            </h3>
+
+            <div>{data.data.markdownRemark.frontmatter.date}</div>
         </div>
 
         <div

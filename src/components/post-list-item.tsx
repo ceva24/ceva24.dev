@@ -5,12 +5,12 @@ const PostListItem: React.FC<IndexPageEdge> = ({ node }: IndexPageEdge) => {
     const title = node.frontmatter.title;
 
     return (
-        <li key={node.id} aria-label={title}>
+        <li key={node.id} className="mb-0" aria-label={title}>
             <Link to={`/${node.fields.path}`} aria-label={title}>
                 <div className="p-6 pb-3 hover:bg-gray-50 hover:shadow-lg">
                     <div className="flex">
-                        <h3 className="flex-grow text-xl pr-6">
-                            <strong className="uppercase">{title}</strong>
+                        <h3 className="flex-grow text-xl mr-6 uppercase font-normal">
+                            {title}
                         </h3>
 
                         <div className="flex-none">{node.frontmatter.date}</div>

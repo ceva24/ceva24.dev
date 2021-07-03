@@ -3,47 +3,41 @@
 exports[`post renders 1`] = `
 <DocumentFragment>
   <ul
-    class="px-3"
+    class="px-3 my-6"
   >
     <li
       aria-label="Post title"
     >
-      <div
-        class="max-w-4xl mx-auto"
+      <a
+        aria-label="Post title"
+        href="/posts/post-title"
       >
-        <a
-          aria-label="Post title"
-          href="/posts/post-title"
+        <div
+          class="p-6 pb-3 hover:bg-gray-50 hover:shadow-lg"
         >
           <div
-            class="p-6 pb-3 text-gray-700 hover:bg-gray-50 hover:shadow-lg"
+            class="flex"
           >
-            <div
-              class="flex"
+            <h3
+              class="flex-grow text-xl pr-6"
             >
-              <h3
-                class="flex-grow font-title text-lg pr-6"
+              <strong
+                class="uppercase"
               >
-                <strong
-                  class="uppercase"
-                >
-                  Post title
-                </strong>
-              </h3>
-              <div
-                class="flex-none"
-              >
-                <div>
-                  2000-01-01
-                </div>
-              </div>
+                Post title
+              </strong>
+            </h3>
+            <div
+              class="flex-none"
+            >
+              2000-01-01
             </div>
-            <p>
-              This is a post...
-            </p>
           </div>
-        </a>
-      </div>
+          <p>
+            This is a post...
+          </p>
+        </div>
+      </a>
     </li>
   </ul>
 </DocumentFragment>

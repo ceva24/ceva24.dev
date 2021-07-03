@@ -3,6 +3,7 @@ const path = require("path");
 module.exports = {
     siteMetadata: {
         name: "Chris Evans",
+        website: "ceva24.dev",
         subtitle: "Thoughts, code and everything in-between",
         role: "A Web Development / Systems Integration Team Leader at the University of York",
         pageDescription:

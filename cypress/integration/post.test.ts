@@ -15,12 +15,10 @@ describe("post page", () => {
         cy.title().should("equal", "Introduction - Welp");
     });
 
-    it("renders syntax highlighting", () => {
-        cy.visit("/posts/hibernate-grails-caching");
+    it("has the banner", () => {
+        cy.visit("/");
 
-        cy.get(".syntax--java").should("exist");
-
-        cy.percySnapshot();
+        cy.findByRole("banner").contains("Chris Evans");
     });
 
     it("contains the header", () => {
@@ -35,6 +33,22 @@ describe("post page", () => {
         cy.contains(
             "I decided to invest in some webspace and set up a blog here"
         );
+    });
+
+    it("renders syntax highlighting", () => {
+        cy.visit("/posts/hibernate-grails-caching");
+
+        cy.get(".syntax--java").should("exist");
+
+        cy.percySnapshot();
+    });
+
+    it("returns to the home page when clicking on the banner header", () => {
+        cy.visit("/posts/introduction");
+
+        cy.findByRole("banner").findByRole("heading").click();
+
+        cy.url().should("eq", `${Cypress.config().baseUrl}/`);
     });
 
     it("has a home link that returns to the index page", () => {

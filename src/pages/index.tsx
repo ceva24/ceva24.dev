@@ -5,7 +5,7 @@ import { PostListItem } from "../components/post-list-item";
 
 const PureIndex: React.FC<IndexPageData> = (data: IndexPageData) => {
     return (
-        <ul className="px-3">
+        <ul className="px-3 my-6">
             {data.data.allMarkdownRemark.edges.map((edge) => (
                 <PostListItem key={edge.node.id} node={edge.node} />
             ))}
@@ -15,9 +15,7 @@ const PureIndex: React.FC<IndexPageData> = (data: IndexPageData) => {
 
 const Index: React.FC<IndexPageData> = (data: IndexPageData) => {
     return (
-        <Layout
-            title={`${data.data.site.siteMetadata.name} | ${data.data.site.siteMetadata.subtitle}`}
-        >
+        <Layout>
             <PureIndex {...data} />
         </Layout>
     );
@@ -26,12 +24,6 @@ const Index: React.FC<IndexPageData> = (data: IndexPageData) => {
 // eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
 const query = graphql`
     query {
-        site {
-            siteMetadata {
-                name
-                subtitle
-            }
-        }
         allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
             totalCount
             edges {
@@ -39,7 +31,7 @@ const query = graphql`
                     id
                     frontmatter {
                         title
-                        date(formatString: "YYYY-MM-DD")
+                        date
                     }
                     fields {
                         slug

@@ -1,22 +1,35 @@
 import React from "react";
 import Helmet from "react-helmet";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery, Link } from "gatsby";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+    faGithub,
+    faLinkedin,
+    faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+import { SocialIcon } from "./social-icon";
 
 interface LayoutProps {
-    title: string;
+    title?: string;
     children: React.ReactNode;
 }
 
 interface PureLayoutProps extends LayoutProps {
-    description: string;
+    pageDescription: string;
+    name: string;
+    website: string;
+    subtitle: string;
 }
 
 const PureLayout: React.FC<PureLayoutProps> = ({
     title,
-    description,
+    name,
+    website,
+    subtitle,
+    pageDescription,
     children,
 }: PureLayoutProps) => (
-    <div>
+    <div className="text-lg">
         <Helmet>
             <html lang="en" />
             <meta charSet="utf-8" />
@@ -24,11 +37,49 @@ const PureLayout: React.FC<PureLayoutProps> = ({
                 name="viewport"
                 content="width=device-width, initial-scale=1, shrink-to-fit=no"
             />
-            <meta name="description" content={description} />
+            <meta name="description" content={pageDescription} />
             <title>{title}</title>
         </Helmet>
 
-        {children}
+        <header className="max-w-6xl mx-auto border-b">
+            <div className="py-8 text-center space-y-5">
+                <h1 className="text-7xl">
+                    <Link to="/">{name}</Link>
+                </h1>
+
+                <div>
+                    <strong>{website}</strong> | {subtitle}
+                </div>
+
+                <div
+                    className="space-x-8 text-gray-700 text-2xl"
+                    aria-label="Contact"
+                >
+                    <SocialIcon
+                        icon={faEnvelope}
+                        label="Email"
+                        url="mailto:chris@ceva24.dev"
+                    />
+                    <SocialIcon
+                        icon={faGithub}
+                        label="Github"
+                        url="https://www.github.com/ceva24"
+                    />
+                    <SocialIcon
+                        icon={faLinkedin}
+                        label="LinkedIn"
+                        url="https://www.linkedin.com/in/ceva24"
+                    />
+                    <SocialIcon
+                        icon={faTwitter}
+                        label="Twitter"
+                        url="https://twitter.com/ceva24"
+                    />
+                </div>
+            </div>
+        </header>
+
+        <main className="max-w-6xl mx-auto">{children}</main>
     </div>
 );
 
@@ -39,6 +90,9 @@ const Layout: React.FC<LayoutProps> = ({ title, children }: LayoutProps) => {
             query {
                 site {
                     siteMetadata {
+                        name
+                        website
+                        subtitle
                         pageDescription
                     }
                 }
@@ -46,10 +100,15 @@ const Layout: React.FC<LayoutProps> = ({ title, children }: LayoutProps) => {
         `
     );
 
+    const pageTitle = title ?? data.site.siteMetadata.name;
+
     return (
         <PureLayout
-            title={title}
-            description={data.site.siteMetadata.pageDescription}
+            title={pageTitle}
+            name={data.site.siteMetadata.name}
+            website={data.site.siteMetadata.website}
+            subtitle={data.site.siteMetadata.subtitle}
+            pageDescription={data.site.siteMetadata.pageDescription}
         >
             {children}
         </PureLayout>

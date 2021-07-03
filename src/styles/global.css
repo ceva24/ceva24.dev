@@ -13,6 +13,10 @@
         @apply mb-5 uppercase text-2xl font-normal;
     }
 
+    a {
+        @apply text-blue-700;
+    }
+
     ul {
         @apply mb-5 list-inside list-disc;
     }
@@ -25,8 +29,17 @@
         @apply mb-2;
     }
 
-    a {
-        @apply text-blue-700;
+    table {
+        @apply mb-5 w-full;
+    }
+
+    tr {
+        @apply border-t-2 border-b-2 p-2;
+    }
+
+    th,
+    td {
+        @apply p-2;
     }
 }
 

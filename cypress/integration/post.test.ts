@@ -43,6 +43,14 @@ describe("post page", () => {
         cy.percySnapshot();
     });
 
+    it("renders tables", () => {
+        cy.visit("/posts/new-pc");
+
+        cy.findByRole("table").should("exist");
+
+        cy.percySnapshot();
+    });
+
     it("returns to the home page when clicking on the banner header", () => {
         cy.visit("/posts/introduction");
 

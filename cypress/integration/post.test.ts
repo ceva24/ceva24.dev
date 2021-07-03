@@ -1,28 +1,33 @@
-// eslint-disable-next-line import/no-unassigned-import
+/* eslint-disable import/no-unassigned-import */
 import "@percy/cypress";
+import "@testing-library/cypress/add-commands";
 
-describe("Post page", () => {
-    it("Renders", () => {
+describe("post page", () => {
+    it("renders", () => {
         cy.visit("/posts/introduction");
 
         cy.percySnapshot();
     });
 
-    it("Renders syntax highlighting", () => {
-        cy.visit("/posts/hibernate-grails-caching");
-
-        cy.get(".syntax--java").should("exist");
-
-        cy.percySnapshot();
-    });
-
-    it("Contains the header", () => {
+    it("sets the page title", () => {
         cy.visit("/posts/introduction");
 
-        cy.get(".post-title").contains("Introduction - Welp");
+        cy.title().should("equal", "Introduction - Welp");
     });
 
-    it("Contains the post content", () => {
+    it("contains the banner", () => {
+        cy.visit("/");
+
+        cy.findByRole("banner").contains("Chris Evans");
+    });
+
+    it("contains the header", () => {
+        cy.visit("/posts/introduction");
+
+        cy.contains("Introduction - Welp");
+    });
+
+    it("contains the post content", () => {
         cy.visit("/posts/introduction");
 
         cy.contains(
@@ -30,18 +35,34 @@ describe("Post page", () => {
         );
     });
 
-    it("Has a home link that returns to the index page", () => {
+    it("renders syntax highlighting", () => {
+        cy.visit("/posts/hibernate-grails-caching");
+
+        cy.get(".syntax--java").should("exist");
+
+        cy.percySnapshot();
+    });
+
+    it("renders tables", () => {
+        cy.visit("/posts/new-pc");
+
+        cy.findByRole("table").should("exist");
+
+        cy.percySnapshot();
+    });
+
+    it("navigates to the index page when clicking on the banner header", () => {
         cy.visit("/posts/introduction");
 
-        cy.get(".home-link").click();
+        cy.findByRole("banner").findByRole("heading").click();
 
         cy.url().should("eq", `${Cypress.config().baseUrl}/`);
     });
 
-    it("Returns to the index page when clicking on the bio title", () => {
+    it("navigates to the index page when clicking on the home link", () => {
         cy.visit("/posts/introduction");
 
-        cy.get(".bio-link").click();
+        cy.findByRole("link", { name: "Home" }).click();
 
         cy.url().should("eq", `${Cypress.config().baseUrl}/`);
     });

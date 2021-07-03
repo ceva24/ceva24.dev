@@ -3,18 +3,15 @@ const path = require("path");
 module.exports = {
     siteMetadata: {
         name: "Chris Evans",
+        website: "ceva24.dev",
         subtitle: "Thoughts, code and everything in-between",
+        role: "A Web Development / Systems Integration Team Leader at the University of York",
+        pageDescription:
+            "Chris Evans, a Web Development / Systems Integration Team Leader at the University of York",
     },
     plugins: [
+        "gatsby-plugin-postcss",
         "gatsby-plugin-react-helmet",
-        "gatsby-plugin-emotion",
-        {
-            resolve: "gatsby-plugin-typography",
-            options: {
-                pathToConfigModule: "src/styles/typography",
-                omitGoogleFont: true,
-            },
-        },
         {
             resolve: "gatsby-source-filesystem",
             options: {

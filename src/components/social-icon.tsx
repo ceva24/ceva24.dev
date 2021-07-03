@@ -1,7 +1,6 @@
-import { css } from "@emotion/react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import { rhythm } from "../styles/typography";
 
 interface SocialIconProps {
     url: string;
@@ -14,15 +13,7 @@ const SocialIcon: React.FC<SocialIconProps> = ({
     label,
     icon,
 }: SocialIconProps) => (
-    <a
-        href={url}
-        title={url}
-        aria-label={label}
-        css={css`
-            color: inherit;
-            margin-right: ${rhythm(1 / 2)};
-        `}
-    >
+    <a href={url} title={url} aria-label={label} className="text-gray-700">
         <FontAwesomeIcon icon={icon} />
     </a>
 );

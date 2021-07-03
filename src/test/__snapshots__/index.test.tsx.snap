@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`post renders 1`] = `
+<DocumentFragment>
+  <ul
+    class="list-none"
+  >
+    <li
+      aria-label="Post title"
+      class="mb-0"
+    >
+      <a
+        aria-label="Post title"
+        class="text-black"
+        href="/posts/post-title"
+      >
+        <div
+          class="p-6 pb-3 hover:bg-gray-50 hover:shadow-lg"
+        >
+          <div
+            class="flex"
+          >
+            <h3
+              class="flex-grow text-xl mr-6 uppercase font-normal"
+            >
+              Post title
+            </h3>
+            <div
+              class="flex-none"
+            >
+              2000-01-01
+            </div>
+          </div>
+          <p>
+            This is a post...
+          </p>
+        </div>
+      </a>
+    </li>
+  </ul>
+</DocumentFragment>
+`;

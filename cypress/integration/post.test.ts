@@ -15,7 +15,7 @@ describe("post page", () => {
         cy.title().should("equal", "Introduction - Welp");
     });
 
-    it("has the banner", () => {
+    it("contains the banner", () => {
         cy.visit("/");
 
         cy.findByRole("banner").contains("Chris Evans");
@@ -51,7 +51,7 @@ describe("post page", () => {
         cy.percySnapshot();
     });
 
-    it("returns to the home page when clicking on the banner header", () => {
+    it("navigates to the index page when clicking on the banner header", () => {
         cy.visit("/posts/introduction");
 
         cy.findByRole("banner").findByRole("heading").click();
@@ -59,7 +59,7 @@ describe("post page", () => {
         cy.url().should("eq", `${Cypress.config().baseUrl}/`);
     });
 
-    it("has a home link that returns to the index page", () => {
+    it("navigates to the index page when clicking on the home link", () => {
         cy.visit("/posts/introduction");
 
         cy.findByRole("link", { name: "Home" }).click();

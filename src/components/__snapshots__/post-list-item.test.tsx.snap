@@ -8,6 +8,7 @@ exports[`post list item renders 1`] = `
   >
     <a
       aria-label="post title"
+      class="text-black"
       href="/posts/post-title"
     >
       <div

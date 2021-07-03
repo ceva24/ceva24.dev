@@ -6,7 +6,7 @@ exports[`layout renders 1`] = `
     class="text-lg font-light"
   >
     <header
-      class="max-w-6xl mx-auto border-b"
+      class="max-w-5xl mx-auto border-b"
     >
       <div
         class="my-8 text-center space-y-5"
@@ -16,7 +16,7 @@ exports[`layout renders 1`] = `
         >
           <a
             aria-current="page"
-            class=""
+            class="text-black"
             href="/"
           >
             Name
@@ -30,10 +30,11 @@ exports[`layout renders 1`] = `
         </div>
         <div
           aria-label="Contact"
-          class="space-x-8 text-gray-700 text-2xl"
+          class="space-x-8 text-2xl"
         >
           <a
             aria-label="Email"
+            class="text-gray-700"
             href="mailto:chris@ceva24.dev"
             title="mailto:chris@ceva24.dev"
           >
@@ -55,6 +56,7 @@ exports[`layout renders 1`] = `
           </a>
           <a
             aria-label="Github"
+            class="text-gray-700"
             href="https://www.github.com/ceva24"
             title="https://www.github.com/ceva24"
           >
@@ -76,6 +78,7 @@ exports[`layout renders 1`] = `
           </a>
           <a
             aria-label="LinkedIn"
+            class="text-gray-700"
             href="https://www.linkedin.com/in/ceva24"
             title="https://www.linkedin.com/in/ceva24"
           >
@@ -97,6 +100,7 @@ exports[`layout renders 1`] = `
           </a>
           <a
             aria-label="Twitter"
+            class="text-gray-700"
             href="https://twitter.com/ceva24"
             title="https://twitter.com/ceva24"
           >
@@ -120,7 +124,7 @@ exports[`layout renders 1`] = `
       </div>
     </header>
     <main
-      class="max-w-6xl mx-auto px-3 my-6"
+      class="max-w-5xl mx-auto px-3 my-6"
     >
       <p>
         Hello

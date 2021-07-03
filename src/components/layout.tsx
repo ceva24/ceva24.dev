@@ -44,20 +44,19 @@ const PureLayout: React.FC<PureLayoutProps> = ({
                 <title>{pageTitle}</title>
             </Helmet>
 
-            <header className="max-w-6xl mx-auto border-b">
+            <header className="max-w-5xl mx-auto border-b">
                 <div className="my-8 text-center space-y-5">
                     <h1 className="text-7xl">
-                        <Link to="/">{name}</Link>
+                        <Link to="/" className="text-black">
+                            {name}
+                        </Link>
                     </h1>
 
                     <div>
                         <strong>{website}</strong> | {subtitle}
                     </div>
 
-                    <div
-                        className="space-x-8 text-gray-700 text-2xl"
-                        aria-label="Contact"
-                    >
+                    <div className="space-x-8 text-2xl" aria-label="Contact">
                         <SocialIcon
                             icon={faEnvelope}
                             label="Email"
@@ -82,7 +81,7 @@ const PureLayout: React.FC<PureLayoutProps> = ({
                 </div>
             </header>
 
-            <main className="max-w-6xl mx-auto px-3 my-6">{children}</main>
+            <main className="max-w-5xl mx-auto px-3 my-6">{children}</main>
         </div>
     );
 };

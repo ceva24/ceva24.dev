@@ -20,11 +20,11 @@ exports[`post renders 1`] = `
           <div
             class="flex"
           >
-            <h3
+            <h2
               class="flex-grow text-xl mr-6 uppercase font-normal"
             >
               Post title
-            </h3>
+            </h2>
             <div
               class="flex-none"
             >

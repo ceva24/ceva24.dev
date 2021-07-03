@@ -26,19 +26,19 @@ describe("index page", () => {
             );
     });
 
-    it("has the banner", () => {
+    it("contains the banner", () => {
         cy.visit("/");
 
         cy.findByRole("banner").contains("Chris Evans");
     });
 
-    it("has a list of posts", () => {
+    it("contains a list of posts", () => {
         cy.visit("/");
 
         cy.findAllByRole("link").should("have.length.above", 10);
     });
 
-    it("can click on a post to navigate to the post", () => {
+    it("navigates to the post page when clicking on a post", () => {
         cy.visit("/");
 
         cy.findByRole("link", { name: "Introduction - Welp" }).click();

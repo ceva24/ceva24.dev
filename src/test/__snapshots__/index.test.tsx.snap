@@ -11,6 +11,7 @@ exports[`post renders 1`] = `
     >
       <a
         aria-label="Post title"
+        class="text-black"
         href="/posts/post-title"
       >
         <div

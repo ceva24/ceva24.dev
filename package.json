@@ -22,7 +22,7 @@
         "clean": "gatsby clean",
         "test": "jest --coverage",
         "e2e": "cypress run",
-        "e2e:visual": "percy exec -- cypress run",
+        "e2e:visual": "percy exec -- cypress run --record",
         "format": "prettier --write .",
         "check-format": "prettier --check .",
         "lint": "xo",

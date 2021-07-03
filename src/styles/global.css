@@ -9,6 +9,7 @@
         @apply mb-5;
     }
 
+    h2,
     h3 {
         @apply mb-5 uppercase text-2xl font-normal;
     }

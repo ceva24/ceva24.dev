@@ -18,6 +18,7 @@ module.exports = {
                 ignore: [
                     "@fortawesome/fontawesome-svg-core/styles.css",
                     "src/styles/highlights.css",
+                    "src/styles/global.css",
                 ],
             },
         },

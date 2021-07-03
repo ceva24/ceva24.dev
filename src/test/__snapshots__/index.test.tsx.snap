@@ -3,10 +3,11 @@
 exports[`post renders 1`] = `
 <DocumentFragment>
   <ul
-    class="px-3 my-6"
+    class="list-none"
   >
     <li
       aria-label="Post title"
+      class="mb-0"
     >
       <a
         aria-label="Post title"
@@ -19,13 +20,9 @@ exports[`post renders 1`] = `
             class="flex"
           >
             <h3
-              class="flex-grow text-xl pr-6"
+              class="flex-grow text-xl mr-6 uppercase font-normal"
             >
-              <strong
-                class="uppercase"
-              >
-                Post title
-              </strong>
+              Post title
             </h3>
             <div
               class="flex-none"

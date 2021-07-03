@@ -5,7 +5,7 @@ import { PostListItem } from "../components/post-list-item";
 
 const PureIndex: React.FC<IndexPageData> = (data: IndexPageData) => {
     return (
-        <ul className="px-3 my-6">
+        <ul className="list-none">
             {data.data.allMarkdownRemark.edges.map((edge) => (
                 <PostListItem key={edge.node.id} node={edge.node} />
             ))}

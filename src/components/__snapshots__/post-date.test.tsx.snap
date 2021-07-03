@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`post date renders 1`] = `
-<DocumentFragment>
-  <strong>
-    2000-01-01
-  </strong>
-</DocumentFragment>
-`;

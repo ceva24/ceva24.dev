@@ -2,13 +2,17 @@
 
 exports[`post renders 1`] = `
 <DocumentFragment>
-  <h2>
-    Post title
-  </h2>
-  <div>
-    <strong>
+  <div
+    class="mt-10 mb-5 space-y-3"
+  >
+    <h3
+      class="text-4xl uppercase font-normal"
+    >
+      Post title
+    </h3>
+    <div>
       2000-01-01
-    </strong>
+    </div>
   </div>
   <div>
     <p>

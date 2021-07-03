@@ -3,12 +3,37 @@
 @tailwind utilities;
 
 @layer base {
-    p {
-        @apply my-5;
+    p,
+    pre,
+    hr {
+        @apply mb-5;
+    }
+
+    h3 {
+        @apply mb-5 uppercase text-2xl font-normal;
+    }
+
+    ul {
+        @apply mb-5 list-inside list-disc;
+    }
+
+    ol {
+        @apply mb-5 list-inside list-decimal;
+    }
+
+    li {
+        @apply mb-2;
     }
 }
 
 @font-face {
     font-family: "Montserrat";
+    font-weight: 300;
     src: url("../fonts/Montserrat-Light.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 400;
+    src: url("../fonts/Montserrat-Regular.ttf");
 }

@@ -4,6 +4,7 @@ exports[`post list item renders 1`] = `
 <DocumentFragment>
   <li
     aria-label="post title"
+    class="mb-0"
   >
     <a
       aria-label="post title"
@@ -16,13 +17,9 @@ exports[`post list item renders 1`] = `
           class="flex"
         >
           <h3
-            class="flex-grow text-xl pr-6"
+            class="flex-grow text-xl mr-6 uppercase font-normal"
           >
-            <strong
-              class="uppercase"
-            >
-              post title
-            </strong>
+            post title
           </h3>
           <div
             class="flex-none"

@@ -30,7 +30,7 @@ describe("post page", () => {
     it("contains the post content", () => {
         cy.visit("/posts/introduction");
 
-        cy.contains(
+        cy.findByRole("article").contains(
             "I decided to invest in some webspace and set up a blog here"
         );
     });

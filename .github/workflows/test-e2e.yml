@@ -23,6 +23,7 @@ jobs:
           start: npm run serve
           command: npm run e2e:visual
           record: true
+          group: e2e
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}

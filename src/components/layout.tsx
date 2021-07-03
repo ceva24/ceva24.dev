@@ -1,13 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
-import { graphql, useStaticQuery, Link } from "gatsby";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import {
-    faGithub,
-    faLinkedin,
-    faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
-import { SocialIcon } from "./social-icon";
+import { graphql, useStaticQuery } from "gatsby";
+import { Header } from "./header";
 
 interface LayoutProps {
     title?: string;
@@ -21,18 +15,11 @@ interface PureLayoutProps extends LayoutProps {
     subtitle: string;
 }
 
-const PureLayout: React.FC<PureLayoutProps> = ({
-    title,
-    name,
-    website,
-    subtitle,
-    pageDescription,
-    children,
-}: PureLayoutProps) => {
-    const pageTitle = title ?? name;
+const PureLayout: React.FC<PureLayoutProps> = (props: PureLayoutProps) => {
+    const pageTitle = props.title ?? props.name;
 
     return (
-        <div className="text-lg font-light">
+        <div className="text-lg font-light max-w-5xl mx-auto">
             <Helmet>
                 <html lang="en" />
                 <meta charSet="utf-8" />
@@ -40,48 +27,13 @@ const PureLayout: React.FC<PureLayoutProps> = ({
                     name="viewport"
                     content="width=device-width, initial-scale=1, shrink-to-fit=no"
                 />
-                <meta name="description" content={pageDescription} />
+                <meta name="description" content={props.pageDescription} />
                 <title>{pageTitle}</title>
             </Helmet>
 
-            <header className="max-w-5xl mx-auto border-b">
-                <div className="my-8 text-center space-y-5">
-                    <h1 className="text-7xl">
-                        <Link to="/" className="text-black">
-                            {name}
-                        </Link>
-                    </h1>
+            <Header {...props} />
 
-                    <div>
-                        <strong>{website}</strong> | {subtitle}
-                    </div>
-
-                    <div className="space-x-8 text-2xl" aria-label="Contact">
-                        <SocialIcon
-                            icon={faEnvelope}
-                            label="Email"
-                            url="mailto:chris@ceva24.dev"
-                        />
-                        <SocialIcon
-                            icon={faGithub}
-                            label="Github"
-                            url="https://www.github.com/ceva24"
-                        />
-                        <SocialIcon
-                            icon={faLinkedin}
-                            label="LinkedIn"
-                            url="https://www.linkedin.com/in/ceva24"
-                        />
-                        <SocialIcon
-                            icon={faTwitter}
-                            label="Twitter"
-                            url="https://twitter.com/ceva24"
-                        />
-                    </div>
-                </div>
-            </header>
-
-            <main className="max-w-5xl mx-auto px-3 my-6">{children}</main>
+            <main className="px-3 my-6">{props.children}</main>
         </div>
     );
 };
@@ -104,13 +56,7 @@ const Layout: React.FC<LayoutProps> = ({ title, children }: LayoutProps) => {
     );
 
     return (
-        <PureLayout
-            title={title}
-            name={data.site.siteMetadata.name}
-            website={data.site.siteMetadata.website}
-            subtitle={data.site.siteMetadata.subtitle}
-            pageDescription={data.site.siteMetadata.pageDescription}
-        >
+        <PureLayout title={title} {...data.site.siteMetadata}>
             {children}
         </PureLayout>
     );

@@ -11,17 +11,6 @@ module.exports = {
     },
     plugins: [
         "gatsby-plugin-postcss",
-        {
-            resolve: "gatsby-plugin-purgecss",
-            options: {
-                tailwind: true,
-                ignore: [
-                    "@fortawesome/fontawesome-svg-core/styles.css",
-                    "src/styles/highlights.css",
-                    "src/styles/global.css",
-                ],
-            },
-        },
         "gatsby-plugin-react-helmet",
         {
             resolve: "gatsby-source-filesystem",

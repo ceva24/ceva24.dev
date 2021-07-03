@@ -3,10 +3,10 @@
 exports[`layout renders 1`] = `
 <DocumentFragment>
   <div
-    class="text-lg font-light"
+    class="text-lg font-light max-w-5xl mx-auto"
   >
     <header
-      class="max-w-5xl mx-auto border-b"
+      class="border-b"
     >
       <div
         class="my-8 text-center space-y-5"
@@ -124,7 +124,7 @@ exports[`layout renders 1`] = `
       </div>
     </header>
     <main
-      class="max-w-5xl mx-auto px-3 my-6"
+      class="px-3 my-6"
     >
       <p>
         Hello

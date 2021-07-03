@@ -32,7 +32,7 @@ const PureLayout: React.FC<PureLayoutProps> = ({
     const pageTitle = title ?? name;
 
     return (
-        <div className="text-lg font-light">
+        <div className="text-lg font-light max-w-5xl mx-auto">
             <Helmet>
                 <html lang="en" />
                 <meta charSet="utf-8" />
@@ -44,7 +44,7 @@ const PureLayout: React.FC<PureLayoutProps> = ({
                 <title>{pageTitle}</title>
             </Helmet>
 
-            <header className="max-w-5xl mx-auto border-b">
+            <header className="border-b">
                 <div className="my-8 text-center space-y-5">
                     <h1 className="text-7xl">
                         <Link to="/" className="text-black">
@@ -81,7 +81,7 @@ const PureLayout: React.FC<PureLayoutProps> = ({
                 </div>
             </header>
 
-            <main className="max-w-5xl mx-auto px-3 my-6">{children}</main>
+            <main className="px-3 my-6">{children}</main>
         </div>
     );
 };

@@ -5,11 +5,11 @@ exports[`post renders 1`] = `
   <div
     class="mt-10 mb-5 space-y-3"
   >
-    <h3
+    <h2
       class="text-4xl uppercase font-normal"
     >
       Post title
-    </h3>
+    </h2>
     <div>
       2000-01-01
     </div>

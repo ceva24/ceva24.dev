@@ -5,9 +5,9 @@ import { Layout } from "../components/layout";
 const PurePost: React.FC<PostTemplateData> = (data: PostTemplateData) => (
     <>
         <div className="mt-10 mb-5 space-y-3">
-            <h3 className="text-4xl uppercase font-normal">
+            <h2 className="text-4xl uppercase font-normal">
                 {data.data.markdownRemark.frontmatter.title}
-            </h3>
+            </h2>
 
             <div>{data.data.markdownRemark.frontmatter.date}</div>
         </div>

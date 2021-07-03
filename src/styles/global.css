@@ -34,11 +34,10 @@
     }
 
     tr {
-        @apply border-t-2 border-b-2 p-2;
+        @apply border-t border-b p-2;
     }
 
-    th,
-    td {
+    th, td {
         @apply p-2;
     }
 }

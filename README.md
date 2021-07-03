@@ -27,9 +27,9 @@ Uses the [gatsby-remark-highlights](https://github.com/amitpatra/gatsby-remark-h
 
 ## CI/CD
 
-- 🚦 [LHCI](https://github.com/GoogleChrome/lighthouse-ci) for performance checks
-- 🦔 [Percy](https://percy.io/788e43c2/ceva24.dev) for visual testing
+-   🚦 [LHCI](https://github.com/GoogleChrome/lighthouse-ci) for performance checks
+-   🦔 [Percy](https://percy.io/788e43c2/ceva24.dev) for visual testing
 
 Reports and snapshots included on each PR ✔️
 
-🚀 Continuously deployed to production using [AWS Amplify](https://aws.amazon.com/amplify/) 
+🚀 Continuously deployed to production using [AWS Amplify](https://aws.amazon.com/amplify/)

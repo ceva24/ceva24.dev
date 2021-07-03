@@ -2,23 +2,25 @@
 
 exports[`post renders 1`] = `
 <DocumentFragment>
-  <div
-    class="mt-10 mb-5 space-y-3"
-  >
-    <h2
-      class="text-4xl uppercase font-normal"
+  <article>
+    <div
+      class="mt-10 mb-5 space-y-3"
     >
-      Post title
-    </h2>
-    <div>
-      2000-01-01
+      <h2
+        class="text-4xl uppercase font-normal"
+      >
+        Post title
+      </h2>
+      <div>
+        2000-01-01
+      </div>
     </div>
-  </div>
-  <div>
-    <p>
-      Hello world
-    </p>
-  </div>
+    <div>
+      <p>
+        Hello world
+      </p>
+    </div>
+  </article>
   <a
     aria-current="page"
     class=""

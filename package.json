@@ -10,7 +10,8 @@
     },
     "keywords": [
         "gatsby",
-        "website"
+        "website",
+        "tailwindcss"
     ],
     "scripts": {
         "prepare": "husky install",

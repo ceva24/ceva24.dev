@@ -14,19 +14,15 @@ exports[`post list item renders 1`] = `
       <div
         class="p-6 pb-3 hover:bg-gray-50 hover:shadow-lg"
       >
-        <div
-          class="flex gap-4"
+        <h2
+          class="uppercase font-normal mb-1"
         >
-          <h2
-            class="flex-auto text-xl uppercase font-normal"
-          >
-            post title
-          </h2>
-          <div
-            class="flex-auto text-right"
-          >
-            01-01-2020
-          </div>
+          post title
+        </h2>
+        <div
+          class="mb-3"
+        >
+          01-01-2020
         </div>
         <p>
           This is a post

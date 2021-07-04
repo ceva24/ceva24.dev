@@ -17,19 +17,15 @@ exports[`post renders 1`] = `
         <div
           class="p-6 pb-3 hover:bg-gray-50 hover:shadow-lg"
         >
-          <div
-            class="flex gap-4"
+          <h2
+            class="uppercase font-normal mb-1"
           >
-            <h2
-              class="flex-auto text-xl uppercase font-normal"
-            >
-              Post title
-            </h2>
-            <div
-              class="flex-auto text-right"
-            >
-              2000-01-01
-            </div>
+            Post title
+          </h2>
+          <div
+            class="mb-3"
+          >
+            2000-01-01
           </div>
           <p>
             This is a post...

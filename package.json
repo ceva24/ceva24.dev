@@ -22,14 +22,14 @@
         "clean": "gatsby clean",
         "test": "jest --coverage",
         "e2e": "cypress run",
-        "e2e:visual": "percy exec -- cypress run",
         "format": "prettier --write .",
         "check-format": "prettier --check .",
         "lint": "xo",
         "check-types:gatsby": "tsc",
         "check-types:cypress": "tsc --project cypress/tsconfig.json",
         "check-types": "npm run check-types:gatsby && npm run check-types:cypress",
-        "check": "npm run check-format && npm run lint && npm run check-types && npm run test"
+        "check": "npm run check-format && npm run lint && npm run check-types && npm run test",
+        "fc": "npm run format && npm run lint && npm run check-types && npm run test"
     },
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^1.2.35",

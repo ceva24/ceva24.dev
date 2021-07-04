@@ -23,7 +23,7 @@ jobs:
           start: npm run serve
           command-prefix: percy exec --
           record: true
-          group: merge
+          group: pull_request
           tag: ${{ github.event_name }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

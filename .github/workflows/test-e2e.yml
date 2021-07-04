@@ -21,10 +21,12 @@ jobs:
         with:
           build: npm run build
           start: npm run serve
-          command: npm run e2e:visual
+          command-prefix: percy exec --
           record: true
-          group: e2e
+          group: merge
+          tag: ${{ github.event_name }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          COMMIT_INFO_MESSAGE: ${{ github.event.pull_request.title }}
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}

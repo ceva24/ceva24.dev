@@ -6,6 +6,8 @@ on:
   push:
     branches:
       - main
+  schedule:
+    - cron: "00 12 * * 1"
 
 jobs:
   test-e2e:
@@ -15,9 +17,15 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 14
-      - run: npm ci
-      - run: npm run build
-      - run: (npm run serve &)
-      - run: npm run e2e:visual
+      - uses: cypress-io/github-action@d2b5039cb4888cf1f0bb9e808f904f7093e0cb2a
+        with:
+          build: npm run build
+          start: npm run serve
+          command-prefix: percy exec --
+          record: true
+          group: pull_request
+          tag: ${{ github.event_name }}
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}

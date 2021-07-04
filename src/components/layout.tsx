@@ -22,11 +22,6 @@ const PureLayout: React.FC<PureLayoutProps> = (props: PureLayoutProps) => {
         <div className="text-lg font-light max-w-5xl mx-auto">
             <Helmet>
                 <html lang="en" />
-                <meta charSet="utf-8" />
-                <meta
-                    name="viewport"
-                    content="width=device-width, initial-scale=1, shrink-to-fit=no"
-                />
                 <meta name="description" content={props.pageDescription} />
                 <title>{pageTitle}</title>
             </Helmet>

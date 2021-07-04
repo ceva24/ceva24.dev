@@ -15,15 +15,15 @@ exports[`post list item renders 1`] = `
         class="p-6 pb-3 hover:bg-gray-50 hover:shadow-lg"
       >
         <div
-          class="flex"
+          class="flex gap-4"
         >
           <h2
-            class="flex-grow text-xl mr-6 uppercase font-normal"
+            class="flex-auto text-xl uppercase font-normal"
           >
             post title
           </h2>
           <div
-            class="flex-none"
+            class="flex-auto text-right"
           >
             01-01-2020
           </div>

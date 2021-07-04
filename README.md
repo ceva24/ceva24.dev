@@ -17,7 +17,7 @@
 
 ## Introduction
 
-Static website built with TypeScript, [Gatsby](https://www.gatsbyjs.org/) and [Tailwind CSS](https://tailwindcss.com/), hosted at [https://ceva24.dev](https://ceva24.dev).
+Static website built with [TypeScript](https://www.typescriptlang.org/), [Gatsby](https://www.gatsbyjs.org/) and [Tailwind CSS](https://tailwindcss.com/), hosted at [https://ceva24.dev](https://ceva24.dev).
 
 ## Development
 
@@ -33,4 +33,4 @@ Uses the [gatsby-remark-highlights](https://github.com/amitpatra/gatsby-remark-h
 
 Reports and snapshots included on each PR ✔️
 
-🚀 Continuously deployed to production using [AWS Amplify](https://aws.amazon.com/amplify/)
+Continuously deployed to production using [AWS Amplify](https://aws.amazon.com/amplify/) 🚀

@@ -28,5 +28,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          COMMIT_INFO_MESSAGE: ${{ github.event.pull_request.title }}
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}

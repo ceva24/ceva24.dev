@@ -66,4 +66,16 @@ describe("post page", () => {
 
         cy.url().should("eq", `${Cypress.config().baseUrl}/`);
     });
+
+    it("contains the footer with the expected content", () => {
+        cy.visit("/posts/introduction");
+
+        cy.get("footer")
+            .findByRole("img", { name: "Chris Evans" })
+            .should("exist");
+
+        cy.get("footer").contains(
+            "A Web Development / Systems Integration Team Leader at the University of York, UK"
+        );
+    });
 });

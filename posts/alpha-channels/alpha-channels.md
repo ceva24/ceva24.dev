@@ -5,6 +5,8 @@ date: "2012-09-23"
 
 Alpha Channels. I’ve wasted many hours in the past researching them, finding incorrect guides, finally figuring them out, and then promptly forgetting and repeating the process 6 months later. Thus its in prime position for transcribing.
 
+<!-- end -->
+
 Essentially, alpha channels allow you to create transparent sections in images (in my case likely TARGAs for use in certain Source Engine-based games…). I’ll be focusing on the process using Adobe Photoshop CS2 in this post.
 
 ### Going through the Motions

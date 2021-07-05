@@ -7,6 +7,8 @@ I decided to invest in some webspace and set up a blog here, mainly focusing on 
 
 First and foremost, as a Software Developer, I tend to pick up various code snippets; often mundane yet vital pieces of code that perform the things that you find yourself doing over and over again.
 
+<!-- end -->
+
 I currently have a Netbeans project that I throw most of these in, or if I come across something that I haven’t need of yet but looks useful, I’ll paste it into OneNote for later refinement.
 However, this soon becomes a repository, which requires maintenance. I’d rather be working on a new project than organising bits of code, so I figure I can ease this off by transforming some of the better pieces into blog posts.
 

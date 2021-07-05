@@ -7,6 +7,8 @@ The Tetris Randomiser that chooses the next tetromino, implemented in Groovy. It
 
 I chose to implement the TGM2 variant, as described on the [Tetris Wiki](https://tetris.wikia.com/wiki/TGM_randomizer).
 
+<!-- end -->
+
 (Update: the wiki has since been updated with a version of the algorithm that is slightly different from the [one described when this post was originally made](https://tetris.fandom.com/wiki/TGM_randomizer?oldid=14149) – I’ve written a [new version of the algorithm](https://gist.github.com/Ceva24/065d64d2b7cbbe7cfe29) that is 35 lines long!)
 
 ```java

@@ -8,6 +8,8 @@ A few weeks ago I was convinced to buy a [Raspberry Pi](https://www.raspberrypi.
 It’s a very flexible piece of kit, and has a friendly community supporting it to boot. It also gives me a chance to delve into a Linux environment at home, something I haven’t done before.
 My RPi is currently employed as a media center and sits comfortably next to the television in my living room.
 
+<!-- end -->
+
 ![A picture of a Raspberry Pi](./thepi.jpg)
 
 In this post I’m going to go over the equipment required to set it up and steps taken to configure it. In the end it was a surprisingly cheap and fairly straightforward solution.

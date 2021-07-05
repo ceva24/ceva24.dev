@@ -3,7 +3,7 @@
 exports[`layout renders 1`] = `
 <DocumentFragment>
   <div
-    class="text-lg font-light max-w-5xl mx-auto"
+    class="text-lg font-light max-w-4xl mx-auto"
   >
     <header
       class="border-b"
@@ -36,7 +36,7 @@ exports[`layout renders 1`] = `
         >
           <a
             aria-label="Email"
-            class="text-gray-700"
+            class="text-gray-800"
             href="mailto:chris@ceva24.dev"
             title="mailto:chris@ceva24.dev"
           >
@@ -58,7 +58,7 @@ exports[`layout renders 1`] = `
           </a>
           <a
             aria-label="Github"
-            class="text-gray-700"
+            class="text-gray-800"
             href="https://www.github.com/ceva24"
             title="https://www.github.com/ceva24"
           >
@@ -80,7 +80,7 @@ exports[`layout renders 1`] = `
           </a>
           <a
             aria-label="LinkedIn"
-            class="text-gray-700"
+            class="text-gray-800"
             href="https://www.linkedin.com/in/ceva24"
             title="https://www.linkedin.com/in/ceva24"
           >
@@ -102,7 +102,7 @@ exports[`layout renders 1`] = `
           </a>
           <a
             aria-label="Twitter"
-            class="text-gray-700"
+            class="text-gray-800"
             href="https://twitter.com/ceva24"
             title="https://twitter.com/ceva24"
           >

@@ -4,7 +4,7 @@ exports[`social icon renders 1`] = `
 <DocumentFragment>
   <a
     aria-label="Twitch"
-    class="text-gray-700"
+    class="text-gray-800"
     href="https://twitch.tv"
     title="https://twitch.tv"
   >

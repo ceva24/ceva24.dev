@@ -45,7 +45,7 @@ interface LayoutData {
     };
 }
 
-interface BioComponentData {
+interface FooterData {
     site: {
         siteMetadata: {
             name: string;

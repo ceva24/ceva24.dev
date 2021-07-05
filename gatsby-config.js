@@ -5,9 +5,9 @@ module.exports = {
         name: "Chris Evans",
         website: "ceva24.dev",
         subtitle: "Thoughts, code and everything in-between",
-        role: "A Web Development / Systems Integration Team Leader at the University of York",
+        role: "A Web Development / Systems Integration Team Leader at the University of York, UK",
         pageDescription:
-            "Chris Evans, a Web Development / Systems Integration Team Leader at the University of York",
+            "Chris Evans, a Web Development / Systems Integration Team Leader at the University of York, UK",
     },
     plugins: [
         "gatsby-plugin-postcss",

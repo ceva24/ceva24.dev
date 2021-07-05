@@ -18,12 +18,15 @@ const PurePost: React.FC<PostTemplateData> = ({ data }: PostTemplateData) => (
                 dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
             />
         </article>
-        <Link to="/">Home</Link>
+
+        <div className="min-w-max text-center">
+            <Link to="/">Home</Link>
+        </div>
     </>
 );
 
 const Post: React.FC<PostTemplateData> = (data: PostTemplateData) => (
-    <Layout title={data.data.markdownRemark.frontmatter.title}>
+    <Layout showFooter title={data.data.markdownRemark.frontmatter.title}>
         <PurePost {...data} />
     </Layout>
 );

@@ -13,7 +13,7 @@ const SocialIcon: React.FC<SocialIconProps> = ({
     label,
     icon,
 }: SocialIconProps) => (
-    <a href={url} title={url} aria-label={label} className="text-gray-700">
+    <a href={url} title={url} aria-label={label} className="text-gray-800">
         <FontAwesomeIcon icon={icon} />
     </a>
 );

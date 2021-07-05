@@ -12,7 +12,7 @@ exports[`layout renders 1`] = `
         class="my-8 text-center space-y-5"
       >
         <h1
-          class="text-7xl"
+          class="text-6xl"
         >
           <a
             aria-current="page"
@@ -22,7 +22,9 @@ exports[`layout renders 1`] = `
             Name
           </a>
         </h1>
-        <div>
+        <div
+          class="px-6"
+        >
           <strong>
             Website
           </strong>

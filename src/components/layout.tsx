@@ -19,7 +19,7 @@ const PureLayout: React.FC<PureLayoutProps> = (props: PureLayoutProps) => {
     const pageTitle = props.title ?? props.name;
 
     return (
-        <div className="text-lg font-light max-w-5xl mx-auto">
+        <div className="text-lg font-light max-w-4xl mx-auto">
             <Helmet>
                 <html lang="en" />
                 <meta name="description" content={props.pageDescription} />

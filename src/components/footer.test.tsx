@@ -1,10 +1,10 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { PureBio } from "./bio";
+import { PureFooter } from "./footer";
 
-describe("bio", () => {
+describe("footer", () => {
     it("renders", () => {
-        const data: BioComponentData = {
+        const data: FooterData = {
             site: {
                 siteMetadata: {
                     name: "Captain",
@@ -13,7 +13,7 @@ describe("bio", () => {
             },
         };
 
-        const { asFragment } = render(<PureBio {...data} />);
+        const { asFragment } = render(<PureFooter {...data} />);
 
         expect(asFragment()).toMatchSnapshot();
     });

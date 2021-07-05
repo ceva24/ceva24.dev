@@ -21,13 +21,13 @@ const Header: React.FC<HeaderProps> = ({
 }: HeaderProps) => (
     <header className="border-b">
         <div className="my-8 text-center space-y-5">
-            <h1 className="text-7xl">
+            <h1 className="text-6xl">
                 <Link to="/" className="text-black">
                     {name}
                 </Link>
             </h1>
 
-            <div>
+            <div className="px-6">
                 <strong>{website}</strong> | {subtitle}
             </div>
 

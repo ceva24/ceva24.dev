@@ -22,7 +22,7 @@ describe("index page", () => {
             .invoke("attr", "content")
             .should(
                 "equal",
-                "Chris Evans, a Web Development / Systems Integration Team Leader at the University of York"
+                "Chris Evans, a Web Development / Systems Integration Team Leader at the University of York, UK"
             );
     });
 
@@ -44,5 +44,11 @@ describe("index page", () => {
         cy.findByRole("link", { name: "Introduction - Welp" }).click();
 
         cy.url().should("eq", `${Cypress.config().baseUrl}/posts/introduction`);
+    });
+
+    it("does not contain the footer", () => {
+        cy.visit("/");
+
+        cy.get("footer").should("not.exist");
     });
 });

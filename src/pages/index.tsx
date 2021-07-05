@@ -37,7 +37,7 @@ const query = graphql`
                         slug
                         path
                     }
-                    excerpt(pruneLength: 300)
+                    excerpt
                 }
             }
         }

@@ -19,7 +19,7 @@ exports[`bio renders 1`] = `
       <div>
         <a
           aria-label="Email"
-          class="text-gray-700"
+          class="text-gray-800"
           href="mailto:chris@ceva24.dev"
           title="mailto:chris@ceva24.dev"
         >
@@ -41,7 +41,7 @@ exports[`bio renders 1`] = `
         </a>
         <a
           aria-label="Github"
-          class="text-gray-700"
+          class="text-gray-800"
           href="https://www.github.com/ceva24"
           title="https://www.github.com/ceva24"
         >
@@ -63,7 +63,7 @@ exports[`bio renders 1`] = `
         </a>
         <a
           aria-label="LinkedIn"
-          class="text-gray-700"
+          class="text-gray-800"
           href="https://uk.linkedin.com/in/ceva24"
           title="https://uk.linkedin.com/in/ceva24"
         >
@@ -85,7 +85,7 @@ exports[`bio renders 1`] = `
         </a>
         <a
           aria-label="Twitter"
-          class="text-gray-700"
+          class="text-gray-800"
           href="https://twitter.com/ceva24"
           title="https://twitter.com/ceva24"
         >

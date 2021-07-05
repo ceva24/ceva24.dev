@@ -5,6 +5,8 @@ date: "2015-04-18"
 
 I recently finished re-working a small Java-based project that didn’t have any unit tests. I chose to use the popular [JUnit](https://junit.org/) + [Mockito](https://site.mockito.org/) combo for adding these, and this post contains some of the things I picked up on (sometimes after much blood, sweat and tears) when learning the framework.
 
+<!-- end -->
+
 First of all I should mention that for anything but the simplest unit tests, the [PowerMock](https://github.com/powermock/powermock) extension is a must-have that brings a lot more mocking power to Mockito – functionality that Spock comes packaged with by default such as mocking static classes.
 
 ### Ways of Specifying Behaviour

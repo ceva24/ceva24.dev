@@ -9,6 +9,8 @@ More and more of my projects include an aspect of calling out to remote systems,
 
 I’ll illustrate this with a simple example, connecting to the [Facebook Graph API](https://developers.facebook.com/docs/reference/api/), the most recent iteration of its REST API (with a fancy name).
 
+<!-- end -->
+
 ### Pre-requisites
 
 Web services are part of the J2EE rather than standard JDK, which means downloading some JAR files. One of the differences with the J2EE that you don’t see so much with standard JDK APIs is that there are many different or alternative implementations of these architectures to choose from, and it’s not always cut-and-dry what the differences are or what the best choice for your app is.

@@ -5,6 +5,8 @@ date: "2015-08-29"
 
 There are various ways of querying a database with Grails, but they behave slightly differently. In this post I want to talk about the behaviour of dynamic finders and where closures specifically.
 
+<!-- end -->
+
 Dynamic finders take advantage of Groovy’s meta-programming paradigm, and are very simple to write. For example:
 
 ```java

@@ -5,6 +5,8 @@ date: "2017-11-14"
 
 For a while I’ve ignored Grails’ caching options, often thinking “well even if they’re not optimised, at least they’re doing something”. But I spent some time recently trying to minimise a delay on querying some relatively static data, and diving into caching was a part of this.
 
+<!-- end -->
+
 ### Sample Application
 
 Consider a Grails 3 application with the following domain:

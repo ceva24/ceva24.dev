@@ -7,6 +7,8 @@ In order to make an HTTPS request in Java, the SSL Certificate issued to the sit
 
 OpenJDK 10 onwards comes bundled with a set of root CA certificates so it's less of an issue, but in older versions of Java this isn't the case.
 
+<!-- end -->
+
 The following example running under `JDK 1.8.0_31` attempts to connect to https://www.cam.ac.uk/:
 
 ```java

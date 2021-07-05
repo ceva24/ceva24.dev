@@ -5,6 +5,8 @@ date: "2015-08-29"
 
 In order to pass variables to normal Grails views or templates the `model` parameter is used, which is a `Map` that contains all values you want to make available to the view:
 
+<!-- end -->
+
 ```java
 <g:render template="cart/checkout" model="${[contents: contents]}"></g:render>
 ```

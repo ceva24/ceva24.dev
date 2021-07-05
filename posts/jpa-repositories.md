@@ -5,6 +5,8 @@ date: "2016-01-04"
 
 If you’re working against a database in a Spring Boot application, chances are you’ll need to bootstrap data for your tests. [Spring suggests using `.sql` files](https://docs.spring.io/spring/docs/5.1.9.RELEASE/spring-framework-reference/testing.html#testcontext-executing-sql-declaratively), however it soon becomes unwieldy to maintain a large repository of scripts.
 
+<!-- end -->
+
 Another way to do this is to save domain objects using a [JPA repository](https://docs.spring.io/spring/docs/5.1.9.RELEASE/spring-framework-reference/data-access.html#dao), like in this example Spock test:
 
 ```java

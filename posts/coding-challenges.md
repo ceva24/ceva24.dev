@@ -7,6 +7,8 @@ I recently spent some time doing coding practice with [Codility](https://codilit
 
 Most of the challenges are able to, or meant to be done using basic techniques such as primitive array and character manipulation, which is something I generally don’t need to do when working in a language with a rich library like Java. So it was a bit of a hurdle at first.
 
+<!-- end -->
+
 I found that there are certain techniques and patterns that emerge. The more I attempted, the more I was able to identify problems as being a certain category and therefore had a grasp of how to find the solution. For example a lot of array-based problems could be solved in one pass by sorting/using intermediate structures.
 
 A lot of the time I also found myself shamefully scoring 20% or so because I’d forgotten one small thing, or used an i instead of a j. It’s quite humbling to see how easy it is to make a mistake when coding without the tools I usually have at my disposal. Thankfully when I first learnt Java I used a plain text editor with simple syntax highlighting and compiled/ran directly from the command line, so it wasn’t entirely unfamiliar to me.

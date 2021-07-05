@@ -5,6 +5,8 @@ date: "2016-01-05"
 
 I built a new PC over Christmas (after ~7 years the old one’s more than had it’s day) thanks to the [/r/buildapc subreddit](https://www.reddit.com/r/buildapc), an amazing source of information for all this sort of stuff.
 
+<!-- end -->
+
 [PCPartPicker part list](https://uk.pcpartpicker.com/list/nZVvP6)
 
 | Type          | Item                                                                      |

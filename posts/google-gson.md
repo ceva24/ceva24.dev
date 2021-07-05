@@ -5,6 +5,8 @@ date: "2012-12-30"
 
 This post serves as a follow-up to [A Simple REST Client](./rest-client-template), in which a basic REST client for the Facebook Graph API was created. In this post, a few examples will show how to get started with Gson by doing some simple parsing of JSON (JavaScript Object Notation) returned by the Facebook Client.
 
+<!-- end -->
+
 ### Pre-requisites
 
 [Google-gson](https://github.com/google/gson)

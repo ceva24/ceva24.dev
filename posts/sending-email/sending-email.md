@@ -5,6 +5,8 @@ date: "2013-05-28"
 
 This is an example that shows how to send emails using pure Java.
 
+<!-- end -->
+
 ### Tools
 
 the [JavaMail API](https://javaee.github.io/javamail/) is the standard library for handling email. As of this post the latest version is 1.5.0. For this example the following JARs are required:

@@ -5,6 +5,8 @@ date: "2012-11-16"
 
 I was one of the (likely) minority who jumped to upgrade to Windows 8 within a couple of days of its release. This is the first time that I’ve upgraded OS manually as opposed to waiting for whatever edition comes with my next new PC, but I had my reasons. In this post I’ll be discussing my opinions of some of the new features, highlighting both the good and bad that I’ve come across so far.
 
+<!-- end -->
+
 ![The Windows 8 logo](./windows-8-logo-300x140.jpg)
 
 So what were my reasons for upgrading? Firstly, the brave evolution of features in this latest Windows iteration piqued my interest, and secondly my old box was running Vista, which in most people’s estimation is probably reason enough itself (and then some). Additionally, I hadn’t had a proper cleanup since getting the PC circa 4 years ago, so it was high time for it.

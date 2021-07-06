@@ -32,6 +32,7 @@
         "fc": "npm run format && npm run lint && npm run check-types && npm run test"
     },
     "dependencies": {
+        "@fontsource/montserrat": "^4.4.5",
         "@fortawesome/fontawesome-svg-core": "^1.2.35",
         "@fortawesome/free-brands-svg-icons": "^5.15.3",
         "@fortawesome/free-solid-svg-icons": "^5.15.3",

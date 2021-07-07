@@ -2,11 +2,20 @@
 
 exports[`footer renders 1`] = `
 <DocumentFragment>
-  <footer
-    class="mt-5 border-t max-w-lg mx-auto"
-  >
+  <footer>
     <div
-      class="my-8 text-center space-y-3"
+      class="min-w-max text-center"
+    >
+      <a
+        aria-current="page"
+        class=""
+        href="/"
+      >
+        Home
+      </a>
+    </div>
+    <div
+      class="my-8 text-center space-y-3 pt-5 border-t max-w-lg mx-auto"
     >
       <div
         class="font-normal"

@@ -71,7 +71,7 @@ describe("post page", () => {
         cy.visit("/posts/introduction");
 
         cy.get("footer")
-            .findByRole("img", { name: "Chris Evans" })
+            .findByRole("img", { name: "Chris Evans profile picture" })
             .should("exist");
 
         cy.get("footer").contains(

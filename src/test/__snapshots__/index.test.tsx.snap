@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`post renders 1`] = `
+exports[`index renders 1`] = `
 <DocumentFragment>
   <ul
     class="list-none"
@@ -18,7 +18,7 @@ exports[`post renders 1`] = `
           class="p-6 pb-3 hover:bg-gray-50 hover:shadow-lg"
         >
           <h2
-            class="uppercase font-normal mb-1"
+            class="text-2xl mb-1"
           >
             Post title
           </h2>

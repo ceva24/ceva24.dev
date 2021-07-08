@@ -11,7 +11,7 @@ jest.mock("gatsby", () => {
     };
 });
 
-describe("post", () => {
+describe("index", () => {
     it("renders", () => {
         const data: IndexPageData = {
             data: {

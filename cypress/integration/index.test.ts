@@ -32,6 +32,21 @@ describe("index page", () => {
         cy.findByRole("banner").contains("Chris Evans");
     });
 
+    it("contains the nav", () => {
+        cy.visit("/");
+
+        cy.findByRole("navigation").should("exist");
+    });
+
+    it("sets the current page link in the nav", () => {
+        cy.visit("/");
+
+        cy.findByRole("navigation")
+            .findByRole("link", { name: "POSTS" })
+            .invoke("attr", "aria-current")
+            .should("equal", "page");
+    });
+
     it("contains a list of posts", () => {
         cy.visit("/");
 
@@ -43,7 +58,10 @@ describe("index page", () => {
 
         cy.findByRole("link", { name: "Introduction - Welp" }).click();
 
-        cy.url().should("eq", `${Cypress.config().baseUrl}/posts/introduction`);
+        cy.url().should(
+            "eq",
+            `${Cypress.config().baseUrl}/posts/introduction/`
+        );
     });
 
     it("does not contain the footer", () => {

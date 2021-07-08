@@ -15,7 +15,7 @@ exports[`post list item renders 1`] = `
         class="p-6 pb-3 hover:bg-gray-50 hover:shadow-lg"
       >
         <h2
-          class="uppercase font-normal mb-1"
+          class="text-2xl mb-1"
         >
           post title
         </h2>

@@ -125,8 +125,25 @@ exports[`layout renders 1`] = `
         </div>
       </div>
     </header>
+    <nav
+      class="my-6 space-x-12 min-w-max text-center"
+    >
+      <a
+        aria-current="page"
+        class="pb-2 text-black border-b border-transparent hover:border-black border-black"
+        href="/"
+      >
+        POSTS
+      </a>
+      <a
+        class="pb-2 text-black border-b border-transparent hover:border-black"
+        href="/about/"
+      >
+        ABOUT
+      </a>
+    </nav>
     <main
-      class="px-3 my-6"
+      class="px-3 mb-6"
     >
       <p>
         Hello

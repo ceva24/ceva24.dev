@@ -6,9 +6,7 @@ exports[`post renders 1`] = `
     <div
       class="mt-10 mb-5 space-y-3"
     >
-      <h2
-        class="text-4xl uppercase font-normal"
-      >
+      <h2>
         Post title
       </h2>
       <div>
@@ -21,16 +19,5 @@ exports[`post renders 1`] = `
       </p>
     </div>
   </article>
-  <div
-    class="min-w-max text-center"
-  >
-    <a
-      aria-current="page"
-      class=""
-      href="/"
-    >
-      Home
-    </a>
-  </div>
 </DocumentFragment>
 `;

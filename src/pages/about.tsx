@@ -19,7 +19,7 @@ const PureAbout: React.FC = () => (
                     src="../img/chris-evans.jpg"
                     alt="Chris Evans"
                     quality={90}
-                    className="border-4"
+                    className="border-2"
                 />
                 <figcaption className="italic text-gray-500">
                     I should really find a more up-to-date picture
@@ -78,7 +78,7 @@ const PureAbout: React.FC = () => (
 
 const About: React.FC = () => {
     return (
-        <Layout showFooter>
+        <Layout showFooter title="Chris Evans - About">
             <PureAbout />
         </Layout>
     );

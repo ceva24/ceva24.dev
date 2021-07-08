@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`nav renders 1`] = `
+<DocumentFragment>
+  <nav
+    class="my-6 space-x-12 min-w-max text-center"
+  >
+    <a
+      aria-current="page"
+      class="pb-2 text-black border-b border-transparent hover:border-black border-black"
+      href="/"
+    >
+      POSTS
+    </a>
+    <a
+      class="pb-2 text-black border-b border-transparent hover:border-black"
+      href="/about/"
+    >
+      ABOUT
+    </a>
+  </nav>
+</DocumentFragment>
+`;

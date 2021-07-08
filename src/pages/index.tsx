@@ -3,23 +3,19 @@ import { graphql } from "gatsby";
 import { Layout } from "../components/layout";
 import { PostListItem } from "../components/post-list-item";
 
-const PureIndex: React.FC<IndexPageData> = (data: IndexPageData) => {
-    return (
+const PureIndex: React.FC<IndexPageData> = (data: IndexPageData) => (
+    <Layout>
         <ul className="list-none">
             {data.data.allMarkdownRemark.edges.map((edge) => (
                 <PostListItem key={edge.node.id} node={edge.node} />
             ))}
         </ul>
-    );
-};
+    </Layout>
+);
 
-const Index: React.FC<IndexPageData> = (data: IndexPageData) => {
-    return (
-        <Layout>
-            <PureIndex {...data} />
-        </Layout>
-    );
-};
+const Index: React.FC<IndexPageData> = (data: IndexPageData) => (
+    <PureIndex {...data} />
+);
 
 // eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
 const query = graphql`

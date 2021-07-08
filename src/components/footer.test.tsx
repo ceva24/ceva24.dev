@@ -1,19 +1,10 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { PureFooter } from "./footer";
+import { Footer } from "./footer";
 
 describe("footer", () => {
     it("renders", () => {
-        const data: FooterData = {
-            site: {
-                siteMetadata: {
-                    name: "Captain",
-                    role: "Caveman",
-                },
-            },
-        };
-
-        const { asFragment } = render(<PureFooter {...data} />);
+        const { asFragment } = render(<Footer />);
 
         expect(asFragment()).toMatchSnapshot();
     });

@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { PureLayout } from "./layout";
+import { Layout } from "./layout";
 
 jest.mock("@reach/router", () => ({
     useLocation: jest.fn().mockImplementation(() => {
@@ -13,15 +13,19 @@ describe("layout", () => {
         const children = <p>Hello</p>;
 
         const { asFragment } = render(
-            <PureLayout
-                title="Title"
-                pageDescription="Description"
-                name="Name"
-                website="Website"
-                subtitle="Subtitle"
-            >
+            <Layout title="Title">{children}</Layout>
+        );
+
+        expect(asFragment()).toMatchSnapshot();
+    });
+
+    it("renders with a footer", () => {
+        const children = <p>Hello</p>;
+
+        const { asFragment } = render(
+            <Layout showFooter title="Title">
                 {children}
-            </PureLayout>
+            </Layout>
         );
 
         expect(asFragment()).toMatchSnapshot();

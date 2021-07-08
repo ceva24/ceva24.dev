@@ -16,16 +16,16 @@ exports[`header renders 1`] = `
           class="text-black"
           href="/"
         >
-          Name
+          Chris Evans
         </a>
       </h1>
       <div
         class="px-6"
       >
         <strong>
-          Website
+          ceva24.dev
         </strong>
-         | Subtitle
+         | Thoughts, code and everything in-between
       </div>
       <div
         aria-label="Contact"

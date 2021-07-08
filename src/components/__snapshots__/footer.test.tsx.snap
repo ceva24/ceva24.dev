@@ -20,12 +20,12 @@ exports[`footer renders 1`] = `
       <div
         class="font-normal"
       >
-        CAPTAIN
+        CHRIS EVANS
       </div>
       <div
         class="px-6"
       >
-        Caveman
+        A Web Development / Systems Integration Team Leader at the University of York, UK
       </div>
     </div>
   </footer>

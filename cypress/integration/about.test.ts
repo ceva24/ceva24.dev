@@ -26,4 +26,13 @@ describe("about page", () => {
 
         cy.findByRole("img", { name: "Chris Evans" }).should("exist");
     });
+
+    it("sets the current page link in the nav", () => {
+        cy.visit("/about");
+
+        cy.findByRole("navigation")
+            .findByRole("link", { name: "ABOUT" })
+            .invoke("attr", "aria-current")
+            .should("equal", "page");
+    });
 });

@@ -12,7 +12,7 @@ describe("about page", () => {
     it("sets the page title", () => {
         cy.visit("/about");
 
-        cy.title().should("equal", "Chris Evans");
+        cy.title().should("equal", "Chris Evans - About");
     });
 
     it("contains the about text", () => {

@@ -3,6 +3,7 @@ import Helmet from "react-helmet";
 import { graphql, useStaticQuery } from "gatsby";
 import { Header } from "./header";
 import { Footer } from "./footer";
+import { Nav } from "./nav";
 
 interface LayoutProps {
     title?: string;
@@ -30,7 +31,9 @@ const PureLayout: React.FC<PureLayoutProps> = (props: PureLayoutProps) => {
 
             <Header {...props} />
 
-            <main className="px-3 my-6">{props.children}</main>
+            <Nav />
+
+            <main className="px-3 mb-6">{props.children}</main>
 
             {props.showFooter ? <Footer /> : null}
         </div>

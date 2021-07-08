@@ -4,31 +4,25 @@ import "@testing-library/cypress/add-commands";
 
 describe("post page", () => {
     it("renders", () => {
-        cy.visit("/posts/introduction");
+        cy.visit("/posts/introduction/");
 
         cy.percySnapshot();
     });
 
     it("sets the page title", () => {
-        cy.visit("/posts/introduction");
+        cy.visit("/posts/introduction/");
 
         cy.title().should("equal", "Introduction - Welp");
     });
 
-    it("contains the banner", () => {
-        cy.visit("/");
-
-        cy.findByRole("banner").contains("Chris Evans");
-    });
-
-    it("contains the header", () => {
-        cy.visit("/posts/introduction");
+    it("contains the post title", () => {
+        cy.visit("/posts/introduction/");
 
         cy.contains("Introduction - Welp");
     });
 
     it("contains the post content", () => {
-        cy.visit("/posts/introduction");
+        cy.visit("/posts/introduction/");
 
         cy.findByRole("article").contains(
             "I decided to invest in some webspace and set up a blog here"
@@ -36,7 +30,7 @@ describe("post page", () => {
     });
 
     it("renders syntax highlighting", () => {
-        cy.visit("/posts/hibernate-grails-caching");
+        cy.visit("/posts/hibernate-grails-caching/");
 
         cy.get(".syntax--java").should("exist");
 
@@ -44,7 +38,7 @@ describe("post page", () => {
     });
 
     it("renders tables", () => {
-        cy.visit("/posts/new-pc");
+        cy.visit("/posts/new-pc/");
 
         cy.findByRole("table").should("exist");
 
@@ -52,7 +46,7 @@ describe("post page", () => {
     });
 
     it("navigates to the index page when clicking on the banner header", () => {
-        cy.visit("/posts/introduction");
+        cy.visit("/posts/introduction/");
 
         cy.findByRole("banner").findByRole("heading").click();
 
@@ -60,7 +54,7 @@ describe("post page", () => {
     });
 
     it("navigates to the index page when clicking on the home link", () => {
-        cy.visit("/posts/introduction");
+        cy.visit("/posts/introduction/");
 
         cy.findByRole("link", { name: "Home" }).click();
 
@@ -68,10 +62,10 @@ describe("post page", () => {
     });
 
     it("contains the footer with the expected content", () => {
-        cy.visit("/posts/introduction");
+        cy.visit("/posts/introduction/");
 
         cy.get("footer")
-            .findByRole("img", { name: "Chris Evans" })
+            .findByRole("img", { name: "Chris Evans profile picture" })
             .should("exist");
 
         cy.get("footer").contains(

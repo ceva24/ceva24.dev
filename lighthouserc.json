@@ -3,7 +3,8 @@
         "collect": {
             "url": [
                 "http://localhost:9000/",
-                "http://localhost:9000/posts/google-domains-aws/"
+                "http://localhost:9000/posts/google-domains-aws/",
+                "http://localhost:9000/about/"
             ],
             "startServerCommand": "npm run serve",
             "startServerReadyPattern": "in the browser"

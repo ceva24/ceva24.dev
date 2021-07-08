@@ -1,7 +1,8 @@
 {
     "extends": [
-        "plugin:prettier/recommended",
         "xo-react",
+        "plugin:jsx-a11y/strict",
+        "plugin:prettier/recommended",
         "plugin:cypress/recommended"
     ],
     "rules": {

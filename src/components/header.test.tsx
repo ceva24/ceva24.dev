@@ -4,9 +4,7 @@ import { Header } from "./header";
 
 describe("header", () => {
     it("renders", () => {
-        const { asFragment } = render(
-            <Header name="Name" subtitle="Subtitle" website="Website" />
-        );
+        const { asFragment } = render(<Header />);
 
         expect(asFragment()).toMatchSnapshot();
     });

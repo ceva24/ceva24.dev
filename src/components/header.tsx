@@ -8,27 +8,18 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { SocialIcon } from "./social-icon";
 
-interface HeaderProps {
-    name: string;
-    subtitle: string;
-    website: string;
-}
-
-const Header: React.FC<HeaderProps> = ({
-    name,
-    subtitle,
-    website,
-}: HeaderProps) => (
+const Header: React.FC = () => (
     <header className="border-b">
         <div className="my-8 text-center space-y-5">
             <h1 className="text-6xl">
                 <Link to="/" className="text-black">
-                    {name}
+                    Chris Evans
                 </Link>
             </h1>
 
             <div className="px-6">
-                <strong>{website}</strong> | {subtitle}
+                <strong>ceva24.dev</strong> | Thoughts, code and everything
+                in-between
             </div>
 
             <div className="space-x-8 text-2xl" aria-label="Contact">

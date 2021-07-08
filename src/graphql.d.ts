@@ -33,23 +33,3 @@ interface PostTemplateData {
         };
     };
 }
-
-interface LayoutData {
-    site: {
-        siteMetadata: {
-            name: string;
-            website: string;
-            subtitle: string;
-            pageDescription: string;
-        };
-    };
-}
-
-interface FooterData {
-    site: {
-        siteMetadata: {
-            name: string;
-            role: string;
-        };
-    };
-}

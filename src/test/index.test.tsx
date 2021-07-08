@@ -11,6 +11,12 @@ jest.mock("gatsby", () => {
     };
 });
 
+jest.mock("@reach/router", () => ({
+    useLocation: jest.fn().mockImplementation(() => {
+        return { pathname: "/" };
+    }),
+}));
+
 describe("index", () => {
     it("renders", () => {
         const data: IndexPageData = {

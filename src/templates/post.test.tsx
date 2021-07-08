@@ -11,6 +11,12 @@ jest.mock("gatsby", () => {
     };
 });
 
+jest.mock("@reach/router", () => ({
+    useLocation: jest.fn().mockImplementation(() => {
+        return { pathname: "/posts/post-title/" };
+    }),
+}));
+
 describe("post", () => {
     it("renders", () => {
         const data: PostTemplateData = {

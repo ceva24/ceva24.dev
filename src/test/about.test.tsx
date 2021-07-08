@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { PureAbout } from "../pages/about";
+import About from "../pages/about";
 
 jest.mock("gatsby", () => {
     return {
@@ -11,9 +11,15 @@ jest.mock("gatsby", () => {
     };
 });
 
+jest.mock("@reach/router", () => ({
+    useLocation: jest.fn().mockImplementation(() => {
+        return { pathname: "/about/" };
+    }),
+}));
+
 describe("about", () => {
     it("renders", () => {
-        const { asFragment } = render(<PureAbout />);
+        const { asFragment } = render(<About />);
 
         expect(asFragment()).toMatchSnapshot();
     });

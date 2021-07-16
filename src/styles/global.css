@@ -22,11 +22,15 @@
     }
 
     ul {
-        @apply mb-5 list-inside list-disc;
+        @apply mb-5 list-disc;
+    }
+
+    ul ul {
+        @apply ml-10;
     }
 
     ol {
-        @apply mb-5 list-inside list-decimal;
+        @apply mb-5 list-decimal;
     }
 
     li {

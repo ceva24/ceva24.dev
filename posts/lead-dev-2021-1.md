@@ -12,7 +12,6 @@ This is the first in a series of posts about the key things I took away from the
 ### The Leader as Coach
 
 -   Google's Project Oxygen showed that great managers are also great coaches. As a result they organised coaching training for all of their managers. This has encouraged me to lean on coaching as a tool more frequently.
-
 -   "Be curious" - about the people in your team. Find out their motivations, their interests, and build rapport. This will help you to find the best ways to help them progress (for example by matching them up with work that aligns with their motivations), help you to find the best approach for difficult conversations, and much more.
 
 ### Their Career, Sponsored by You
@@ -22,7 +21,6 @@ This is the first in a series of posts about the key things I took away from the
 ### Building Healthy Feedback Environments
 
 -   Professional feedback needs to happen more than once or twice a year (e.g. at performance review).
-
 -   Healthy feedback environments have the following qualities:
     -   **Credibility of source** - the person giving feedback understands the work, the context and the standard expected
     -   **Quality of feedback** - the feedback is accurate and specific, focusing on what the person does rather than who they are

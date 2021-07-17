@@ -45,6 +45,14 @@ describe("post page", () => {
         cy.percySnapshot();
     });
 
+    it("renders indented list items", () => {
+        cy.visit("/posts/lead-dev-2021-1/");
+
+        cy.findAllByRole("list").should("exist");
+
+        cy.percySnapshot();
+    });
+
     it("navigates to the index page when clicking on the banner header", () => {
         cy.visit("/posts/introduction/");
 

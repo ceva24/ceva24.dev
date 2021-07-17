@@ -22,7 +22,7 @@
     }
 
     ul {
-        @apply mb-5 ml-5 list-disc;
+        @apply mb-5 list-inside list-disc;
     }
 
     ul ul {
@@ -30,7 +30,7 @@
     }
 
     ol {
-        @apply mb-5 list-decimal;
+        @apply mb-5 list-inside list-decimal;
     }
 
     li {

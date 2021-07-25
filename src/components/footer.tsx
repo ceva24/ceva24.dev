@@ -12,8 +12,7 @@ const Footer: React.FC = () => (
             <StaticImage
                 src="../img/profile-picture.png"
                 alt="Chris Evans profile picture"
-                quality={100}
-                className="rounded-full"
+                className="w-32 rounded-full"
             />
 
             <div className="font-normal">CHRIS EVANS</div>

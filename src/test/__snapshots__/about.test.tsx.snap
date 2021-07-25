@@ -154,13 +154,7 @@ exports[`about renders 1`] = `
       <div
         class="max-w-lg mx-auto mb-5"
       >
-        <figure>
-          <figcaption
-            class="italic text-gray-500"
-          >
-            I should really find a more up-to-date picture
-          </figcaption>
-        </figure>
+        <figure />
       </div>
       <p>
         I started out in Java and then moved into back-end web development with Groovy/Grails. A while back I transitioned to JavaScript/TypeScript, Node.js and React (mainly Next.js and Gatsby). I've also built up a chunk of experience in AWS Serverless and event-driven architecture.

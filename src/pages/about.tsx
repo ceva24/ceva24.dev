@@ -18,14 +18,10 @@ const About: React.FC = () => {
             <div className="max-w-lg mx-auto mb-5">
                 <figure>
                     <StaticImage
-                        src="../img/chris-evans.jpg"
+                        src="../img/chris-evans.png"
                         alt="Chris Evans"
-                        quality={90}
                         className="border-2"
                     />
-                    <figcaption className="italic text-gray-500">
-                        I should really find a more up-to-date picture
-                    </figcaption>
                 </figure>
             </div>
 

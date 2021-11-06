@@ -9,7 +9,14 @@
         "react/jsx-indent": "off",
         "react/jsx-indent-props": "off",
         "react/jsx-tag-spacing": "off",
-        "react/react-in-jsx-scope": "off"
+        "react/react-in-jsx-scope": "off",
+        "@typescript-eslint/naming-convention": [
+            "warn",
+            {
+                "selector": "function",
+                "format": ["PascalCase", "camelCase"]
+            }
+        ]
     },
     "ignores": ["gatsby-*.js", "*.config.js"]
 }

@@ -1,5 +1,4 @@
 {
     "testEnvironment": "jsdom",
-    "setupFiles": ["./src/setup-jest.ts"],
     "testPathIgnorePatterns": ["<rootDir>/cypress"]
 }

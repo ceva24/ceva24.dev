@@ -17,7 +17,6 @@ const Index: React.FC<IndexPageData> = (data: IndexPageData) => (
     <PureIndex {...data} />
 );
 
-// eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
 const query = graphql`
     query {
         allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {

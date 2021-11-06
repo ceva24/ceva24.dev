@@ -21,7 +21,6 @@ const Post: React.FC<PostTemplateData> = (data: PostTemplateData) => (
     <PurePost {...data} />
 );
 
-// eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
 const query = graphql`
     query ($slug: String!) {
         markdownRemark(fields: { slug: { eq: $slug } }) {

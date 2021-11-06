@@ -29,7 +29,8 @@
         "check-types:cypress": "tsc --project cypress/tsconfig.json",
         "check-types": "npm run check-types:gatsby && npm run check-types:cypress",
         "check": "npm run check-format && npm run lint && npm run check-types && npm run test",
-        "fc": "npm run format && npm run check"
+        "fc": "npm run format && npm run check",
+        "update": "ncu -u"
     },
     "dependencies": {
         "@fontsource/montserrat": "^4.5.1",

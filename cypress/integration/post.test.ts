@@ -46,7 +46,7 @@ describe("post page", () => {
     });
 
     it("renders indented list items", () => {
-        cy.visit("/posts/lead-dev-2021-1/");
+        cy.visit("/posts/lead-dev-2021/");
 
         cy.findAllByRole("list").should("exist");
 

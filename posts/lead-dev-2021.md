@@ -1,11 +1,11 @@
 ---
-title: "LeadDev Together 2021 - Session 1, Developing your Team"
+title: "LeadDev Together 2021 - Developing your Team"
 date: "2021-07-16"
 ---
 
-I'm fortunate enough to have attended the [LeadDev conference](https://leaddev.com/) a number of times through work, and I always come away with new insights and motivation to improve the way I lead my team. 2021 is no different, with an insightful set of talks on various topics.
+I'm fortunate enough to have attended the [LeadDev conference](https://leaddev.com/) a number of times through my work, and I always come away with new insights and motivation to improve the way I lead my team. 2021 is no different, with an insightful set of talks on various topics.
 
-This is the first in a series of posts about the key things I took away from the conference.
+These are some key things I took away from the first day of the conference.
 
 <!-- end -->
 

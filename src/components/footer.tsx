@@ -18,8 +18,7 @@ const Footer: React.FC = () => (
             <div className="font-normal">CHRIS EVANS</div>
 
             <div className="px-6">
-                A Web Development / Systems Integration Team Leader at the
-                University of York, UK
+                Senior Engineering Manager at the LEGO Group, UK
             </div>
         </div>
     </footer>

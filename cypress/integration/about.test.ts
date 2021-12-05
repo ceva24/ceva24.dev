@@ -18,7 +18,7 @@ describe("about page", () => {
     it("contains the about text", () => {
         cy.visit("/about");
 
-        cy.contains("Hi! I'm a Development Team Lead from York, UK");
+        cy.contains("Hi! I'm an Engineering Manager from York, UK");
     });
 
     it("contains the picture", () => {

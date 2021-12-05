@@ -23,7 +23,7 @@ const Layout: React.FC<LayoutProps> = ({
                 <html lang="en" />
                 <meta
                     name="description"
-                    content="Chris Evans, a Web Development / Systems Integration Team Leader at the University of York, UK"
+                    content="Chris Evans, Senior Engineering Manager at the LEGO Group, UK"
                 />
                 <title>{pageTitle}</title>
             </Helmet>

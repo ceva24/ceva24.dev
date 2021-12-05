@@ -149,7 +149,7 @@ exports[`about renders 1`] = `
         About me
       </h2>
       <p>
-        Hi! I'm a Development Team Lead from York, UK. I currently work at the University of York, leading a team of developers building great products and maintaining the systems that support the outstanding teaching and learning delivered by the University.
+        Hi! I'm an Engineering Manager from York, UK. I currently work at the LEGO Group, supporting a team of software engineers building great products and maintaining the systems that support the company's outstanding customer service.
       </p>
       <div
         class="max-w-lg mx-auto mb-5"
@@ -210,7 +210,7 @@ exports[`about renders 1`] = `
         <div
           class="px-6"
         >
-          A Web Development / Systems Integration Team Leader at the University of York, UK
+          Senior Engineering Manager at the LEGO Group, UK
         </div>
       </div>
     </footer>

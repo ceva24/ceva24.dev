@@ -77,7 +77,7 @@ describe("post page", () => {
             .should("exist");
 
         cy.get("footer").contains(
-            "A Web Development / Systems Integration Team Leader at the University of York, UK"
+            "Senior Engineering Manager at the LEGO Group, UK"
         );
     });
 });

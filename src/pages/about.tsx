@@ -8,11 +8,10 @@ const About: React.FC = () => {
             <h2>About me</h2>
 
             <p>
-                Hi! I&apos;m a Development Team Lead from York, UK. I currently
-                work at the University of York, leading a team of developers
+                Hi! I&apos;m an Engineering Manager from York, UK. I currently
+                work at the LEGO Group, supporting a team of software engineers
                 building great products and maintaining the systems that support
-                the outstanding teaching and learning delivered by the
-                University.
+                the company&apos;s outstanding customer service.
             </p>
 
             <div className="max-w-lg mx-auto mb-5">

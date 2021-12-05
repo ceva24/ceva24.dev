@@ -22,7 +22,7 @@ describe("index page", () => {
             .invoke("attr", "content")
             .should(
                 "equal",
-                "Chris Evans, a Web Development / Systems Integration Team Leader at the University of York, UK"
+                "Chris Evans, Senior Engineering Manager at the LEGO Group, UK"
             );
     });
 

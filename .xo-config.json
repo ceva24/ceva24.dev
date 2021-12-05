@@ -16,7 +16,8 @@
                 "selector": "function",
                 "format": ["PascalCase", "camelCase"]
             }
-        ]
+        ],
+        "import/extensions": ["error", { "tsx": "never" }]
     },
     "ignores": ["gatsby-*.js", "*.config.js"]
 }

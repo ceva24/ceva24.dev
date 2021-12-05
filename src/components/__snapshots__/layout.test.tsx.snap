@@ -325,7 +325,7 @@ exports[`layout renders with a footer 1`] = `
         <div
           class="px-6"
         >
-          A Web Development / Systems Integration Team Leader at the University of York, UK
+          Senior Engineering Manager at the LEGO Group, UK
         </div>
       </div>
     </footer>

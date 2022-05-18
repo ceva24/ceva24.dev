@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import { PureIndex } from "../pages/index";
 
-jest.mock("gatsby", () => {
+jest.mock("gatsby", (): unknown => {
     return {
         ...jest.requireActual("gatsby"),
         graphql: jest.fn(),

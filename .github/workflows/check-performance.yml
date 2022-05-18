@@ -18,7 +18,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}
       - uses: actions/setup-node@v1
         with:
-          node-version: 14
+          node-version-file: .nvmrc
       - run: npm i -g @lhci/cli@0.8.x
       - run: npm i
       - run: npm run build

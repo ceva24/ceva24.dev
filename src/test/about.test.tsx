@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import About from "../pages/about";
 
-jest.mock("gatsby", () => {
+jest.mock("gatsby", (): unknown => {
     return {
         ...jest.requireActual("gatsby"),
         graphql: jest.fn(),

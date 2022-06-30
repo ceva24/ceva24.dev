@@ -10,7 +10,7 @@ const Footer: React.FC = () => (
 
         <div className="my-8 text-center space-y-3 pt-5 border-t max-w-lg mx-auto">
             <StaticImage
-                src="../img/profile-picture.png"
+                src="../img/avatar.svg"
                 alt="Chris Evans profile picture"
                 className="w-32 rounded-full"
             />

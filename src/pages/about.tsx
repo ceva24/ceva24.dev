@@ -1,4 +1,3 @@
-import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import { Layout } from "../components/layout";
 
@@ -8,21 +7,11 @@ const About: React.FC = () => {
             <h2>About me</h2>
 
             <p>
-                Hi! I&apos;m an Engineering Manager from York, UK. I currently
+                Hi! I&apos;m an Engineering Manager from the UK. I currently
                 work at the LEGO Group, supporting a team of software engineers
                 building great products and maintaining the systems that support
                 the company&apos;s outstanding customer service.
             </p>
-
-            <div className="max-w-lg mx-auto mb-5">
-                <figure>
-                    <StaticImage
-                        src="../img/chris-evans.png"
-                        alt="Chris Evans"
-                        className="border-2"
-                    />
-                </figure>
-            </div>
 
             <p>
                 I started out in Java and then moved into back-end web
@@ -33,24 +22,25 @@ const About: React.FC = () => {
             </p>
 
             <p>
-                I&apos;m really keen on automation and using it to enhance
-                teams&apos; capabilities - I take full advantage of GitHub
-                workflows both at work and in personal projects!
+                I&apos;m keen on automation and using it to increase teams&apos;
+                capabilities over time. I&apos;m also interested in agile team
+                leadership - driving change by focusing on user benefit,
+                breaking things down into deliverable increments and using
+                metrics to inform success. I value an open and collaborative
+                approach to software development, always asking the question
+                &quot;what value are we delivering?&quot;
             </p>
 
             <p>
-                I&apos;m also interested in agile team leadership - driving
-                change by focusing on user benefit, breaking things down into
-                deliverable increments and using metrics to inform success. I
-                value an open and collaborative approach to software
-                development, always asking the question &quot;what value are we
-                delivering?&quot;
-            </p>
-
-            <p>
-                I&apos;m passionate about people - attracting and recruiting the
-                best talent, doing onboarding right, and supporting
+                I&apos;m passionate about people - attracting and recruiting
+                talented developers, doing onboarding right, and supporting
                 developers&apos; careers to drive them towards success.
+            </p>
+
+            <p>
+                I get satisfaction from seeing a team succeed and constantly
+                improve itself, as well as knowing our work makes a difference
+                to people.
             </p>
 
             <p>

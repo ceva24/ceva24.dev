@@ -1,9 +1,10 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { Layout } from "../components/layout";
+import PageHead from "../components/page-head";
 
 const PurePost: React.FC<PostTemplateData> = ({ data }: PostTemplateData) => (
-    <Layout showFooter title={data.markdownRemark.frontmatter.title}>
+    <Layout showFooter>
         <article>
             <div className="mt-10 mb-5 space-y-3">
                 <h2>{data.markdownRemark.frontmatter.title}</h2>
@@ -33,5 +34,9 @@ const query = graphql`
     }
 `;
 
+const Head = ({ data }: PostTemplateData) => (
+    <PageHead title={data.markdownRemark.frontmatter.title} />
+);
+
 export default Post;
-export { PurePost, query };
+export { Head, PurePost, query };

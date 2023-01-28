@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { Layout } from "../components/layout";
+import PageHead from "../components/page-head";
 import { PostListItem } from "../components/post-list-item";
 
 const PureIndex: React.FC<IndexPageData> = (data: IndexPageData) => (
@@ -19,7 +20,7 @@ const Index: React.FC<IndexPageData> = (data: IndexPageData) => (
 
 const query = graphql`
     query {
-        allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+        allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
             totalCount
             edges {
                 node {
@@ -39,5 +40,7 @@ const query = graphql`
     }
 `;
 
+const Head = () => <PageHead />;
+
 export default Index;
-export { PureIndex, query };
+export { Head, PureIndex, query };

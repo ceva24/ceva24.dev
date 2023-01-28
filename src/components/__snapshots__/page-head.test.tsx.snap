@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`page-head renders 1`] = `
+<DocumentFragment>
+  <meta
+    content="Chris Evans, Senior Engineering Manager at the LEGO Group, UK"
+    name="description"
+  />
+  <title>
+    Chris Evans
+  </title>
+</DocumentFragment>
+`;
+
+exports[`page-head renders with a title 1`] = `
+<DocumentFragment>
+  <meta
+    content="Chris Evans, Senior Engineering Manager at the LEGO Group, UK"
+    name="description"
+  />
+  <title>
+    Test title
+  </title>
+</DocumentFragment>
+`;

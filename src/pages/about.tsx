@@ -1,9 +1,10 @@
 import React from "react";
 import { Layout } from "../components/layout";
+import PageHead from "../components/page-head";
 
 const About: React.FC = () => {
     return (
-        <Layout showFooter title="Chris Evans - About">
+        <Layout showFooter>
             <h2>About me</h2>
 
             <p>
@@ -65,4 +66,7 @@ const About: React.FC = () => {
     );
 };
 
+const Head = () => <PageHead title="Chris Evans - About" />;
+
 export default About;
+export { Head };

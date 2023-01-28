@@ -13,9 +13,7 @@ describe("layout", () => {
     it("renders", () => {
         const children = <p>Hello</p>;
 
-        const { asFragment } = render(
-            <Layout title="Title">{children}</Layout>
-        );
+        const { asFragment } = render(<Layout>{children}</Layout>);
 
         expect(asFragment()).toMatchSnapshot();
     });
@@ -23,11 +21,7 @@ describe("layout", () => {
     it("renders with a footer", () => {
         const children = <p>Hello</p>;
 
-        const { asFragment } = render(
-            <Layout showFooter title="Title">
-                {children}
-            </Layout>
-        );
+        const { asFragment } = render(<Layout showFooter>{children}</Layout>);
 
         expect(asFragment()).toMatchSnapshot();
     });

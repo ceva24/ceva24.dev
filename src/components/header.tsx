@@ -1,11 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import {
-    faGithub,
-    faLinkedin,
-    faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { SocialIcon } from "./social-icon";
 
 const Header: React.FC = () => (
@@ -37,11 +33,6 @@ const Header: React.FC = () => (
                     icon={faLinkedin}
                     label="LinkedIn"
                     url="https://www.linkedin.com/in/ceva24"
-                />
-                <SocialIcon
-                    icon={faTwitter}
-                    label="Twitter"
-                    url="https://twitter.com/ceva24"
                 />
             </div>
         </div>

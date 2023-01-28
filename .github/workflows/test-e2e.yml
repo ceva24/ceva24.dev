@@ -13,11 +13,11 @@ jobs:
   test-e2e:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version-file: .nvmrc
-      - uses: cypress-io/github-action@d2b5039cb4888cf1f0bb9e808f904f7093e0cb2a
+      - uses: cypress-io/github-action@53cc3178f59cc99b5519c29c14a182fb98ea4f31 # v4.1.0
         with:
           build: npm run build
           start: npm run serve
@@ -29,3 +29,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+          COMMIT_INFO_MESSAGE: ${{ github.event.pull_request.title }}
+          COMMIT_INFO_SHA: ${{ github.event.pull_request.head.sha }}

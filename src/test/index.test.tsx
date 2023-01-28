@@ -11,7 +11,8 @@ jest.mock("gatsby", (): unknown => {
     };
 });
 
-jest.mock("@reach/router", () => ({
+jest.mock("@gatsbyjs/reach-router", (): unknown => ({
+    ...jest.requireActual("@gatsbyjs/reach-router"),
     useLocation: jest.fn().mockImplementation(() => {
         return { pathname: "/" };
     }),

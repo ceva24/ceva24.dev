@@ -2,7 +2,8 @@ import React from "react";
 import { render } from "@testing-library/react";
 import { Layout } from "./layout";
 
-jest.mock("@reach/router", () => ({
+jest.mock("@gatsbyjs/reach-router", (): unknown => ({
+    ...jest.requireActual("@gatsbyjs/reach-router"),
     useLocation: jest.fn().mockImplementation(() => {
         return { pathname: "/" };
     }),

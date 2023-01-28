@@ -20,7 +20,7 @@ jobs:
         with:
           node-version-file: .nvmrc
       - run: npm i -g @lhci/cli@0.8.x
-      - run: npm i
+      - run: npm ci
       - run: npm run build
       - run: lhci autorun
         env:

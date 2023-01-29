@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { PureIndex } from "../pages/index";
+import { Head, PureIndex } from "../pages/index";
 
 jest.mock("gatsby", (): unknown => {
     return {
@@ -45,6 +45,14 @@ describe("index", () => {
         };
 
         const { asFragment } = render(<PureIndex {...data} />);
+
+        expect(asFragment()).toMatchSnapshot();
+    });
+});
+
+describe("head", () => {
+    it("renders", () => {
+        const { asFragment } = render(<Head />);
 
         expect(asFragment()).toMatchSnapshot();
     });

@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import About from "../pages/about";
+import About, { Head } from "../pages/about";
 
 jest.mock("gatsby", (): unknown => {
     return {
@@ -21,6 +21,14 @@ jest.mock("@gatsbyjs/reach-router", (): unknown => ({
 describe("about", () => {
     it("renders", () => {
         const { asFragment } = render(<About />);
+
+        expect(asFragment()).toMatchSnapshot();
+    });
+});
+
+describe("head", () => {
+    it("renders", () => {
+        const { asFragment } = render(<Head />);
 
         expect(asFragment()).toMatchSnapshot();
     });

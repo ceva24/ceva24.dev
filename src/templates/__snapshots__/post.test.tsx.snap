@@ -1,5 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`head renders 1`] = `
+<DocumentFragment>
+  <meta
+    content="Chris Evans, Senior Engineering Manager at the LEGO Group, UK"
+    name="description"
+  />
+  <title>
+    Post title
+  </title>
+</DocumentFragment>
+`;
+
 exports[`post renders 1`] = `
 <DocumentFragment>
   <div

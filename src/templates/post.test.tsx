@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { PurePost } from "./post";
+import { Head, PurePost } from "./post";
 
 jest.mock("gatsby", (): unknown => {
     return {
@@ -18,21 +18,29 @@ jest.mock("@gatsbyjs/reach-router", (): unknown => ({
     }),
 }));
 
+const data: PostTemplateData = {
+    data: {
+        markdownRemark: {
+            frontmatter: {
+                title: "Post title",
+                date: "2000-01-01",
+            },
+            html: "<p>Hello world</p>",
+        },
+    },
+};
+
 describe("post", () => {
     it("renders", () => {
-        const data: PostTemplateData = {
-            data: {
-                markdownRemark: {
-                    frontmatter: {
-                        title: "Post title",
-                        date: "2000-01-01",
-                    },
-                    html: "<p>Hello world</p>",
-                },
-            },
-        };
-
         const { asFragment } = render(<PurePost {...data} />);
+
+        expect(asFragment()).toMatchSnapshot();
+    });
+});
+
+describe("head", () => {
+    it("renders", () => {
+        const { asFragment } = render(<Head {...data} />);
 
         expect(asFragment()).toMatchSnapshot();
     });

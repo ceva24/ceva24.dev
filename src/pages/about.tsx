@@ -9,8 +9,8 @@ const About: React.FC = () => {
 
             <p>
                 Hi! I&apos;m an Engineering Manager from the UK. I currently
-                work at the LEGO Group, supporting a team of software engineers
-                building great products and maintaining the systems that support
+                work at the LEGO Group supporting a team of software engineers
+                building great products and maintaining services that support
                 the company&apos;s outstanding customer service.
             </p>
 
@@ -33,8 +33,8 @@ const About: React.FC = () => {
             </p>
 
             <p>
-                I&apos;m passionate about people - attracting and recruiting
-                talented developers, doing onboarding right, and supporting
+                I enjoy working with people - attracting and recruiting talented
+                developers, doing onboarding right, and supporting
                 developers&apos; careers to drive them towards success.
             </p>
 

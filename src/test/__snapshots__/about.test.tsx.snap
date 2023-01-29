@@ -190,3 +190,15 @@ exports[`about renders 1`] = `
   </div>
 </DocumentFragment>
 `;
+
+exports[`head renders 1`] = `
+<DocumentFragment>
+  <meta
+    content="Chris Evans, Senior Engineering Manager at the LEGO Group, UK"
+    name="description"
+  />
+  <title>
+    Chris Evans - About
+  </title>
+</DocumentFragment>
+`;

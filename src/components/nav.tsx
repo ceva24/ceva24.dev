@@ -31,7 +31,7 @@ const NavLink: React.FC<NavLinkProps> = ({
     <Link
         partiallyActive={partiallyActive}
         to={link}
-        className="pb-2 text-black border-b border-transparent hover:border-black"
+        className="pb-2 text-black border-b hover:border-black"
         activeClassName="border-black"
     >
         {text}

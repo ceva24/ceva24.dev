@@ -120,13 +120,13 @@ exports[`index renders 1`] = `
     >
       <a
         aria-current="page"
-        class="pb-2 text-black border-b border-transparent hover:border-black border-black"
+        class="pb-2 text-black border-b hover:border-black border-black"
         href="/"
       >
         POSTS
       </a>
       <a
-        class="pb-2 text-black border-b border-transparent hover:border-black"
+        class="pb-2 text-black border-b hover:border-black"
         href="/about/"
       >
         ABOUT
